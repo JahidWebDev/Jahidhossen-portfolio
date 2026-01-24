@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+/* Optional custom styles */
+.loader-shutter-top {
+  transform-origin: bottom center;
+}
+
+.loader-shutter-bottom {
+  transform-origin: top center;
+}
+
+.loader-bar {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-down {
+  animation: fadeInDown 0.8s ease-out;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+.delay-700 {
+  animation-delay: 700ms;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.canvas-wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
+
+@font-face {
+  font-family: "blinkma";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../src/assets/Fonts/blinkmacsystemfont-black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "BebasNeue";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../src/assets/Fonts/BebasNeue-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Cabin";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../src/assets/Fonts/Cabin-VariableFont_wdth\,wght.ttf") format("truetype");
+}
+
+
+
+@theme {
+  --font-blinkma: "blinkma", sans-serif;
+  --font-BebasNeue: "BebasNeue", sans-serif;
+  --font-Cabin: "Cabin", sans-serif;
+ 
+}
