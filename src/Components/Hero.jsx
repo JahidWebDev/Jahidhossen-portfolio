@@ -5,23 +5,32 @@ import * as THREE from "three";
 import { gsap } from "gsap";
 import logo from "../img/jh-logo-jahid-hossen-shakil.png";
 import JahidHossen from "../img/Jahid-Hossen-JahidHossen.png";
-import { FaLinkedin, FaGithub, FaTwitter, FaInstagram, FaAward } from 'react-icons/fa';
-  const socialIcons = [
-    { Icon: FaLinkedin,  hover: 'hover:text-blue-400', href: '#' },
-    { Icon: FaGithub,  hover: 'hover:text-balck', href: '#' },
-    { Icon: FaTwitter,  hover: 'hover:text-sky-300', href: '#' },
-    { Icon: FaInstagram, hover: 'hover:text-pink-400', href: '#' },
-  ];
+import {
+  FaLinkedin,
+  FaGithub,
+  FaTwitter,
+  FaInstagram,
+  FaAward,
+  FaLinkedinIn,
+  FaFacebookF,
+  FaWhatsapp,
+} from "react-icons/fa";
+
+const socialIcons = [
+  { Icon: FaLinkedin, hover: "hover:text-blue-400", href: "#" },
+  { Icon: FaGithub, hover: "hover:text-balck", href: "#" },
+  { Icon: FaTwitter, hover: "hover:text-sky-300", href: "#" },
+  { Icon: FaInstagram, hover: "hover:text-pink-400", href: "#" },
+];
 /* ================= PARTICLE BACKGROUND ================= */
 const ParticleBackground = () => {
-
   // ================================
   const points = useRef();
   const count = 1700;
 
   const particlesPosition = useMemo(() => {
     const positions = new Float32Array(count * 3);
-     
+
     const radius = 2;
 
     for (let i = 0; i < count; i++) {
@@ -86,23 +95,23 @@ const Hero = () => {
       // Overlay animation
       gsap.set(overlayRef.current, {
         display: "block",
-        opacity: 0
+        opacity: 0,
       });
-      
+
       gsap.to(overlayRef.current, {
         opacity: 1,
         duration: 0.3,
-        ease: "power2.out"
+        ease: "power2.out",
       });
 
       // Menu animation
       gsap.set(menuRef.current, {
         x: "100%",
-        display: "block"
+        display: "block",
       });
       gsap.set(itemsRef.current, {
         x: 40,
-        opacity: 0
+        opacity: 0,
       });
 
       gsap.to(menuRef.current, {
@@ -129,7 +138,7 @@ const Hero = () => {
         ease: "power2.in",
         onComplete: () => {
           gsap.set(overlayRef.current, { display: "none" });
-        }
+        },
       });
 
       // Menu animation
@@ -150,38 +159,36 @@ const Hero = () => {
       <nav className="absolute top-2 left-0 right-0 z-40 px-4 py-4 sm:px-6 sm:py-6">
         <div className="max-w-[1800px] mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-0">
           <div className="flex flex-col sm:flex-row items-center text-center gap-2 sm:gap-6 md:gap-12 text-white">
-          <div className="flex items-center gap-4">
-
-
-  <h2 className="text-2xl  sm:text-3xl text-white">
-  <span className="font-bold text-[#0AE448] font-[var(--font-BebasNeue)]">
-    Jahid
-  </span>
-  <span className="font-semibold text-[#0AE448]  font-[var(--font-Cabin)] ml-1">
-    Hossen
-  </span>
-</h2>
-
-</div>
-           <h6 className="text-sm sm:text-lg md:text-xl 
+            <div className="flex items-center gap-4">
+              <h2 className="text-2xl  sm:text-3xl text-white">
+                <span className="font-bold text-[#0AE448] font-[var(--font-BebasNeue)]">
+                  Jahid
+                </span>
+                <span className="font-semibold text-[#0AE448]  font-[var(--font-Cabin)] ml-1">
+                  Hossen
+                </span>
+              </h2>
+            </div>
+            <h6
+              className="text-sm sm:text-lg md:text-xl 
                flex flex-col sm:flex-row 
                items-center sm:items-end 
                gap-2 sm:gap-4 md:gap-6 
                text-[#FFFCE1]
                text-right sm:justify-end 
                font-[var(--font-Cabin)]
-               w-full">
-  <span>+8801777169849</span>
+               w-full"
+            >
+              <span>+8801777169849</span>
 
-  <span className="hidden sm:inline-block rotate-[25deg] text-[#0AE448] text-2xl md:text-3xl">
-    |
-  </span>
+              <span className="hidden sm:inline-block rotate-[25deg] text-[#0AE448] text-2xl md:text-3xl">
+                |
+              </span>
 
-  <span className="text-sm sm:text-lg md:text-xl text-[#FFFCE1] font-[var(--font-Cabin)]">
-    contactjahiddev@gmail.com
-  </span>
-</h6>
-
+              <span className="text-sm sm:text-lg md:text-xl text-[#FFFCE1] font-[var(--font-Cabin)]">
+                contactjahiddev@gmail.com
+              </span>
+            </h6>
           </div>
 
           {/* HAMBURGER BUTTON */}
@@ -222,7 +229,7 @@ const Hero = () => {
       {/* SLIDE MENU */}
       <div
         ref={menuRef}
-        className="fixed top-0 right-0 h-screen w-full sm:w-[85%] md:w-[380px] bg-[#0AE448] backdrop-blur-xl text-white z-50"
+        className="fixed top-0 right-0 h-screen w-full sm:w-[85%] md:w-[380px] bg-[#0AE448] backdrop-blur-xl text-black/60 z-50"
         style={{ display: "none" }}
       >
         <button
@@ -233,7 +240,7 @@ const Hero = () => {
           ✕
         </button>
 
-        <div className="flex flex-col justify-center h-full px-6 sm:px-10 space-y-4 sm:space-y-7 text-lg sm:text-2xl font-light">
+        <div className="flex flex-col mt-40 font-blinkma justify-start px-6 sm:px-10 space-y-4 sm:space-y-7 text-lg sm:text-2xl font-bold">
           {menuItems.map((item, i) => (
             <div
               key={item}
@@ -242,121 +249,151 @@ const Hero = () => {
                 setActiveItem(item);
                 setIsMenuOpen(false);
               }}
-              className="relative cursor-pointer pl-6 sm:pl-8 hover:text-blue-400 transition-colors duration-300 group"
+              className="relative cursor-pointer pl-6 sm:pl-8 hover:text-[#FFFCE1] transition-colors duration-300 group"
             >
-              {activeItem === item && (
-                <span className="absolute left-0 top-1/2 -translate-y-1/2 w-2 h-2 sm:w-3 sm:h-3 bg-blue-500 rounded-full animate-pulse" />
-              )}
               <span className="group-hover:translate-x-2 transition-transform duration-300 inline-block">
                 {item}
               </span>
             </div>
           ))}
         </div>
+        <div className="absolute text-black/90 bottom-6 sm:bottom-16 left-6 sm:left-10 right-6 sm:right-10 text-center space-y-4">
+          {/* Social Icons */}
+          <div className="flex justify-center gap-6">
+            <a
+              href="https://facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-2xl hover:text-black hover:scale-110 transition-all duration-300"
+            >
+              <FaFacebookF />
+            </a>
 
-        <div className="absolute bottom-6 sm:bottom-10 left-6 sm:left-10 right-6 sm:right-10 text-center">
-          <h6 className="text-xs sm:text-sm opacity-50">
-            © Shohelranabaig 2025. All Rights Reserved
+            <a
+              href="https://linkedin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-2xl hover:text-black hover:scale-110 transition-all duration-300"
+            >
+              <FaLinkedinIn />
+            </a>
+
+            <a
+              href="https://github.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-2xl hover:text-black hover:scale-110 transition-all duration-300"
+            >
+              <FaGithub />
+            </a>
+
+            <a
+              href="https://wa.me/8801XXXXXXXXX"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-2xl hover:text-black hover:scale-110 transition-all duration-300"
+            >
+              <FaWhatsapp />
+            </a>
+          </div>
+
+          {/* Copyright */}
+          <h6 className="text-base font-Cabin">
+            © Jahid Hossen 2026. All Rights Reserved
           </h6>
         </div>
       </div>
 
       {/* MAIN CONTENT */}
-<div className="relative z-20 min-h-screen flex ml-10  px-4">
-  <div className="max-w-6xl w-full flex flex-col lg:flex-row mt-31 gap-10 text-[#FFFCE1]">
-    
-    {/* LEFT: TEXT */}
-    <div className="flex flex-col items-start gap-4">
-      
-      <h4 className="font-blinkma uppercase text-left text-[clamp(24px,3vw,56px)]">
-        <span className="text-[#0AE448]">Hi,</span> I am Jahid
-      </h4>
+      <div className="relative z-20 min-h-screen flex ml-10  px-4">
+        <div className="max-w-6xl w-full flex flex-col lg:flex-row mt-31 gap-10 text-[#FFFCE1]">
+          {/* LEFT: TEXT */}
+          <div className="flex flex-col items-start gap-4">
+            <h4 className="font-blinkma uppercase text-left text-[clamp(24px,3vw,56px)]">
+              <span className="text-[#0AE448]">Hi,</span> I am Jahid
+            </h4>
 
-      <h1
-        className="
+            <h1
+              className="
           font-BebasNeue
           text-left
           leading-none
           whitespace-nowrap
           text-[clamp(52px,9vw,140px)]
         "
-      >
-        FRONTEND AND <br />
-        <span className="block">MERN STACK DEVELOPER</span>
-      </h1>
-<h6 className="text-2xl font-Cabin   leading-relaxed mb-3">
-  I am a Frontend and MERN Stack Developer with strong experience in building modern, responsive, and performance-driven web applications. I specialize in creating clean user interfaces, writing scalable and maintainable code, and developing full-stack solutions using React, Node.js, Express, and MongoDB. My goal is to deliver secure, fast, and user-friendly websites that help businesses grow and succeed online.
-</h6>
+            >
+              FRONTEND AND <br />
+              <span className="block">MERN STACK DEVELOPER</span>
+            </h1>
+            <h6 className="text-2xl font-Cabin   leading-relaxed mb-3">
+              I am a Frontend and MERN Stack Developer with strong experience in
+              building modern, responsive, and performance-driven web
+              applications. I specialize in creating clean user interfaces,
+              writing scalable and maintainable code, and developing full-stack
+              solutions using React, Node.js, Express, and MongoDB. My goal is
+              to deliver secure, fast, and user-friendly websites that help
+              businesses grow and succeed online.
+            </h6>
 
-<h6 className=" text-1xl mt-40 font-Cabin  ">
-  © Jahid hossen 2026. All rights reserved.
-</h6>
+            <h6 className=" text-1xl mt-40 font-Cabin  ">
+              © Jahid hossen 2026. All rights reserved.
+            </h6>
+          </div>
 
+          {/* RIGHT: IMAGE */}
+          <div className="flex-shrink-0  rounded-[5px] p-2 mb-100  flex justify-center items-center">
+            <div className="relative">
+              <div className="relative inline-block">
+                <img
+                  src={JahidHossen}
+                  alt="Jahid Hossen"
+                  className="w-[220px] sm:w-[280px] md:w-[340px] mt-42 pb-20 lg:w-[650px] object-cover rounded-lg  opacity-90"
+                />
+                <div className="absolute inset-0 shadow-[0_10px_30px_rgba(0,0,0,0.60),0_6px_6px_rgba(0,0,0,0.40)] rounded-lg mix-blend-multiply">
+                  <div className="flex items-center justify-between p-6 backdrop-blur-sm rounded-xl  ">
+                    {/* Social Icons */}
+                    <div className="flex space-x-3">
+                      {socialIcons.map((social, index) => (
+                        <a
+                          key={index}
+                          href={social.href}
+                          className={`p-2 rounded-lg  ${social.color} ${social.hover} transition-all duration-300 transform hover:scale-110`}
+                        >
+                          <social.Icon className="w-6 h-6" />
+                        </a>
+                      ))}
+                    </div>
 
-    </div>
-
-    {/* RIGHT: IMAGE */}
-<div className="flex-shrink-0  rounded-[5px] p-2 mb-100  flex justify-center items-center">
-<div className="relative">
-<div className="relative inline-block">
-  <img
-    src={JahidHossen}
-    alt="Jahid Hossen"
-    className="w-[220px] sm:w-[280px] md:w-[340px] mt-42 pb-20 lg:w-[650px] object-cover rounded-lg  opacity-90"
-    />
-  <div className="absolute inset-0 shadow-[0_10px_30px_rgba(0,0,0,0.60),0_6px_6px_rgba(0,0,0,0.40)] rounded-lg mix-blend-multiply">
- <div className="flex items-center justify-between p-6 backdrop-blur-sm rounded-xl  ">
-      {/* Social Icons */}
-      <div className="flex space-x-3">
-        {socialIcons.map((social, index) => (
-          <a
-            key={index}
-            href={social.href}
-            className={`p-2 rounded-lg  ${social.color} ${social.hover} transition-all duration-300 transform hover:scale-110`}
-          >
-            <social.Icon className="w-6 h-6" />
-          </a>
-        ))}
-      </div>
-
-      {/* Experience Badge */}
-      <div className="flex items-center space-x-3 px-4 py-2 bg-gradient-to-r  rounded-lg  ">
-        <FaAward className="w-12 h-12 text-[#0AE448]" />
-        <div>
-        <div className="flex items-baseline gap-1">
-  <span className="text-3xl font-bold  font-BebasNeue ">3</span> 
-  <span className="text-2xl tracking-wide font-Cabin ">
-    Years Experience
-    
-  </span>
- 
-</div>
-
+                    {/* Experience Badge */}
+                    <div className="flex items-center space-x-3 px-4 py-2 bg-gradient-to-r  rounded-lg  ">
+                      <FaAward className="w-12 h-12 text-[#0AE448]" />
+                      <div>
+                        <div className="flex items-baseline gap-1">
+                          <span className="text-3xl font-bold  font-BebasNeue ">
+                            3
+                          </span>
+                          <span className="text-2xl tracking-wide font-Cabin ">
+                            Years Experience
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* Bottom opacity overlay - stronger version */}
+              <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black via-black/70 to-transparent mix-blend-multiply rounded-b-lg pointer-events-none opacity-80"></div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
-  {/* Bottom opacity overlay - stronger version */}
-    <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black via-black/70 to-transparent mix-blend-multiply rounded-b-lg pointer-events-none opacity-80">
-   
-    </div>
-</div>
-</div>
-
-  </div>
-</div>
-
-
-
-
-
-
-
 
       {/* PARTICLES BACKGROUND */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <Canvas camera={{ position: [0, 0, 4], fov: 60 }} gl={{ antialias: true, preserveDrawingBuffer: true }}>
+        <Canvas
+          camera={{ position: [0, 0, 4], fov: 60 }}
+          gl={{ antialias: true, preserveDrawingBuffer: true }}
+        >
           <ambientLight intensity={0.8} />
           <ParticleBackground />
         </Canvas>
@@ -379,6 +416,7 @@ const Hero = () => {
           />
         </svg>
       </div>
+     
     </div>
   );
 };
