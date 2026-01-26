@@ -5,6 +5,7 @@ import * as THREE from "three";
 import { gsap } from "gsap";
 import logo from "../img/jh-logo-jahid-hossen-shakil.png";
 import JahidHossen from "../img/Jahid-Hossen-JahidHossen.png";
+
 import {
   FaLinkedin,
   FaGithub,
@@ -154,7 +155,7 @@ const Hero = () => {
   }, [isMenuOpen]);
 
   return (
-    <div className="relative bg-[#191919] w-full min-h-screen md:h-screen overflow-hidden">
+    <div className=" bg-[#191919] w-full min-h-screen md:h-screen overflow-hidden">
       {/* NAVBAR */}
       <nav className="absolute top-2 left-0 right-0 z-40 px-4 py-4 sm:px-6 sm:py-6">
         <div className="max-w-[1800px] mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-0">

@@ -1,4 +1,8 @@
 import React from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Specialization = () => {
   const skills = [
@@ -11,7 +15,7 @@ const Specialization = () => {
   ];
 
   return (
-    <section className="w-full min-h-screen bg-[#191919] text-white flex flex-col items-center justify-center px-5 py-20 text-center">
+    <section className="  w-full min-h-screen bg-[#191919] text-white flex flex-col items-center justify-center px-5 py-20 text-center">
       <h2 className="text-4xl sm:text-5xl md:text-6xl text-[#0AE448] mb-5 font-bold">
         Specialization
       </h2>

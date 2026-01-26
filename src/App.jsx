@@ -3,84 +3,121 @@ import styled from "styled-components";
 import { gsap, CSSPlugin, Expo } from "gsap";
 import Hero from "./Components/Hero";
 import Specialization from "./Components/Specialization";
+import { useRef, } from "react";
+
+
+
 
 gsap.registerPlugin(CSSPlugin);
 
 function App() {
+
+
+  // ===============================
   const [counter, setCounter] = useState(0);
   const [loadingComplete, setLoadingComplete] = useState(false);
-
+const contentRef = useRef(null);
   // ===== Loading Counter =====
   useEffect(() => {
-    const count = setInterval(() => {
-      setCounter((counter) =>
-        counter < 100
-          ? counter + 1
-          : (clearInterval(count), reveal(), 100)
-      );
-    }, 25);
+  const interval = setInterval(() => {
+    setCounter((prev) => {
+      if (prev < 100) {
+        return prev + 1;
+      } else {
+        clearInterval(interval);
+        reveal(); // loading শেষ হলে animation
+        return 100;
+      }
+    });
+  }, 25);
 
-    return () => clearInterval(count);
-  }, []);
+  return () => clearInterval(interval);
+}, []);
+
+useEffect(() => {
+  document.body.style.overflow = loadingComplete ? "auto" : "hidden";
+}, [loadingComplete]);
 
   // ===== GSAP Reveal Animation =====
-  const reveal = () => {
-    gsap
-      .timeline()
-      .to(".follow", {
-        width: "100%",
-        ease: Expo.easeInOut,
-        duration: 1.2,
-        delay: 0.7,
-      })
-      .to(".hide", { opacity: 0, duration: 0.3 })
-      .to(".hide", { display: "none", duration: 0.3 })
-      .to(".follow", {
-        height: "100%",
-        ease: Expo.easeInOut,
-        duration: 0.7,
-        delay: 0.5,
-      })
-.to(".content", {
-  x: 0,               // screen এ আসার জন্য
-  ease: Expo.easeInOut,
-  duration: 0.7,         // 3 সেকেন্ডে slide হবে
-  onComplete: () => setLoadingComplete(true),
-})
-.to(".title-lines", { display: "block", duration: 0.1 })
-.to(".title-lines", {
-  opacity: 1,
-  stagger: 0.15,
-  ease: Expo.easeInOut,
-  duration: 0.6,
+const reveal = () => {
+  const tl = gsap.timeline();
+
+  tl.to(".follow", {
+    width: "100%",
+    duration: 1.2,
+    ease: Expo.easeInOut,
+  })
+
+    .to(".hide", {
+      opacity: 0,
+      duration: 0.3,
+    })
+
+    .to(".follow", {
+      height: "100%",
+      duration: 0.8,
+      ease: Expo.easeInOut,
+    })
+
+    // loader fade (still mounted)
+    .to(".loading", {
+      opacity: 0,
+      duration: 0.6,
+      ease: Expo.easeInOut,
+    })
+
+    // content reveal BEFORE loader unmount
+    .fromTo(
+  ".content",
+  { x: "-100%", visibility: "hidden" },
+  {
+    x: "0%",
+    visibility: "visible",
+    duration: 1.1,
+    ease: Expo.easeOut,
+  },
+  "-=0.4"
+)
+
+
+
+    // finally unmount loader
+.add(() => {
+  const content = document.querySelector(".content");
+
+  // content back to normal document flow
+  content.style.position = "relative";
+  content.style.visibility = "visible";
+
+  setLoadingComplete(true);
 });
 
-  };
+};
 
   return (
     <AppContainer>
       {/* ===== LOADING ANIMATION ===== */}
-      {!loadingComplete && (
-        <Loading>
-          <Follow className="follow" />
-          <ProgressBar
-            className="hide"
-            style={{ width: counter + "%" }}
-          />
-          <Count>{counter}%</Count>
-        </Loading>
-      )}
+  {!loadingComplete && (
+  <Loading className="loading">
+    <Follow className="follow" />
+    <ProgressBar className="hide" style={{ width: counter + "%" }} />
+    <Count className="hide">{counter}%</Count>
+  </Loading>
+)}
+
 
       {/* ===== HERO CONTENT ===== */}
-      <Content className="content">
+      <Content className="content hero-wrapper">
         <Hero />
       </Content>
 
       {/* ===== SPECIALIZATION SECTION ===== */}
       {loadingComplete && (
-        <SpecializationWrapper>
+        
+          <SpecializationWrapper>
           <Specialization />
         </SpecializationWrapper>
+        
       )}
     </AppContainer>
   );
@@ -93,10 +130,11 @@ export default App;
 const AppContainer = styled.div`
   width: 100vw;
   min-height: 100vh;
-  color: #000;
+  background-color: #0ae448;
   position: relative;
   overflow-x: hidden;
 `;
+
 
 const Loading = styled.div`
     height: 100%;
@@ -139,6 +177,8 @@ const Count = styled.p`
 `;
 
 const Content = styled.div`
+  position: fixed;
+  inset: 0;
   width: 100%;
   height: 100vh;
   background-color: #0ae448;
@@ -146,10 +186,13 @@ const Content = styled.div`
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding: auto;
 
-  transform: translateX(-100%); /* left থেকে শুরু */
+  transform: translateX(-100%);
+  visibility: hidden;
 `;
+
+
+
 
 
 const SpecializationWrapper = styled.div`

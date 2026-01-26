@@ -13,6 +13,8 @@
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
+
+
 @keyframes fadeInDown {
   0% {
     opacity: 0;
@@ -55,11 +57,15 @@
   animation-delay: 700ms;
 }
 
-html, body, #root {
-  width: 100%;
-  height: 100%;
+html,
+body,
+#root {
+  
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
 }
 
 .canvas-wrapper {
@@ -98,4 +104,28 @@ html, body, #root {
   --font-BebasNeue: "BebasNeue", sans-serif;
   --font-Cabin: "Cabin", sans-serif;
  
+}
+
+.hero-wrapper {
+  height: 200vh;      /* scroll distance */
+  position: relative;
+}
+
+.hero-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.special-wrapper {
+  min-height: 100vh;
+}
+
+
+.left {
+  position: sticky;
+  top: 20px;
+}
+.right {
+  position: relative; /* scrolls normally */
 }
