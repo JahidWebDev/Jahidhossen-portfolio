@@ -25,6 +25,15 @@ const socialIcons = [
 ];
 /* ================= PARTICLE BACKGROUND ================= */
 const ParticleBackground = () => {
+useEffect(() => {
+  // document.body.style.overflow = "hidden";
+  return () => {
+    // document.body.style.overflow = "auto";
+  };
+}, []);
+
+
+
   // ================================
   const points = useRef();
   const count = 1700;
@@ -153,9 +162,10 @@ const Hero = () => {
       });
     }
   }, [isMenuOpen]);
-
+// ===============================
   return (
-    <div className=" bg-[#191919] w-full min-h-screen md:h-screen overflow-hidden">
+    <div className=" w-full h-screen 
+  bg-[#191919] w-full min-h-screen md:h-screen overflow-hidden">
       {/* NAVBAR */}
       <nav className="absolute top-2 left-0 right-0 z-40 px-4 py-4 sm:px-6 sm:py-6">
         <div className="max-w-[1800px] mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-0">
@@ -193,29 +203,30 @@ const Hero = () => {
           </div>
 
           {/* HAMBURGER BUTTON */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="absolute top-4 right-4 sm:relative sm:top-0 sm:right-0 w-10 h-10 sm:w-10 sm:h-10 relative z-50"
-            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          >
-            <div className="flex flex-col justify-center items-center w-full h-full">
-              <span
-                className={`block w-6 h-0.5 bg-white transition-all duration-300 ${
-                  isMenuOpen ? "rotate-45 translate-y-1.5" : ""
-                }`}
-              />
-              <span
-                className={`block w-6 h-0.5 bg-white my-1.5 transition-all duration-300 ${
-                  isMenuOpen ? "opacity-0" : ""
-                }`}
-              />
-              <span
-                className={`block w-6 h-0.5 bg-white transition-all duration-300 ${
-                  isMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
-                }`}
-              />
-            </div>
-          </button>
+         <button
+  onClick={() => setIsMenuOpen(!isMenuOpen)}
+  className="relative top-4 right-4 w-[60px] h-[40px] rounded-[6px] bg-[#0ae448] sm:relative sm:top-0 sm:right-0 sm:w-10 sm:h-10 z-50"
+  aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+>
+  <div className="flex flex-col justify-center items-center w-full h-full space-y-1">
+    <span
+      className={`block w-8 h-1 rounded bg-[#0e100f] transition-all duration-300 ${
+        isMenuOpen ? "rotate-45 translate-y-1.5" : ""
+      }`}
+    />
+    <span
+      className={`block w-8 h-1 rounded bg-[#0e100f] transition-all duration-300 ${
+        isMenuOpen ? "opacity-0" : ""
+      }`}
+    />
+    <span
+      className={`block w-8 h-1 rounded bg-[#0e100f] transition-all duration-300 ${
+        isMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
+      }`}
+    />
+  </div>
+</button>
+
         </div>
       </nav>
 
