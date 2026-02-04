@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { gsap, CSSPlugin, Expo } from "gsap";
 import Hero from "./Components/Hero";
 import Specialization from "./Components/Specialization";
+import Resume from "./Components/Resume";
 
 gsap.registerPlugin(CSSPlugin);
 
@@ -24,6 +25,7 @@ function App() {
     return () => clearInterval(interval);
   }, []);
 
+  // Disable scroll during loading
   useEffect(() => {
     document.body.style.overflow = loadingComplete ? "auto" : "hidden";
   }, [loadingComplete]);
@@ -32,31 +34,14 @@ function App() {
   const reveal = () => {
     const tl = gsap.timeline();
 
-    tl.to(".follow", {
-      width: "100%",
-      duration: 1.2,
-      ease: Expo.easeInOut,
-    })
+    tl.to(".follow", { width: "100%", duration: 1.2, ease: Expo.easeInOut })
       .to(".hide", { opacity: 0, duration: 0.3 })
-      .to(".follow", {
-        height: "100%",
-        duration: 0.8,
-        ease: Expo.easeInOut,
-      })
-      .to(".loading", {
-        opacity: 0,
-        duration: 0.6,
-        ease: Expo.easeInOut,
-      })
+      .to(".follow", { height: "100%", duration: 0.8, ease: Expo.easeInOut })
+      .to(".loading", { opacity: 0, duration: 0.6, ease: Expo.easeInOut })
       .fromTo(
         ".hero-content",
         { x: "-100%", visibility: "hidden" },
-        {
-          x: "0%",
-          visibility: "visible",
-          duration: 1.1,
-          ease: Expo.easeOut,
-        },
+        { x: "0%", visibility: "visible", duration: 1.1, ease: Expo.easeOut },
         "-=0.4"
       )
       .add(() => setLoadingComplete(true));
@@ -73,32 +58,42 @@ function App() {
         </Loading>
       )}
 
-      {/* ===== HERO (FIXED) ===== */}
+      {/* ===== HERO ===== */}
       <HeroWrapper className="hero-content">
         <Hero />
       </HeroWrapper>
 
-      {/* ===== SCROLL SPACE ===== */}
-      <ScrollSpacer />
-
-      {/* ===== PAGE COMES FROM BOTTOM ===== */}
+      {/* ===== PAGE CONTENT ===== */}
       {loadingComplete && (
-        <SpecializationWrapper>
-          <Specialization />
-        </SpecializationWrapper>
+        <>
+          {/* Spacer so Hero height is preserved */}
+          <ScrollSpacer />
+      {/* ===== PAGE COMES FROM BOTTOM ===== */}
+<section id="specialization">
+  {loadingComplete && (
+    <SpecializationWrapper>
+      <Specialization />
+    </SpecializationWrapper>
+  )}
+</section>
+<section id="resume" className="">
+    <Resume/>
+</section>
+        </>
       )}
     </AppContainer>
   );
 }
 
 export default App;
+
+/* ===== Styled Components ===== */
 const AppContainer = styled.div`
   width: 100vw;
   overflow-x: hidden;
   background-color: #0ae448;
 `;
 
-/* ===== LOADER ===== */
 const Loading = styled.div`
   position: fixed;
   inset: 0;
@@ -106,7 +101,7 @@ const Loading = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999;
+  z-index: 9999;
 `;
 
 const Follow = styled.div`
@@ -132,35 +127,39 @@ const Count = styled.p`
   color: #fff;
 `;
 
-/* ===== HERO FIXED ===== */
 const HeroWrapper = styled.div`
   position: fixed;
   inset: 0;
   width: 100%;
   height: 100vh;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
-  z-index: 1;
+  z-index: 10;
 `;
 
-/* ===== SCROLL SPACE ===== */
 const ScrollSpacer = styled.div`
-  height: 100vh;
+  height: 100vh; /* same as hero height */
 `;
 
-/* ===== PAGE OVER HERO ===== */
 const SpecializationWrapper = styled.div`
   position: relative;
   width: 100%;
   min-height: 100vh;
-
   background-color: #191919;
-  z-index: 10;
-
   display: flex;
   justify-content: center;
   align-items: flex-start;
+ 
+`;
+
+const ResumeWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0ae448;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 80px 20px;
 `;

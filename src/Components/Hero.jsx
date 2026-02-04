@@ -205,7 +205,7 @@ const Hero = () => {
           {/* HAMBURGER BUTTON */}
          <button
   onClick={() => setIsMenuOpen(!isMenuOpen)}
-  className="relative top-4 right-4 w-[60px] h-[40px] rounded-[6px] bg-[#0ae448] sm:relative sm:top-0 sm:right-0 sm:w-10 sm:h-10 z-50"
+  className="relative top-4 right-4 w-[60px] h-[30spx] rounded-[6px] bg-[#0ae448] sm:relative sm:top-0 sm:right-0 sm:w-10 sm:h-10 z-50"
   aria-label={isMenuOpen ? "Close menu" : "Open menu"}
 >
   <div className="flex flex-col justify-center items-center w-full h-full space-y-1">
@@ -252,23 +252,24 @@ const Hero = () => {
           ✕
         </button>
 
-        <div className="flex flex-col mt-40 font-blinkma justify-start px-6 sm:px-10 space-y-4 sm:space-y-7 text-lg sm:text-2xl font-bold">
-          {menuItems.map((item, i) => (
-            <div
-              key={item}
-              ref={(el) => (itemsRef.current[i] = el)}
-              onClick={() => {
-                setActiveItem(item);
-                setIsMenuOpen(false);
-              }}
-              className="relative cursor-pointer pl-6 sm:pl-8 hover:text-[#FFFCE1] transition-colors duration-300 group"
-            >
-              <span className="group-hover:translate-x-2 transition-transform duration-300 inline-block">
-                {item}
-              </span>
-            </div>
-          ))}
-        </div>
+       <div className="flex flex-col mt-40 font-blinkma justify-start px-6 sm:px-10 space-y-4 sm:space-y-7 text-lg sm:text-2xl font-bold">
+  {menuItems.map((item, i) => {
+    const link = `#${item.toLowerCase().replace(/\s+/g, "")}`; // e.g., "Specialization" -> "#specialization"
+    return (
+      <a
+        key={item}
+        href={link}
+        onClick={() => setIsMenuOpen(false)} // close menu on click
+        className="relative cursor-pointer pl-6 sm:pl-8 hover:text-[#FFFCE1] transition-colors duration-300 group"
+      >
+        <span className="group-hover:translate-x-2 transition-transform duration-300 inline-block">
+          {item}
+        </span>
+      </a>
+    );
+  })}
+</div>
+
         <div className="absolute text-black/90 bottom-6 sm:bottom-16 left-6 sm:left-10 right-6 sm:right-10 text-center space-y-4">
           {/* Social Icons */}
           <div className="flex justify-center gap-6">
