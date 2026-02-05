@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import { gsap, CSSPlugin, Expo } from "gsap";
 import Hero from "./Components/Hero";
@@ -8,6 +8,25 @@ import Resume from "./Components/Resume";
 gsap.registerPlugin(CSSPlugin);
 
 function App() {
+
+  const sectionRef = useRef(null);
+
+useEffect(() => {
+  if (!sectionRef.current) return; // ⚡️ prevent null target
+  gsap.from(sectionRef.current, {
+    opacity: 0,
+    y: 50,
+    scrollTrigger: {
+      trigger: sectionRef.current,
+      start: "top 80%",
+      toggleActions: "play none none none",
+    },
+  });
+}, []);
+
+
+
+  //==========================
   const [counter, setCounter] = useState(0);
   const [loadingComplete, setLoadingComplete] = useState(false);
 
@@ -59,9 +78,11 @@ function App() {
       )}
 
       {/* ===== HERO ===== */}
-      <HeroWrapper className="hero-content">
-        <Hero />
-      </HeroWrapper>
+      // Loader complete হলে Hero relative
+<HeroWrapper fixed={!loadingComplete}>
+  <Hero />
+</HeroWrapper>
+
 
       {/* ===== PAGE CONTENT ===== */}
       {loadingComplete && (
@@ -69,16 +90,32 @@ function App() {
           {/* Spacer so Hero height is preserved */}
           <ScrollSpacer />
       {/* ===== PAGE COMES FROM BOTTOM ===== */}
-<section id="specialization">
-  {loadingComplete && (
-    <SpecializationWrapper>
-      <Specialization />
-    </SpecializationWrapper>
-  )}
+<HeroWrapper>
+  <Hero />
+</HeroWrapper>
+
+<ScrollSpacer />   {/* Hero height space */}
+
+{/* ===== HERO ===== */}
+{/* ===== HERO ===== */}
+<HeroWrapper className="hero-content">
+  <Hero />
+</HeroWrapper>
+
+{/* Hero space */}
+<ScrollSpacer />
+
+{/* ===== SPECIALIZATION ===== */}
+   <section id="specialization" ref={sectionRef}>
+   <Specialization/>
+    </section>
+
+<section id="resume">
+  <Resume />
 </section>
-<section id="resume" className="">
-    <Resume/>
-</section>
+
+
+
         </>
       )}
     </AppContainer>
@@ -126,40 +163,17 @@ const Count = styled.p`
   font-size: 40px;
   color: #fff;
 `;
-
 const HeroWrapper = styled.div`
   position: fixed;
   inset: 0;
-  width: 100%;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   z-index: 10;
 `;
+
 
 const ScrollSpacer = styled.div`
   height: 100vh; /* same as hero height */
 `;
 
-const SpecializationWrapper = styled.div`
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  background-color: #191919;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
- 
-`;
 
-const ResumeWrapper = styled.div`
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  background-color: #0ae448;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 80px 20px;
-`;
+

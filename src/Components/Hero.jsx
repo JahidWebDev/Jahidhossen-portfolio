@@ -5,6 +5,9 @@ import * as THREE from "three";
 import { gsap } from "gsap";
 import logo from "../img/jh-logo-jahid-hossen-shakil.png";
 import JahidHossen from "../img/Jahid-Hossen-JahidHossen.png";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
 
 import {
   FaLinkedin,
@@ -33,6 +36,34 @@ useEffect(() => {
 }, []);
 
 
+const sectionRef = useRef(null);
+useEffect(() => {
+  const ctx = gsap.context(() => {
+    gsap.fromTo(
+      sectionRef.current,
+      {
+        y: "100%",
+        opacity: 0,
+      },
+      {
+        y: "0%",
+        opacity: 1,
+        duration: 1,
+        ease: "power4.out",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top bottom",   // hero শেষ হলে
+          end: "+=100%",
+          pin: true,             // 🔥 FIXED LIKE BEHAVIOR
+          pinSpacing: false,     // page move করবে না
+          scrub: false,
+        },
+      }
+    );
+  }, sectionRef);
+
+  return () => ctx.revert();
+}, []);
 
   // ================================
   const points = useRef();
@@ -165,7 +196,7 @@ const Hero = () => {
 // ===============================
   return (
     <div className=" w-full h-screen 
-  bg-[#191919] w-full min-h-screen md:h-screen overflow-hidden">
+  bg-[#191919] w-full min-h-screen  md:h-screen overflow-hidden">
       {/* NAVBAR */}
       <nav className="absolute top-2 left-0 right-0 z-40 px-4 py-4 sm:px-6 sm:py-6">
         <div className="max-w-[1800px] mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-0">
