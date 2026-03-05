@@ -1,11 +1,8 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
-import {
-  FaFacebookF,
-  FaLinkedinIn,
-  FaGithub,
-  FaWhatsapp,
-} from "react-icons/fa";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Specialization = () => {
   const skills = [
@@ -17,205 +14,95 @@ const Specialization = () => {
     "GSAP Animations",
   ];
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const menuRef = useRef(null);
-  const overlayRef = useRef(null);
-  const itemsRef = useRef([]);
+  const sectionRef = useRef(null);
+  const skillsRef = useRef([]);
+  const subSectionRef = useRef(null);
 
-  const menuItems = [
-    "Home",
-    "Specialization",
-    "Resume",
-    "About",
-    "Projects",
-    "Testimonials",
-    "Contact",
-  ];
-
-  // ===== GSAP MENU =====
   useEffect(() => {
-    if (!menuRef.current || !overlayRef.current) return;
+    if (!sectionRef.current) return;
 
-    if (isMenuOpen) {
-      gsap.set(overlayRef.current, { display: "block", opacity: 0 });
-      gsap.to(overlayRef.current, { opacity: 1, duration: 0.3 });
+    // Animate the heading
+    gsap.from(sectionRef.current.querySelector("h2"), {
+      y: 50,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top 80%",
+      },
+    });
 
-      gsap.set(menuRef.current, { x: "100%", display: "flex" });
-      gsap.set(itemsRef.current, { x: 40, opacity: 0 });
+    // Animate the paragraph
+    gsap.from(sectionRef.current.querySelector("p"), {
+      y: 50,
+      opacity: 0,
+      duration: 1,
+      delay: 0.2,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top 80%",
+      },
+    });
 
-      gsap.to(menuRef.current, {
-        x: "0%",
-        duration: 0.6,
-        ease: "power3.out",
-      });
+    // Animate the skill items with stagger
+    gsap.from(skillsRef.current, {
+      y: 50,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.15,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top 75%",
+      },
+    });
 
-      gsap.to(itemsRef.current, {
-        x: 0,
-        opacity: 1,
-        stagger: 0.08,
-        delay: 0.25,
-        duration: 0.45,
-      });
-    } else {
-      gsap.to(overlayRef.current, {
+    // Animate the sub-section (hello)
+    if (subSectionRef.current) {
+      gsap.from(subSectionRef.current, {
+        y: 100,
         opacity: 0,
-        duration: 0.25,
-        onComplete: () =>
-          gsap.set(overlayRef.current, { display: "none" }),
-      });
-
-      gsap.to(menuRef.current, {
-        x: "100%",
-        duration: 0.45,
-        onComplete: () =>
-          gsap.set(menuRef.current, { display: "none" }),
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: subSectionRef.current,
+          start: "top 80%",
+        },
       });
     }
-  }, [isMenuOpen]);
+  }, []);
 
   return (
-  <section>
-      <section className="min-h-screen z-[9999] bg-[#191919] text-white relative">
-      {/* ===== NAVBAR ===== */}
-      <nav className="sticky top-0 z-50 px-6 py-5 bg-[#191919]/80 backdrop-blur-md flex justify-between items-center">
-        <h2 className="text-2xl text-[#0AE448] font-bold">Jahid Hossen</h2>
+    <section
+      
+      className="w-full  sticky top-0   z-50 min-h-screen bg-[#bb2e2e] flex flex-col items-center justify-center px-5 py-20 text-center"
+    >
+      <h1 className="text-4xl sm:text-5xl md:text-6xl text-[#0AE448] mb-5 font-bold tracking-wide uppercase">
+        Specialization
+      </h1>
 
-        <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="w-10 h-10 bg-[#0AE448] rounded flex flex-col justify-center items-center space-y-1"
-        >
-          <span className={`block w-6 h-1 bg-black ${isMenuOpen && "rotate-45 translate-y-1.5"}`} />
-          <span className={`block w-6 h-1 bg-black ${isMenuOpen && "opacity-0"}`} />
-          <span className={`block w-6 h-1 bg-black ${isMenuOpen && "-rotate-45 -translate-y-1.5"}`} />
-        </button>
-      </nav>
+      <p className="text-base sm:text-lg md:text-xl max-w-3xl mb-12 leading-relaxed text-gray-300">
+        I specialize in building modern web applications with React, and full-stack MERN projects using Node.js, Express, and MongoDB. My focus is on performance, scalability, and clean user interfaces.
+      </p>
 
-      {/* ===== OVERLAY ===== */}
-      <div
-        ref={overlayRef}
-        className="fixed inset-0 bg-black/70 z-40 hidden"
-        onClick={() => setIsMenuOpen(false)}
-      />
-
-      {/* ===== MENU ===== */}
-      <div
-        ref={menuRef}
-        className="fixed top-0 right-0 h-full w-80 bg-[#0AE448] z-50 hidden p-6 flex flex-col justify-between"
-      >
-        <ul className="mt-20 space-y-4 text-black font-bold text-lg">
-          {menuItems.map((item, i) => (
-            <li key={i} ref={(el) => (itemsRef.current[i] = el)}>
-              <a href={`#${item.toLowerCase()}`} onClick={() => setIsMenuOpen(false)}>
-                {item}
-              </a>
-            </li>
-          ))}
-        </ul>
-
-        <div className="text-black text-center">
-          <div className="flex justify-center gap-4 text-xl mb-4">
-            <FaFacebookF />
-            <FaLinkedinIn />
-            <FaGithub />
-            <FaWhatsapp />
+      <div className="flex flex-wrap justify-center gap-6">
+        {skills.map((skill, index) => (
+          <div
+            key={index}
+            ref={(el) => (skillsRef.current[index] = el)}
+            className="relative group px-6 py-3 bg-[#0AE448]/10 backdrop-blur-sm border-2 border-[#0AE448] rounded-2xl font-semibold text-[#0AE448] transition-transform duration-300 hover:scale-110 hover:bg-[#0AE448]/20 hover:shadow-lg"
+          >
+            <span className="relative z-10">{skill}</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0AE448]/20 via-transparent to-[#0AE448]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl pointer-events-none"></div>
           </div>
-          <p className="text-sm">© Jahid Hossen 2026</p>
-        </div>
+        ))}
       </div>
 
-      {/* ===== CONTENT ===== */}
-      <div className="min-h-screen flex flex-col justify-center items-center px-6 text-center">
-        <h1 className="text-3xl mb-4">Hello World</h1>
-        <h2 className="text-5xl text-[#0AE448] font-bold mb-6">
-          Specialization
-        </h2>
-        <p className="max-w-3xl text-lg mb-10">
-          I specialize in Frontend Development using React and MERN stack.
-        </p>
-
-        <div className="flex flex-wrap justify-center gap-4">
-          {skills.map((skill, i) => (
-            <div
-              key={i}
-              className="px-4 py-2 border-2 border-[#0AE448] text-[#0AE448] font-bold rounded-lg hover:bg-[#0AE448] hover:text-black transition"
-            >
-              {skill}
-            </div>
-          ))}
-        </div>
-      </div>
+      {/* Sub-section */}
+    
     </section>
-      <section className="min-h-screen z-[9999] bg-[#191919] text-white relative">
-      {/* ===== NAVBAR ===== */}
-      <nav className="sticky top-0 z-50 px-6 py-5 bg-[#191919]/80 backdrop-blur-md flex justify-between items-center">
-        <h2 className="text-2xl text-[#0AE448] font-bold">Jahid Hossen</h2>
-
-        <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="w-10 h-10 bg-[#0AE448] rounded flex flex-col justify-center items-center space-y-1"
-        >
-          <span className={`block w-6 h-1 bg-black ${isMenuOpen && "rotate-45 translate-y-1.5"}`} />
-          <span className={`block w-6 h-1 bg-black ${isMenuOpen && "opacity-0"}`} />
-          <span className={`block w-6 h-1 bg-black ${isMenuOpen && "-rotate-45 -translate-y-1.5"}`} />
-        </button>
-      </nav>
-
-      {/* ===== OVERLAY ===== */}
-      <div
-        ref={overlayRef}
-        className="fixed inset-0 bg-black/70 z-40 hidden"
-        onClick={() => setIsMenuOpen(false)}
-      />
-
-      {/* ===== MENU ===== */}
-      <div
-        ref={menuRef}
-        className="fixed top-0 right-0 h-full w-80 bg-[#0AE448] z-50 hidden p-6 flex flex-col justify-between"
-      >
-        <ul className="mt-20 space-y-4 text-black font-bold text-lg">
-          {menuItems.map((item, i) => (
-            <li key={i} ref={(el) => (itemsRef.current[i] = el)}>
-              <a href={`#${item.toLowerCase()}`} onClick={() => setIsMenuOpen(false)}>
-                {item}
-              </a>
-            </li>
-          ))}
-        </ul>
-
-        <div className="text-black text-center">
-          <div className="flex justify-center gap-4 text-xl mb-4">
-            <FaFacebookF />
-            <FaLinkedinIn />
-            <FaGithub />
-            <FaWhatsapp />
-          </div>
-          <p className="text-sm">© Jahid Hossen 2026</p>
-        </div>
-      </div>
-
-      {/* ===== CONTENT ===== */}
-      <div className="min-h-screen flex flex-col justify-center items-center px-6 text-center">
-        <h1 className="text-3xl mb-4">Hello World</h1>
-        <h2 className="text-5xl text-[#0AE448] font-bold mb-6">
-          Specialization
-        </h2>
-        <p className="max-w-3xl text-lg mb-10">
-          I specialize in Frontend Development using React and MERN stack.
-        </p>
-
-        <div className="flex flex-wrap justify-center gap-4">
-          {skills.map((skill, i) => (
-            <div
-              key={i}
-              className="px-4 py-2 border-2 border-[#0AE448] text-[#0AE448] font-bold rounded-lg hover:bg-[#0AE448] hover:text-black transition"
-            >
-              {skill}
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  </section>
   );
 };
 

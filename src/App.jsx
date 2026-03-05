@@ -5,8 +5,10 @@ import Hero from "./Components/Hero";
 import Specialization from "./Components/Specialization";
 import Resume from "./Components/Resume";
 
-gsap.registerPlugin(CSSPlugin);
 
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger)
 function App() {
 
   const sectionRef = useRef(null);
@@ -106,7 +108,7 @@ useEffect(() => {
 <ScrollSpacer />
 
 {/* ===== SPECIALIZATION ===== */}
-   <section id="specialization" ref={sectionRef}>
+   <section id="specialization" >
    <Specialization/>
     </section>
 
