@@ -129,3 +129,20 @@ body,
 .right {
   position: relative; /* scrolls normally */
 }
+
+
+/* Hide scrollbar - Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+/* Hide scrollbar - Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* Hide scrollbar - IE / Edge */
+body {
+  -ms-overflow-style: none;
+}
