@@ -146,3 +146,10 @@ html {
 body {
   -ms-overflow-style: none;
 }
+
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  visibility: visible; /* initially visible */
+}

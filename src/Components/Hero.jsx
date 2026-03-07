@@ -1,8 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
-import JahidHossen from "../img/Jahid-Hossen-JahidHossen.png";
+import Jahid from "../img/Jahid-Hossen-JahidHossen.png";
 import { FaLinkedin, FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
-import { gsap } from "gsap";
 
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 /* ================= SOCIAL ICONS ================= */
 const socialIcons = [
   { Icon: FaLinkedin, hover: "hover:text-blue-400", href: "#" },
@@ -13,6 +16,65 @@ const socialIcons = [
 
 /* ================= HERO COMPONENT ================= */
 const Hero = () => {
+    const sectionsRef = useRef([]);
+useEffect(() => {
+
+  const sections = sectionsRef.current;
+
+  sections.forEach((section, i) => {
+
+    if (!section) return;
+
+    // last section pin করব না
+    if (i === sections.length - 1) return;
+
+    ScrollTrigger.create({
+      trigger: section,
+      start: "top top",
+      end: "+=100%",
+      pin: true,
+      pinSpacing: true
+    });
+
+  });
+
+}, []);
+
+useEffect(() => {
+
+  const sections = sectionsRef.current.filter(Boolean);
+
+  sections.forEach((section, index) => {
+
+    if (index === sections.length - 1) return;
+
+    ScrollTrigger.create({
+      trigger: section,
+      start: "top top",
+      end: "+=100%",
+      pin: true,
+      pinSpacing: true,
+    });
+
+  });
+
+}, []);
+
+  useEffect(() => {
+    const heroText = sectionsRef.current[0]?.querySelectorAll(
+      "div.flex-1 > *"
+    );
+    if (!heroText) return;
+
+    gsap.from(heroText, {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      ease: "power3.out",
+      stagger: 0.2,
+    });
+  }, []);
+  // ====================================
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
   const overlayRef = useRef(null);
@@ -71,9 +133,11 @@ const Hero = () => {
   }, [isMenuOpen]);
 
   return (
-    <div id="home" className="relative w-full">
+<section className=" bg-[#191919] w-full min-h-screen">
+      <div id="home" className="relative ">
       {/* ================= NAVBAR ================= */}
-      <nav className="fixed top-0 left-0 right-0 z-[9999] px-6 py-4 flex justify-between items-center text-white">
+<div>
+        <nav className="fixed top-0 left-0 right-0 z-[9999] px-6 py-4 flex justify-between items-center text-white">
         <h2 className="text-2xl sm:text-3xl font-bold">
           <span className="text-[#0AE448]">Jahid</span>{" "}
           <span className="text-[#0AE448] font-semibold ml-1">Hossen</span>
@@ -101,50 +165,6 @@ const Hero = () => {
           />
         </button>
       </nav>
-
-      {/* ================= HERO SECTION ================= */}
-      <section className="sticky top-0 w-full min-h-screen bg-[#191919] flex items-center justify-center px-6 pt-24 lg:pt-0">
-  <div className="max-w-6xl w-full flex flex-col lg:flex-row gap-10 text-[#FFFCE1]">
-    
-    {/* LEFT TEXT */}
-    <div className="flex flex-col justify-center gap-4">
-      <h4 className="uppercase text-[clamp(24px,3vw,56px)]">
-        <span className="text-[#0AE448]">Hi,</span> I am Jahid
-      </h4>
-
-      <h1 className="leading-none text-[clamp(52px,9vw,140px)] whitespace-nowrap">
-        FRONTEND AND <br />
-        <span className="block">MERN STACK DEVELOPER</span>
-      </h1>
-
-      <h6 className="text-2xl leading-relaxed mb-3 max-w-xl">
-        I am a Frontend and MERN Stack Developer with strong experience
-        in building modern, responsive, and performance-driven web
-        applications.
-      </h6>
-
-      {/* SOCIAL ICONS */}
-      <div className="flex gap-4 mt-4 text-2xl">
-        {socialIcons.map(({ Icon, hover }, idx) => (
-          <a key={idx} href="#" className={`${hover} transition`}>
-            <Icon />
-          </a>
-        ))}
-      </div>
-    </div>
-
-    {/* RIGHT IMAGE */}
-    <div className="flex-shrink-0 flex justify-center items-center">
-      <img
-        src={JahidHossen}
-        alt="Jahid Hossen"
-        className="w-[220px] sm:w-[280px] md:w-[340px] lg:w-[500px] object-cover rounded-lg opacity-90"
-      />
-    </div>
-
-  </div>
-</section>
-
       {/* ================= MENU OVERLAY ================= */}
       <div
         ref={overlayRef}
@@ -172,36 +192,22 @@ const Hero = () => {
           ))}
         </div>
       </div>
+      
 
-      {/* ================= SCROLLABLE SECTIONS ================= */}
-      <section
-        id="about"
-        className="min-h-screen p-10 bg-[#111] text-white flex flex-col justify-center"
-      >
-        <h2 className="text-4xl mb-4">About Me</h2>
-        <p>
-          I am a passionate MERN Stack developer with 3 years of experience
-          building scalable web applications and beautiful user interfaces.
-        </p>
-      </section>
+</div>
 
-      <section
-        id="projects"
-        className="min-h-screen p-10 bg-[#222] text-white flex flex-col justify-center"
-      >
-        <h2 className="text-4xl mb-4">Projects</h2>
-        <p>Here are some of my projects showcasing frontend and full-stack work.</p>
-      </section>
-
-      <section
-        id="contact"
-        className="min-h-screen p-10 bg-[#333] text-white flex flex-col justify-center"
-      >
-        <h2 className="text-4xl mb-4">Contact</h2>
-        <p>Contact me via email or social media links above.</p>
-      </section>
+      {/* ================= HERO SECTION ================= */}
 
     </div>
+
+    <section className="">
+         <h1 className="   ">bangla</h1>
+    </section>
+</section>
+
+      
+
+ 
   );
 };
 
