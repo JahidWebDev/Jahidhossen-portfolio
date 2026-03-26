@@ -1,24 +1,34 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Loading from "./loading";
-import NavBar from "./Components/NavBar";
+import Pages from "./Home/Pages";
+import NavbarWrapper from "./Components/NavbarWrapper";
+
+// import navbar wrapper
+
 
 function App() {
   const [loadingComplete, setLoadingComplete] = useState(false);
 
   return (
     <Router>
-      {/* Show Loader until loading is complete */}
-      {!loadingComplete && <Loading onComplete={() => setLoadingComplete(true)} />}
+      {/* Loader */}
+      {!loadingComplete && (
+        <Loading onComplete={() => setLoadingComplete(true)} />
+      )}
 
+      {/* Main App */}
       {loadingComplete && (
         <>
-          <NavBar /> {/* Fixed navigation */}
+          {/* Navbar + Modal */}
+          <NavbarWrapper />
+
+          {/* Page Content */}
           <div className="pt-20">
             <Routes>
-              <Route path="/" element={<h1 className="text-center mt-10 text-2xl">Home Page</h1>} />
-              <Route path="/about" element={<h1 className="text-center mt-10 text-2xl">About Page</h1>} />
-              <Route path="/contact" element={<h1 className="text-center mt-10 text-2xl">Contact Page</h1>} />
+              <Route path="/" element={<Pages />} />
+              <Route path="/about" element={<h1 className="text-white p-10">About Page</h1>} />
+              <Route path="/contact" element={<h1 className="text-white p-10">Contact Page</h1>} />
             </Routes>
           </div>
         </>

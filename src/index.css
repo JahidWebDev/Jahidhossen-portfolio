@@ -151,7 +151,6 @@ html {
 }
 
 
-
 .loading {
   position: relative;
   width: 100%;
@@ -162,39 +161,56 @@ html {
 
 .follow {
   position: absolute;
-  background-color: #0ae448;
+  background-color: #EC5E30;
   height: 2px;
   width: 0;
   left: 0;
   bottom: 5.4%;
   z-index: 2;
 }
+
 .loading-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 48px;
+  font-size: 45px;
   font-weight: 700;
   color: white;
   white-space: nowrap;
   overflow: hidden;
-
   width: 0;
+  font-family: "BebasNeue";
+  letter-spacing: 4px;
+  /* border-right: 2px solid #EC5E30; */
+  z-index: 3; /* follow এর উপর থাকবে */
+
   animation: typing 2.7s linear forwards, blink 0.7s step-end infinite;
 }
 
-/* Smooth typing using linear animation (no steps) */
-@keyframes typing {
-  from { width: 0; }
-  to { width: 15ch; } /* number of characters */
+.welcome-text {
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #EC5E30;
+  font-size: 16px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-weight: 500;
+  opacity: 0.85;
+  font-family: "blinkma";
 }
 
-/* Blinking cursor */
-/* @keyframes blink {
+@keyframes typing {
+  from { width: 0; }
+  to { width: 26ch; } /* "My Web Portfolio" এর জন্য 16ch */
+}
+
+@keyframes blink {
   0%, 50%, 100% { border-color: #0ae448; }
   25%, 75% { border-color: transparent; }
-} */
+}
 .progress-bar {
   position: absolute;
   left: 0;
@@ -222,4 +238,7 @@ html {
   justify-content: center;
   align-items: center;
   background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

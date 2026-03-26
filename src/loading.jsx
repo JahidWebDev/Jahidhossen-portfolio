@@ -88,8 +88,11 @@ tl.to(".follow", {
     <div className="">
   {!loadingComplete && (
     <div className="loading">
-      <div className="follow"></div>
-      <h1 className="loading-text">My Web Portfolio</h1>
+      <div className="follow">
+      
+      </div>
+       <p className="welcome-text">Assalamu Alaykum</p>
+  <h1 className="loading-text">Welcome to My Portfolio</h1>
       <div className="progress-bar hide" style={{ width: counter + "%" }} />
       <p className="count hide font-bold">{counter}%</p>
     </div>
