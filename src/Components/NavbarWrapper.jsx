@@ -1,31 +1,23 @@
-import React, { useState } from "react";
-
-
-import useSplash from "../hooks/useSplash";
-import FloatingNav from "./FloatingNav";
-import NavModal from "./NavModel";
-
-const NavbarWrapper = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const { startSplash } = useSplash();
-
+function NavbarWrapper() {
   return (
-    <>
-      <StandingNavbar startSplash={startSplash} />
+    <aside className="fixed left-0 top-0 h-screen w-72 bg-slate-900 text-white">
+      <div className="p-8">
+        <h1 className="text-3xl font-bold">
+          Portfolio
+        </h1>
 
-      <FloatingNav
-        isOpen={isOpen}
-        onOpen={() => setIsOpen(true)}
-        onClose={() => setIsOpen(false)}
-      />
+        <ul className="mt-10 space-y-5">
+          <li>
+            <a href="#home">Home</a>
+          </li>
 
-      <NavModal
-        isOpen={isOpen}
-        onClose={() => setIsOpen(false)}
-        startSplash={startSplash}
-      />
-    </>
+          <li>
+            <a href="#about">About</a>
+          </li>
+        </ul>
+      </div>
+    </aside>
   );
-};
+}
 
 export default NavbarWrapper;

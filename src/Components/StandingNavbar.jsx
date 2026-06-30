@@ -52,4 +52,4 @@ const StandingNavbar = ({ startSplash }) => {
   );
 };
 
-export default StandingNavbar;
+// export default StandingNavbar;

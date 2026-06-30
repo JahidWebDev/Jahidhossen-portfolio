@@ -1,17 +1,17 @@
-import { useState } from "react";
+// import { useState } from "react";
 
-const useSplash = () => {
-  const [isSplashing, setIsSplashing] = useState(false);
+// const useSplash = () => {
+//   const [isSplashing, setIsSplashing] = useState(false);
 
-  const startSplash = () => {
-    setIsSplashing(true);
+//   const startSplash = () => {
+//     setIsSplashing(true);
 
-    setTimeout(() => {
-      setIsSplashing(false);
-    }, 1200);
-  };
+//     setTimeout(() => {
+//       setIsSplashing(false);
+//     }, 1200);
+//   };
 
-  return { isSplashing, startSplash };
-};
+//   return { isSplashing, startSplash };
+// };
 
-export default useSplash;
+// export default useSplash;
