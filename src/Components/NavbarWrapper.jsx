@@ -24,9 +24,11 @@ function NavbarWrapper() {
     `group relative flex items-center gap-4
     px-6 py-4
     rounded-l-full
-    uppercase tracking-wider
+     
     font-medium
+
     transition-all duration-500 ease-out
+    tracking-[2px]
     ${
       isActive
         ? "bg-[#c33201] text-white translate-x-8 "
@@ -37,7 +39,7 @@ function NavbarWrapper() {
     group
     w-11 h-11
     rounded-full
-    bg-[#1b1b1b]
+    bg-[#2C2F3F]
     border border-[#2b2b2b]
     flex items-center justify-center
     text-gray-300
@@ -47,7 +49,7 @@ function NavbarWrapper() {
     hover:text-white
     hover:-translate-y-2
     hover:rotate-12
-    hover:shadow-[0_0_20px_rgba(195,50,1,.8)]
+    
     active:scale-90
   `;
 
@@ -76,7 +78,7 @@ function NavbarWrapper() {
         h-screen
         w-full sm:w-80 lg:w-72
         bg-[#111]
-        border-[#1e1e1e]
+        
         z-50
         transition-transform duration-500
         ${
@@ -99,23 +101,17 @@ function NavbarWrapper() {
           <img
             src={Image}
             alt="Profile"
-            className="w-32 h-32 rounded-full object-cover border-4 border-[#c33201]
-            shadow-[0_0_30px_rgba(195,50,1,.5)]"
+            className="w-32 h-32 rounded-full object-cover border-7 border-[#2C2F3F] 
+            "
           />
+<h2
+  className="mt-5 text-3xl text-white tracking-[3px] font-semibold"
+  style={{ fontFamily: "BebasNeue" }}
+>
+  Jahid Hossen
+</h2>
 
-          <h2
-            className="mt-5 text-3xl text-white"
-            style={{ fontFamily: "BebasNeue" }}
-          >
-            Jahid Hossen
-          </h2>
-
-          <p
-            className="text-gray-500 mt-1"
-            style={{ fontFamily: "Cabin" }}
-          >
-            MERN Stack Developer
-          </p>
+          
 
           {/* Social */}
           <div className="flex gap-4 mt-6">
@@ -139,7 +135,7 @@ function NavbarWrapper() {
           </div>
 
           {/* Navigation */}
-          <ul className="w-full mt-12 space-y-3">
+          <ul className="w-full mt-7 space-y-3">
 
             <li>
               <NavLink
@@ -210,9 +206,17 @@ function NavbarWrapper() {
           </ul>
 
           {/* Footer */}
-          <div className="mt-auto pt-10 text-center text-gray-600 text-sm">
-            © 2026 <span className="text-[#c33201]">Jahid Hossen</span>
-          </div>
+          <div className="mt-auto pt-10 w-full text-center">
+
+  <div className="w-full h-px bg-gradient-to-r from-transparent via-[#c33201] to-transparent mb-6"></div>
+
+
+
+  <p className="mt-2 text-sm text-gray-500">
+    © 2026. All Rights Reserved.
+  </p>
+
+</div>
 
         </div>
       </aside>
