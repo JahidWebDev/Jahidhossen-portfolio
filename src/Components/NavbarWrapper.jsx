@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import Image from "../img/profile.png";
+
 import {
   FaBars,
   FaTimes,
@@ -19,18 +21,42 @@ function NavbarWrapper() {
   const [open, setOpen] = useState(false);
 
   const navClass = ({ isActive }) =>
-    `flex items-center gap-3 px-5 py-3 rounded-lg transition-all duration-300 ${
+    `group relative flex items-center gap-4
+    px-6 py-4
+    rounded-l-full
+    uppercase tracking-wider
+    font-medium
+    transition-all duration-500 ease-out
+    ${
       isActive
-        ? "bg-sky-500 text-white"
-        : "text-gray-300 hover:bg-slate-700 hover:text-white"
+        ? "bg-[#c33201] text-white translate-x-8 "
+        : "text-gray-400 hover:bg-[#c33201]/20 hover:text-white hover:translate-x-2"
     }`;
+
+  const socialClass = `
+    group
+    w-11 h-11
+    rounded-full
+    bg-[#1b1b1b]
+    border border-[#2b2b2b]
+    flex items-center justify-center
+    text-gray-300
+    transition-all duration-500
+    hover:bg-[#c33201]
+    hover:border-[#c33201]
+    hover:text-white
+    hover:-translate-y-2
+    hover:rotate-12
+    hover:shadow-[0_0_20px_rgba(195,50,1,.8)]
+    active:scale-90
+  `;
 
   return (
     <>
-      {/* Mobile Menu Button */}
+      {/* Mobile Button */}
       <button
         onClick={() => setOpen(true)}
-        className="fixed top-5 right-5 z-50 lg:hidden bg-sky-500 text-white p-3 rounded-full shadow-lg"
+        className="fixed top-5 right-5 z-50 lg:hidden bg-[#c33201] text-white p-3 rounded-full shadow-lg"
       >
         <FaBars size={20} />
       </button>
@@ -39,37 +65,42 @@ function NavbarWrapper() {
       {open && (
         <div
           onClick={() => setOpen(false)}
-          className="fixed inset-0 bg-black/60 z-40 lg:hidden"
+          className="fixed inset-0 bg-black/70 z-40 lg:hidden"
         />
       )}
 
       {/* Sidebar */}
       <aside
         className={`
-          fixed top-0 left-0 h-screen
-          w-full sm:w-80 lg:w-72
-          bg-slate-900
-          z-50
-          transition-transform duration-300
-          ${open ? "translate-x-0" : "-translate-x-full"}
-          lg:translate-x-0
-        `}
+        fixed top-0 left-0
+        h-screen
+        w-full sm:w-80 lg:w-72
+        bg-[#111]
+        border-[#1e1e1e]
+        z-50
+        transition-transform duration-500
+        ${
+          open ? "translate-x-0" : "-translate-x-full"
+        }
+        lg:translate-x-0
+      `}
       >
-        {/* Close Button */}
+        {/* Close */}
         <button
           onClick={() => setOpen(false)}
-          className="absolute top-5 right-5 lg:hidden text-white"
+          className="absolute top-5 right-5 text-white lg:hidden"
         >
           <FaTimes size={24} />
         </button>
 
-        <div className="flex flex-col items-center px-8 py-10 h-full overflow-y-auto">
+        <div className="flex flex-col items-center h-full overflow-y-auto px-8 py-10">
 
           {/* Profile */}
           <img
-            src="/profile.jpg"
+            src={Image}
             alt="Profile"
-            className="w-32 h-32 rounded-full border-4 border-sky-500 object-cover"
+            className="w-32 h-32 rounded-full object-cover border-4 border-[#c33201]
+            shadow-[0_0_30px_rgba(195,50,1,.5)]"
           />
 
           <h2
@@ -80,7 +111,7 @@ function NavbarWrapper() {
           </h2>
 
           <p
-            className="text-gray-400 mt-1"
+            className="text-gray-500 mt-1"
             style={{ fontFamily: "Cabin" }}
           >
             MERN Stack Developer
@@ -88,72 +119,99 @@ function NavbarWrapper() {
 
           {/* Social */}
           <div className="flex gap-4 mt-6">
-            <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-sky-500 transition">
-              <FaFacebookF />
+
+            <a href="#" className={socialClass}>
+              <FaFacebookF className="group-hover:scale-125 transition-all duration-500" />
             </a>
 
-            <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-sky-500 transition">
-              <FaGithub />
+            <a href="#" className={socialClass}>
+              <FaGithub className="group-hover:scale-125 transition-all duration-500" />
             </a>
 
-            <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-sky-500 transition">
-              <FaLinkedinIn />
+            <a href="#" className={socialClass}>
+              <FaLinkedinIn className="group-hover:scale-125 transition-all duration-500" />
             </a>
 
-            <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-sky-500 transition">
-              <FaInstagram />
+            <a href="#" className={socialClass}>
+              <FaInstagram className="group-hover:scale-125 transition-all duration-500" />
             </a>
+
           </div>
 
           {/* Navigation */}
-          <ul className="w-full mt-10 space-y-3">
+          <ul className="w-full mt-12 space-y-3">
 
             <li>
-              <NavLink to="/" className={navClass} onClick={() => setOpen(false)}>
-                <FaHome />
+              <NavLink
+                to="/"
+                className={navClass}
+                onClick={() => setOpen(false)}
+              >
+                <FaHome className="transition-all duration-500 group-hover:scale-125 group-hover:rotate-12" />
                 Home
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/about" className={navClass} onClick={() => setOpen(false)}>
-                <FaUser />
+              <NavLink
+                to="/about"
+                className={navClass}
+                onClick={() => setOpen(false)}
+              >
+                <FaUser className="transition-all duration-500 group-hover:scale-125 group-hover:rotate-12" />
                 About
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/resume" className={navClass} onClick={() => setOpen(false)}>
-                <FaFileAlt />
+              <NavLink
+                to="/resume"
+                className={navClass}
+                onClick={() => setOpen(false)}
+              >
+                <FaFileAlt className="transition-all duration-500 group-hover:scale-125 group-hover:rotate-12" />
                 Resume
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/portfolio" className={navClass} onClick={() => setOpen(false)}>
-                <FaBriefcase />
+              <NavLink
+                to="/portfolio"
+                className={navClass}
+                onClick={() => setOpen(false)}
+              >
+                <FaBriefcase className="transition-all duration-500 group-hover:scale-125 group-hover:rotate-12" />
                 Portfolio
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/services" className={navClass} onClick={() => setOpen(false)}>
-                <FaTools />
+              <NavLink
+                to="/services"
+                className={navClass}
+                onClick={() => setOpen(false)}
+              >
+                <FaTools className="transition-all duration-500 group-hover:scale-125 group-hover:rotate-12" />
                 Services
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/contact" className={navClass} onClick={() => setOpen(false)}>
-                <FaEnvelope />
+              <NavLink
+                to="/contact"
+                className={navClass}
+                onClick={() => setOpen(false)}
+              >
+                <FaEnvelope className="transition-all duration-500 group-hover:scale-125 group-hover:rotate-12" />
                 Contact
               </NavLink>
             </li>
 
           </ul>
 
-          <div className="mt-auto text-center text-gray-500 text-sm pt-10">
-            © 2026 Jahid Hossen
+          {/* Footer */}
+          <div className="mt-auto pt-10 text-center text-gray-600 text-sm">
+            © 2026 <span className="text-[#c33201]">Jahid Hossen</span>
           </div>
 
         </div>

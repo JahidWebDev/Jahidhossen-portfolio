@@ -11,9 +11,9 @@ function Pages() {
       <div className="relative z-10 mt-[100vh] bg-white">
         <About />
       </div>
-      <div className="">
+    
           <ResumePage />
-      </div>
+    
    
     </>
   );

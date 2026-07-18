@@ -23,7 +23,9 @@ function Hero() {
           </p>
         </div>
       </div>
+      
     </section>
+    
   );
 }
 
