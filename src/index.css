@@ -255,3 +255,248 @@ section {
   min-height: 100vh;
   scroll-snap-align: start;
 }
+
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #111;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, .45);
+  z-index: 1;
+}
+
+.hero-bg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* ===========================
+   GRID
+=========================== */
+
+.hero-grid {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+
+  background-size: 80px 80px;
+}
+
+/* ===========================
+   PURPLE ORB
+=========================== */
+
+.hero-orb {
+
+  position: absolute;
+
+  width: 130px;
+  height: 130px;
+
+  left: 50%;
+  top: 43%;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background: #8B5CF6;
+
+  z-index: 2;
+
+  box-shadow:
+    0 0 40px #8B5CF6,
+    0 0 90px #8B5CF6,
+    0 0 160px rgba(139,92,246,.5);
+}
+
+/* ===========================
+   BIG TITLE
+=========================== */
+
+.hero-title {
+
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 35px;
+
+  padding: 0 50px;
+
+  pointer-events: none;
+
+  z-index: 2;
+
+  transform:
+      perspective(1200px)
+      rotateX(20deg);
+}
+
+.hero-title span {
+
+  font-size: clamp(70px, 10vw, 190px);
+
+  font-weight: 900;
+
+  color: #5b5d64;
+
+  line-height: .85;
+
+  text-transform: uppercase;
+
+  letter-spacing: -5px;
+
+  text-shadow:
+      3px 3px 0 #3d3d3d,
+      6px 6px 0 #333,
+      9px 9px 0 #2a2a2a,
+      12px 12px 0 #1f1f1f,
+      15px 15px 25px rgba(0,0,0,.6);
+}
+
+/* ===========================
+   CONTENT
+=========================== */
+
+.hero-content {
+
+  position: absolute;
+
+  left: 50px;
+  right: 50px;
+  bottom: 45px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  z-index: 5;
+}
+
+.hero-text{
+    max-width:700px;
+}
+
+.hero-text h2 {
+
+  color: white;
+
+  font-size: clamp(28px,3vw,52px);
+
+  font-weight: 500;
+
+  line-height: 1.2;
+
+  margin-bottom: 18px;
+}
+
+.hero-text p {
+
+  color: #8d8d8d;
+
+  font-size: clamp(16px,1.2vw,22px);
+
+  line-height: 1.8;
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.hero-btn {
+
+  padding: 18px 34px;
+
+  border-radius: 14px;
+
+  border: 1px solid rgba(255,255,255,.25);
+
+  color: white;
+
+  text-decoration: none;
+
+  backdrop-filter: blur(15px);
+
+  background: rgba(255,255,255,.05);
+
+  transition: .35s;
+}
+
+.hero-btn:hover {
+
+  background: white;
+
+  color: black;
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:900px){
+
+.hero-title{
+
+padding:20px;
+gap:15px;
+
+}
+
+.hero-title span{
+
+font-size:65px;
+
+}
+
+.hero-content{
+
+left:25px;
+right:25px;
+bottom:35px;
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:30px;
+
+}
+
+.hero-orb{
+
+width:90px;
+height:90px;
+
+}
+
+}
+
+body{
+  background-color: #c33201;
+}
