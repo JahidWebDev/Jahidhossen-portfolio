@@ -18,6 +18,9 @@ import {
 } from "react-icons/fa";
 
 function NavbarWrapper() {
+
+
+  
   const [open, setOpen] = useState(false);
 
   const navClass = ({ isActive }) =>
@@ -135,7 +138,7 @@ function NavbarWrapper() {
           </div>
 
           {/* Navigation */}
-          <ul className="w-full mt-7 space-y-3">
+          <ul className="w-full font-blinkma mt-7 space-y-3">
 
             <li>
               <NavLink

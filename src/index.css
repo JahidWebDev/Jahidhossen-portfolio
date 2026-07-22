@@ -500,3 +500,13 @@ height:90px;
 body{
   background-color: #c33201;
 }
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
