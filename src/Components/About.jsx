@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-
+import { motion } from "framer-motion";
 import {
   FaChevronRight,
   FaSmile,
@@ -51,12 +51,61 @@ function About() {
   }, []);
 
   return (
-    <section
-      id="about"
-      ref={sectionRef}
-      className="bg-white py-20 px-6 md:px-10  lg:left-72 lg:px-20"
-      style={{ fontFamily: "blinkma" }}
+    <section 
+     id="about" ref={sectionRef} className=" glow bg-white py-20 px-6 md:px-10 lg:left-72 lg:px-20   isolate
+    bg-gradient-to-br
+    from-white
+    via-[#fffaf8]
+    to-[#fff3ef]" style={{ fontFamily: "blinkma" }}
     >
+
+  {/* ===== Premium Background Glow ===== */}
+{/* ===== Premium UI Glow Background ===== */}
+<div
+  className="absolute inset-0 pointer-events-none"
+  style={{
+    background: `
+      /* Top */
+      radial-gradient(circle at 50% 0%, rgba(195,50,1,.12), transparent 30%),
+
+      /* Bottom */
+      radial-gradient(circle at 50% 100%, rgba(255,140,0,.10), transparent 30%),
+
+      /* Left */
+      radial-gradient(circle at 0% 50%, rgba(255,90,31,.10), transparent 28%),
+
+      /* Right */
+      radial-gradient(circle at 100% 50%, rgba(255,180,0,.10), transparent 28%),
+
+      /* Top Left */
+      radial-gradient(circle at 10% 10%, rgba(195,50,1,.08), transparent 22%),
+
+      /* Top Right */
+      radial-gradient(circle at 90% 10%, rgba(255,180,0,.08), transparent 22%),
+
+      /* Bottom Left */
+      radial-gradient(circle at 10% 90%, rgba(255,120,120,.08), transparent 22%),
+
+      /* Bottom Right */
+      radial-gradient(circle at 90% 90%, rgba(255,140,0,.08), transparent 22%)
+    `,
+  }}
+/>
+{/* Grid Pattern */}
+<div
+  className="absolute inset-0 pointer-events-none opacity-30"
+  style={{
+    backgroundImage: `
+      linear-gradient(45deg, rgba(195,50,1,.08) 25%, transparent 25%),
+      linear-gradient(-45deg, rgba(195,50,1,.08) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, rgba(195,50,1,.08) 75%),
+      linear-gradient(-45deg, transparent 75%, rgba(195,50,1,.08) 75%)
+    `,
+    backgroundSize: "40px 40px",
+    backgroundPosition: "0 0, 0 20px, 20px -20px, -20px 0",
+  }}
+/>
+
      <div className="max-w-7xl mx-auto px-4 lg:mr-42">
 
         {/* Heading */}
@@ -89,7 +138,8 @@ function About() {
               src={profile}
               alt="profile"
               className="
-                w-full
+                w-full z-50
+                
                 rounded-2xl
                 bg-[#111]
                 shadow-2xl
@@ -188,215 +238,56 @@ function About() {
 
         </div>
 
-        {/* ========= FACTS SECTION START HERE ========= */}
-                {/* ================= FACTS ================= */}
+       
 
-        <div className="mt-24">
 
-          <h2 className="text-5xl font-bold text-[#c33201]">
-            Facts
-          </h2>
-
-          <div className="w-20 h-1 rounded-full bg-[#c33201] mt-5"></div>
-
-          <p className="mt-8 text-gray-600 leading-8 max-w-6xl">
-            Experienced in developing scalable web applications using
-            both front-end and back-end technologies. Committed to
-            clean code, performance optimization, and delivering
-            solutions that enhance user experience across various
-            industries.
-          </p>
-
-          <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-8 mt-14">
-
-            {/* Card 1 */}
-
-            <div
-              className="
-              bg-white
-              rounded-2xl
-              p-8
-              shadow-lg
-              hover:shadow-2xl
-              transition-all
-              duration-500
-              hover:-translate-y-3
-            "
-            >
-              <div className="w-16 h-16 rounded-full bg-[#c33201]/10 flex items-center justify-center">
-                <FaSmile className="text-3xl text-[#c33201]" />
-              </div>
-
-              <h3 className="text-5xl font-bold mt-6 text-gray-800">
-                2673
-              </h3>
-
-              <h4 className="mt-4 text-xl font-semibold">
-                Happy Clients
-              </h4>
-
-              <p className="text-gray-500 mt-2">
-                Clients and Trainees
-              </p>
-            </div>
-
-            {/* Card 2 */}
-
-            <div
-              className="
-              bg-white
-              rounded-2xl
-              p-8
-              shadow-lg
-              hover:shadow-2xl
-              transition-all
-              duration-500
-              hover:-translate-y-3
-            "
-            >
-              <div className="w-16 h-16 rounded-full bg-[#c33201]/10 flex items-center justify-center">
-                <FaClipboardList className="text-3xl text-[#c33201]" />
-              </div>
-
-              <h3 className="text-5xl font-bold mt-6 text-gray-800">
-                32
-              </h3>
-
-              <h4 className="mt-4 text-xl font-semibold">
-                Projects
-              </h4>
-
-              <p className="text-gray-500 mt-2">
-                Business Website
-              </p>
-            </div>
-
-            {/* Card 3 */}
-
-            <div
-              className="
-              bg-white
-              rounded-2xl
-              p-8
-              shadow-lg
-              hover:shadow-2xl
-              transition-all
-              duration-500
-              hover:-translate-y-3
-            "
-            >
-              <div className="w-16 h-16 rounded-full bg-[#c33201]/10 flex items-center justify-center">
-                <FaHeadset className="text-3xl text-[#c33201]" />
-              </div>
-
-              <h3 className="text-5xl font-bold mt-6 text-gray-800">
-                12
-              </h3>
-
-              <h4 className="mt-4 text-xl font-semibold">
-                Experiences
-              </h4>
-
-              <p className="text-gray-500 mt-2">
-                Design & Development
-              </p>
-            </div>
-
-            {/* Card 4 */}
-
-            <div
-              className="
-              bg-white
-              rounded-2xl
-              p-8
-              shadow-lg
-              hover:shadow-2xl
-              transition-all
-              duration-500
-              hover:-translate-y-3
-            "
-            >
-              <div className="w-16 h-16 rounded-full bg-[#c33201]/10 flex items-center justify-center">
-                <FaAward className="text-3xl text-[#c33201]" />
-              </div>
-
-              <h3 className="text-5xl font-bold mt-6 text-gray-800">
-                4
-              </h3>
-
-              <h4 className="mt-4 text-xl font-semibold">
-                Awards
-              </h4>
-
-              <p className="text-gray-500 mt-2">
-                Academic Awards
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-
-        {/* ================= SKILLS START ================= */}
                 {/* ================= SKILLS ================= */}
+{/* ================= SKILLS ================= */}
+<section className="py-10  relative overflow-hidden">
 
-        <div className="mt-24">
 
-          <h2 className="text-5xl font-bold text-[#c33201]">
-            Skills
-          </h2>
+  <div className="max-w-7xl mx-auto px-6 relative z-10">
 
-          <div className="w-20 h-1 rounded-full bg-[#c33201] mt-5"></div>
+    <div className="text-center">
 
-          <p className="mt-8 text-gray-600 leading-8 max-w-6xl">
-            Full Stack Web Developer with expertise in front-end
-            technologies (React.js, HTML, CSS, JavaScript) and
-            back-end development (Node.js, Express.js, MongoDB).
-            Passionate about building scalable, responsive and
-            user-friendly applications.
-          </p>
+      <span className="uppercase tracking-[6px] text-[#c33201] font-semibold">
+        My Skills
+      </span>
 
-          <div className="grid lg:grid-cols-2 gap-12 mt-14">
+      <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mt-3">
+        Technical Expertise
+      </h2>
 
-            {/* Left Column */}
+      <p className="text-gray-600 max-w-3xl mx-auto mt-6 leading-8">
+        Full Stack Web Developer with expertise in modern frontend,
+        backend and UI/UX technologies. Passionate about creating
+        scalable, responsive and high-performance applications.
+      </p>
 
-            <div className="space-y-7">
+    </div>
 
-              <Skill title="HTML" value="100" />
+    <div className="grid md:grid-cols-2 gap-8 mt-20">
 
-              <Skill title="CSS / SCSS" value="95" />
+      <Skill title="HTML" value={100} />
+      <Skill title="CSS / SCSS" value={95} />
+      <Skill title="Bootstrap" value={95} />
+      <Skill title="Tailwind CSS" value={100} />
+      <Skill title="Git & Github" value={95} />
+      <Skill title="JavaScript" value={95} />
+      <Skill title="React.js" value={95} />
+      <Skill title="Next.js" value={90} />
+      <Skill title="TypeScript" value={88} />
+      <Skill title="Node.js" value={90} />
+      <Skill title="Express.js" value={90} />
+      <Skill title="MongoDB" value={90} />
+      <Skill title="Mongoose" value={88} />
+      <Skill title="Adobe (PS, AI, XD, PR)" value={85} />
 
-              <Skill title="JavaScript" value="95" />
+    </div>
 
-              <Skill title="TypeScript" value="90" />
+  </div>
 
-              <Skill title="React.js" value="90" />
-
-              <Skill title="Next.js" value="90" />
-
-            </div>
-
-            {/* Right Column */}
-
-            <div className="space-y-7">
-
-              <Skill title="Node.js" value="85" />
-
-              <Skill title="PHP" value="85" />
-
-              <Skill title="Python" value="80" />
-
-              <Skill title="Java" value="75" />
-
-              <Skill title="Adobe (PS, AI, XD, PR)" value="85" />
-
-              <Skill title="R (Data Analytics)" value="80" />
-
-            </div>
-
-          </div>
-
-        </div>
+</section>
 
       </div>
     </section>
@@ -405,15 +296,26 @@ function About() {
 
 /* ================= Skill Component ================= */
 
-function Skill({ title, value }) {
+
+
+export  function Skill({ title, value }) {
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: .6 }}
+      whileHover={{
+        y: -8,
+        scale: 1.02,
+      }}
+      className="bg-white/60 rounded-2xl shadow-lg border border-gray-100 p-4 hover:shadow-2xl transition-all duration-500"
+    >
+      <div className="flex justify-between mb-4">
 
-      <div className="flex justify-between mb-2">
-
-        <span className="font-semibold uppercase tracking-wide">
+        <h3 className="font-semibold text-lg text-gray-800">
           {title}
-        </span>
+        </h3>
 
         <span className="font-bold text-[#c33201]">
           {value}%
@@ -421,18 +323,34 @@ function Skill({ title, value }) {
 
       </div>
 
-      <div className="w-full h-3 bg-gray-200 rounded-full overflow-hidden">
+      <div className="relative h-3 rounded-full bg-[#111] overflow-hidden">
+  <motion.div
+    initial={{ width: 0 }}
+    whileInView={{ width: `${value}%` }}
+    viewport={{ once: true }}
+    transition={{ duration: 1.5 }}
+    className="relative h-full rounded-full bg-gradient-to-r from-[#c33201] via-[#ff6b35] to-[#47a6ff] overflow-hidden"
+  >
+    <motion.svg
+      className="absolute inset-0 w-[200%] h-full"
+      viewBox="0 0 200 20"
+      preserveAspectRatio="none"
+      animate={{ x: ["0%", "-50%"] }}
+      transition={{
+        duration: 3,
+        repeat: Infinity,
+        ease: "linear",
+      }}
+    >
+      <path
+        d="M0 10 Q10 2 20 10 T40 10 T60 10 T80 10 T100 10 T120 10 T140 10 T160 10 T180 10 T200 10 V20 H0 Z"
+        fill="rgba(255,255,255,0.35)"
+      />
+    </motion.svg>
+  </motion.div>
+</div>
 
-        <div
-          className="h-full rounded-full bg-[#c33201] transition-all duration-1000"
-          style={{
-            width: `${value}%`,
-          }}
-        />
-
-      </div>
-
-    </div>
+    </motion.div>
   );
 }
 

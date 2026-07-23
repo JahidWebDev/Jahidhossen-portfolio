@@ -97,7 +97,12 @@ body,
   src: url("../src/assets/Fonts/Cabin-VariableFont_wdth\,wght.ttf") format("truetype");
 }
 
-
+.glow {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  pointer-events: none;
+}
 
 @theme {
   --font-blinkma: "blinkma", sans-serif;
