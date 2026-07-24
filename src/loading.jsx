@@ -19,7 +19,7 @@ function loading({ onComplete }) {
         reveal();
         return 100;
       });
-    }, 25);
+    }, 12);
 
     return () => clearInterval(interval);
   }, []);
@@ -44,13 +44,13 @@ tl.to(".follow", {
   .to(".follow", {
     height: "100%",
     bottom: 0,
-    duration: 0.8,
+    duration: 0.4,
     ease: "expo.inOut",
   })
     // 👇 ONLY ONE loader animation
   .to(".loading", {
       opacity: 0,
-      duration: 0.6,
+      duration: 0.3,
       ease: Expo.easeInOut,
       onComplete: () => {
         setLoadingComplete(true);
@@ -63,11 +63,11 @@ tl.to(".follow", {
   {
     opacity: 1,
     y: 0,
-    duration: 0.5,
+    duration: 0.4,
     ease: "power3.out",
-    stagger: 0.05, // প্রতিটি letter এর delay
+    stagger: 0.04, // প্রতিটি letter এর delay
   },
-  "-=0.8"
+  "-=0.3"
 )
     .fromTo(
       ".main-content",
@@ -90,9 +90,12 @@ tl.to(".follow", {
     <div
       className="
         loading
-        flex flex-col items-center justify-center
+        flex flex-col
+        items-center
+        justify-center
         min-h-screen
-        px-5 sm:px-8
+        px-5
+        sm:px-8
         text-center
       "
     >
@@ -101,9 +104,12 @@ tl.to(".follow", {
       <p
         className="
           welcome-text
-          text-sm
-          sm:text-base
+          text-xs
+          sm:text-sm
+          md:text-base
           lg:text-lg
+          tracking-[2px]
+          uppercase
         "
       >
         Assalamu Alaykum
@@ -112,13 +118,14 @@ tl.to(".follow", {
       <h1
         className="
           loading-text
-          mt-2
+          mt-3
           font-bold
           leading-tight
-          text-3xl
-          sm:text-4xl
-          md:text-5xl
-          lg:text-6xl
+          text-[18px]
+          sm:text-[24px]
+          md:text-[32px]
+          lg:text-[40px]
+          xl:text-[50px]
         "
       >
         Welcome to My Portfolio
@@ -129,11 +136,10 @@ tl.to(".follow", {
           progress-bar
           hide
           mt-6
-          h-1.5
-         
-          w-52
-          sm:w-72
-          md:w-96
+          h-[2px]
+          w-48
+          sm:w-64
+          md:w-80
           lg:w-[450px]
         "
         style={{ width: `${counter}%` }}
@@ -143,11 +149,11 @@ tl.to(".follow", {
         className="
           count
           hide
-          font-bold
           mt-3
-          text-lg
-          sm:text-xl
-          lg:text-2xl
+          font-bold
+          text-base
+          sm:text-lg
+          md:text-xl
         "
       >
         {counter}%

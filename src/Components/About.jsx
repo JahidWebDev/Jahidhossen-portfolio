@@ -250,15 +250,15 @@ function About() {
 
     <div className="text-center">
 
-      <span className="uppercase tracking-[6px] text-[#c33201] font-semibold">
+      <span className="uppercase font-blinkma tracking-[6px] text-[#c33201] font-semibold">
         My Skills
       </span>
 
-      <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mt-3">
+      <h2 className="text-5xl font-BebasNeue lg:text-7xl font-bold text-gray-900 mt-3">
         Technical Expertise
       </h2>
 
-      <p className="text-gray-600 max-w-3xl mx-auto mt-6 leading-8">
+      <p className="text-gray-600 font-blinkma max-w-3xl mx-auto mt-6 leading-8">
         Full Stack Web Developer with expertise in modern frontend,
         backend and UI/UX technologies. Passionate about creating
         scalable, responsive and high-performance applications.
@@ -336,11 +336,11 @@ export function Skill({ title, value }) {
       "
     >
       <div className="flex items-center justify-between mb-3">
-        <h3 className="font-semibold text-base md:text-lg text-gray-800">
+        <h3 className="font-semibold font-blinkma text-base md:text-lg text-gray-800">
           {title}
         </h3>
 
-        <span className="font-bold text-[#c33201] text-sm md:text-base">
+        <span className="font-bold font-Cabin text-[#c33201] text-sm md:text-base">
           {value}%
         </span>
       </div>

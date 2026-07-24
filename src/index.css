@@ -523,20 +523,19 @@ body{
   }
 
   .welcome-text {
-    font-size: 14px;
     letter-spacing: 2px;
   }
 
   .loading-text {
-    font-size: 32px;
     line-height: 1.2;
   }
 
   .progress-bar {
-    height: 4px;
+    height: 2px;
   }
 
   .count {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
+
