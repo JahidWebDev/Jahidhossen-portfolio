@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { motion } from "framer-motion";
+
 import {
   FaChevronRight,
   FaSmile,
@@ -295,61 +295,99 @@ function About() {
 }
 
 /* ================= Skill Component ================= */
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
+import { useMediaQuery } from "react-responsive";
 
+export function Skill({ title, value }) {
+  const isMobile = useMediaQuery({
+    maxWidth: 768,
+  });
 
-
-export  function Skill({ title, value }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 40 }}
+      initial={{ opacity: 0, y: 25 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: .6 }}
-      whileHover={{
-        y: -8,
-        scale: 1.02,
+      viewport={{
+        once: true,
+        amount: 0.3,
       }}
-      className="bg-white/60 rounded-2xl shadow-lg border border-gray-100 p-4 hover:shadow-2xl transition-all duration-500"
+      transition={{
+        duration: 0.5,
+        ease: "easeOut",
+      }}
+      whileHover={
+        !isMobile
+          ? {
+              y: -4,
+            }
+          : {}
+      }
+      className="
+        bg-white/50
+        rounded-xl
+        border border-gray-100
+        shadow-md
+        hover:shadow-xl
+        p-4
+        transition-all
+        duration-300
+        will-change-transform
+      "
     >
-      <div className="flex justify-between mb-4">
-
-        <h3 className="font-semibold text-lg text-gray-800">
+      <div className="flex items-center justify-between mb-3">
+        <h3 className="font-semibold text-base md:text-lg text-gray-800">
           {title}
         </h3>
 
-        <span className="font-bold text-[#c33201]">
+        <span className="font-bold text-[#c33201] text-sm md:text-base">
           {value}%
         </span>
-
       </div>
 
-      <div className="relative h-3 rounded-full bg-[#111] overflow-hidden">
-  <motion.div
-    initial={{ width: 0 }}
-    whileInView={{ width: `${value}%` }}
-    viewport={{ once: true }}
-    transition={{ duration: 1.5 }}
-    className="relative h-full rounded-full bg-gradient-to-r from-[#c33201] via-[#ff6b35] to-[#47a6ff] overflow-hidden"
-  >
-    <motion.svg
-      className="absolute inset-0 w-[200%] h-full"
-      viewBox="0 0 200 20"
-      preserveAspectRatio="none"
-      animate={{ x: ["0%", "-50%"] }}
-      transition={{
-        duration: 3,
-        repeat: Infinity,
-        ease: "linear",
-      }}
-    >
-      <path
-        d="M0 10 Q10 2 20 10 T40 10 T60 10 T80 10 T100 10 T120 10 T140 10 T160 10 T180 10 T200 10 V20 H0 Z"
-        fill="rgba(255,255,255,0.35)"
-      />
-    </motion.svg>
-  </motion.div>
-</div>
-
+      <div className="relative h-3 bg-gray-200 rounded-full overflow-hidden">
+        <motion.div
+          initial={{ width: 0 }}
+          whileInView={{ width: `${value}%` }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 1.2,
+            ease: "easeOut",
+          }}
+          className="
+            relative
+            h-full
+            rounded-full
+            overflow-hidden
+            bg-gradient-to-r
+            from-[#c33201]
+            via-orange-500
+            to-blue-500
+          "
+        >
+          {/* Desktop only Shine Effect */}
+          {!isMobile && (
+            <motion.div
+              animate={{
+                x: ["-100%", "150%"],
+              }}
+              transition={{
+                duration: 2.5,
+                repeat: Infinity,
+                ease: "linear",
+              }}
+              className="
+                absolute
+                inset-y-0
+                w-10
+                bg-white/30
+                blur-sm
+                rotate-12
+              "
+            />
+          )}
+        </motion.div>
+      </div>
     </motion.div>
   );
 }
