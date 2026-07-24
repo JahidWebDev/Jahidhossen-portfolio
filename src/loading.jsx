@@ -85,16 +85,73 @@ tl.to(".follow", {
 };
 
   return (
-    <div className="">
+<div className="w-full">
   {!loadingComplete && (
-    <div className="loading">
-      <div className="follow">
-      
-      </div>
-       <p className="welcome-text">Assalamu Alaykum</p>
-  <h1 className="loading-text">Welcome to My Portfolio</h1>
-      <div className="progress-bar hide" style={{ width: counter + "%" }} />
-      <p className="count hide font-bold">{counter}%</p>
+    <div
+      className="
+        loading
+        flex flex-col items-center justify-center
+        min-h-screen
+        px-5 sm:px-8
+        text-center
+      "
+    >
+      <div className="follow"></div>
+
+      <p
+        className="
+          welcome-text
+          text-sm
+          sm:text-base
+          lg:text-lg
+        "
+      >
+        Assalamu Alaykum
+      </p>
+
+      <h1
+        className="
+          loading-text
+          mt-2
+          font-bold
+          leading-tight
+          text-3xl
+          sm:text-4xl
+          md:text-5xl
+          lg:text-6xl
+        "
+      >
+        Welcome to My Portfolio
+      </h1>
+
+      <div
+        className="
+          progress-bar
+          hide
+          mt-6
+          h-1.5
+         
+          w-52
+          sm:w-72
+          md:w-96
+          lg:w-[450px]
+        "
+        style={{ width: `${counter}%` }}
+      />
+
+      <p
+        className="
+          count
+          hide
+          font-bold
+          mt-3
+          text-lg
+          sm:text-xl
+          lg:text-2xl
+        "
+      >
+        {counter}%
+      </p>
     </div>
   )}
 </div>
