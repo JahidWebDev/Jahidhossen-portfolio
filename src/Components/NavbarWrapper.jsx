@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Image from "../img/profile.png";
-
+import { HiBars3, HiXMark } from "react-icons/hi2";
 import {
-  FaBars,
-  FaTimes,
+
   FaFacebookF,
   FaGithub,
   FaLinkedinIn,
@@ -59,47 +58,85 @@ function NavbarWrapper() {
   return (
     <>
       {/* Mobile Button */}
-      <button
-        onClick={() => setOpen(true)}
-        className="fixed top-5 right-5 z-50 lg:hidden bg-[#c33201] text-white p-3 rounded-full shadow-lg"
-      >
-        <FaBars size={20} />
-      </button>
+    <button
+  onClick={() => setOpen(!open)}
+  className="
+    fixed
+    top-5
+    right-5
+    z-[999]
+    lg:hidden
+    w-12
+    h-12
+    flex
+    items-center
+    justify-center
 
+   
+  
+   
+    text-white
+  
+  
+ 
+   
+  "
+>
+  {open ? (
+    <HiXMark className="w-10 h-10 " />
+  ) : (
+    <HiBars3 className="w-10 h-10 text-black" />
+  )}
+</button>
       {/* Overlay */}
-      {open && (
-        <div
-          onClick={() => setOpen(false)}
-          className="fixed inset-0 bg-black/70 z-40 lg:hidden"
-        />
-      )}
+     {open && (
+  <div
+    onClick={() => setOpen(false)}
+    className="
+      fixed
+      inset-0
+      bg-[#111]
+     
+      z-40
+      lg:hidden
+     
+     
+    "
+  />
+)}
 
       {/* Sidebar */}
       <aside
         className={`
-        fixed top-0 left-0
-        h-screen
-        w-full sm:w-80 lg:w-72
-        bg-[#111]
-        
-        z-50
-        transition-transform duration-500
-        ${
-          open ? "translate-x-0" : "-translate-x-full"
-        }
-        lg:translate-x-0
-      `}
-      >
+    fixed
+    top-0
+    left-0
+    h-screen
+    w-full
+    sm:w-80
+    lg:w-72
+    bg-[#111]
+    z-50
+
+    transform
+    transition-all
+    duration-500
+    ease-in-out
+
+    ${
+      open
+        ? "translate-y-0 "
+        : "-translate-y-full "
+    }
+
+    lg:translate-y-0
+   
+  `}
+>
         {/* Close */}
-        <button
-          onClick={() => setOpen(false)}
-          className="absolute top-5 right-5 text-white lg:hidden"
-        >
-          <FaTimes size={24} />
-        </button>
+      
 
-        <div className="flex flex-col items-center h-full overflow-y-auto px-8 py-10">
-
+       <div className="flex flex-col items-center h-full overflow-y-auto px-8 py-10">
           {/* Profile */}
           <img
             src={Image}

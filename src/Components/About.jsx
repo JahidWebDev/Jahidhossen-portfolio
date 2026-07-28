@@ -53,7 +53,7 @@ function About() {
   return (
     <section 
      id="about" ref={sectionRef} className=" glow bg-white py-20 px-6 md:px-10 lg:left-72 lg:px-20   isolate
-    bg-gradient-to-br
+   
     from-white
     via-[#fffaf8]
     to-[#fff3ef]" style={{ fontFamily: "blinkma" }}
@@ -61,51 +61,21 @@ function About() {
 
   {/* ===== Premium Background Glow ===== */}
 {/* ===== Premium UI Glow Background ===== */}
-<div
-  className="absolute inset-0 pointer-events-none"
-  style={{
-    background: `
-      /* Top */
-      radial-gradient(circle at 50% 0%, rgba(195,50,1,.12), transparent 30%),
 
-      /* Bottom */
-      radial-gradient(circle at 50% 100%, rgba(255,140,0,.10), transparent 30%),
-
-      /* Left */
-      radial-gradient(circle at 0% 50%, rgba(255,90,31,.10), transparent 28%),
-
-      /* Right */
-      radial-gradient(circle at 100% 50%, rgba(255,180,0,.10), transparent 28%),
-
-      /* Top Left */
-      radial-gradient(circle at 10% 10%, rgba(195,50,1,.08), transparent 22%),
-
-      /* Top Right */
-      radial-gradient(circle at 90% 10%, rgba(255,180,0,.08), transparent 22%),
-
-      /* Bottom Left */
-      radial-gradient(circle at 10% 90%, rgba(255,120,120,.08), transparent 22%),
-
-      /* Bottom Right */
-      radial-gradient(circle at 90% 90%, rgba(255,140,0,.08), transparent 22%)
-    `,
-  }}
-/>
 {/* Grid Pattern */}
-<div
-  className="absolute inset-0 pointer-events-none opacity-30"
+  {/* <div
+  className="absolute inset-0 opacity-10 pointer-events-none"
   style={{
     backgroundImage: `
-      linear-gradient(45deg, rgba(195,50,1,.08) 25%, transparent 25%),
-      linear-gradient(-45deg, rgba(195,50,1,.08) 25%, transparent 25%),
-      linear-gradient(45deg, transparent 75%, rgba(195,50,1,.08) 75%),
-      linear-gradient(-45deg, transparent 75%, rgba(195,50,1,.08) 75%)
+      linear-gradient(45deg, rgba(0,0,0,.08) 25%, transparent 25%),
+      linear-gradient(-45deg, rgba(0,0,0,.08) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, rgba(0,0,0,.08) 75%),
+      linear-gradient(-45deg, transparent 75%, rgba(0,0,0,.08) 75%)
     `,
     backgroundSize: "40px 40px",
     backgroundPosition: "0 0, 0 20px, 20px -20px, -20px 0",
   }}
-/>
-
+/> */}
      <div className="max-w-7xl mx-auto px-4 lg:mr-42">
 
         {/* Heading */}
@@ -334,16 +304,19 @@ export function Skill({ title, value }) {
           : {}
       }
       className="
-        bg-white/50
-        rounded-xl
-        border border-gray-100
-        shadow-md
-        hover:shadow-xl
-        p-4
-        transition-all
-        duration-300
-        will-change-transform
-      "
+    bg-white/20
+  backdrop-blur-md
+  border
+  border-white/30
+  rounded-2xl
+  shadow-[0_8px_32px_rgba(0,0,0,0.12)]
+  hover:bg-white/30
+  hover:shadow-[0_12px_40px_rgba(0,0,0,0.18)]
+  transition-all
+  duration-300
+  p-4
+  will-change-transform
+"
     >
       <div className="flex items-center justify-between mb-3">
         <h3 className="font-semibold font-blinkma text-base md:text-lg text-gray-800">
@@ -371,8 +344,8 @@ export function Skill({ title, value }) {
             overflow-hidden
             bg-gradient-to-r
             from-[#c33201]
-            via-orange-500
-            to-blue-500
+            
+            to-[#00a5f1]
           "
         >
           {/* Desktop only Shine Effect */}

@@ -12,28 +12,27 @@ function ResumePage() {
       className="relative py-20  bg-[#f8f8f8] overflow-hidden"
     >
       {/* Background Pattern */}
-      <div
-        className="absolute inset-0 opacity-20 pointer-events-none"
-        style={{
-          backgroundImage: `
-            linear-gradient(45deg, rgba(195,50,1,.08) 25%, transparent 25%),
-            linear-gradient(-45deg, rgba(195,50,1,.08) 25%, transparent 25%),
-            linear-gradient(45deg, transparent 75%, rgba(195,50,1,.08) 75%),
-            linear-gradient(-45deg, transparent 75%, rgba(195,50,1,.08) 75%)
-          `,
-          backgroundSize: "40px 40px",
-          backgroundPosition:
-            "0 0,0 20px,20px -20px,-20px 0",
-        }}
-      />
+  {/* <div
+  className="absolute inset-0 opacity-10 pointer-events-none"
+  style={{
+    backgroundImage: `
+      linear-gradient(45deg, rgba(0,0,0,.08) 25%, transparent 25%),
+      linear-gradient(-45deg, rgba(0,0,0,.08) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, rgba(0,0,0,.08) 75%),
+      linear-gradient(-45deg, transparent 75%, rgba(0,0,0,.08) 75%)
+    `,
+    backgroundSize: "40px 40px",
+    backgroundPosition: "0 0, 0 20px, 20px -20px, -20px 0",
+  }}
+/> */}
 
       <div className="relative max-w-7xl mx-auto px-5 md:px-8 lg:px-12 lg:right-20">
 
         {/* Heading */}
 
-        <div className="mb-20">
+        <div className="mb-12">
 
-          <p className="uppercase tracking-[6px] font-semibold text-[#c33201]">
+          <p className="uppercase  tracking-[6px] font-blinkma font-semibold text-[#c33201]">
             My Resume
           </p>
 
@@ -46,7 +45,7 @@ function ResumePage() {
 
           <div className="w-24 h-1 bg-[#c33201] rounded-full mt-5"></div>
 
-          <p className="mt-8 text-gray-600 max-w-4xl leading-8">
+          <p className="mt-8 font-blinkma text-gray-600 max-w-4xl leading-8">
             Explore my professional journey as a MERN Stack Developer,
             showcasing my education, technical skills, professional
             experience and passion for building modern web applications.
@@ -62,7 +61,7 @@ function ResumePage() {
 
           <div>
 
-            <h2 className="text-4xl font-bold mb-10">
+            <h2 className="text-4xl font-BebasNeue font-bold mb-10">
               Summary
             </h2>
 
@@ -72,11 +71,11 @@ function ResumePage() {
 
               <div className="pb-16">
 
-                <h3 className="text-3xl font-bold uppercase">
+                <h3 className="text-3xl font-blinkma font-bold uppercase">
                   Jahid Hossen
                 </h3>
 
-                <p className="italic text-gray-500 mt-6 leading-8">
+                <p className="italic font-blinkma text-gray-500 mt-6 leading-8">
                   Passionate MERN Stack Developer specializing in
                   modern, responsive and scalable web applications.
                   I enjoy transforming ideas into fast, secure and
@@ -84,15 +83,15 @@ function ResumePage() {
                   web technologies.
                 </p>
 
-                <ul className="mt-8 space-y-5">
+                <ul className="mt-8 font-blinkma space-y-5">
 
-                  <li className="flex items-center gap-4">
+                  <li className="flex  items-center gap-4">
                     <FaMapMarkerAlt className="text-[#c33201]" />
                     <span>Dhaka, Bangladesh</span>
                   </li>
 
                   <li className="flex items-center gap-4">
-                    <FaPhoneAlt className="text-[#c33201]" />
+                    <FaPhoneAlt className=" font-Cabin text-[#c33201]" />
                     <span>+880 1777-169849</span>
                   </li>
 
@@ -120,7 +119,7 @@ function ResumePage() {
 {/* Professional Experience */}
 {/* ========================= */}
 
-<div className="relative border-l-2 border-[#c33201] pl-8">
+<div className="relative font-blinkma border-l-2 border-[#c33201] pl-8">
 
   {/* Experience 01 */}
   <h2 className="text-4xl font-bold mb-10">
@@ -135,7 +134,7 @@ function ResumePage() {
       MERN Stack Developer
     </h3>
 
-    <span className="inline-block mt-4 px-4 py-1 rounded-full bg-[#c33201]/10 text-[#c33201] font-semibold">
+    <span className="inline-block font-Cabin mt-4 px-4 py-1 rounded-full bg-[#c33201]/10 text-[#c33201] font-semibold">
       2024 - Present
     </span>
 
@@ -183,7 +182,7 @@ function ResumePage() {
       Frontend Developer
     </h3>
 
-    <span className="inline-block mt-4 px-4 py-1 rounded-full bg-[#c33201]/10 text-[#c33201] font-semibold">
+    <span className="inline-block font-Cabin mt-4 px-4 py-1 rounded-full bg-[#c33201]/10 text-[#c33201] font-semibold">
       2023 - Present
     </span>
 
@@ -234,11 +233,11 @@ function ResumePage() {
 {/* Education */}
 {/* ========================= */}
 
-<h2 className="text-4xl font-bold mt-20 mb-10">
+<h2 className="text-4xl font-blinkma font-bold mt-20 mb-10">
   Education
 </h2>
 
-<div className="relative border-l-2 border-[#c33201] pl-8">
+<div className="relative font-blinkma border-l-2 border-[#c33201] pl-8">
 
   {/* SSC */}
 
@@ -250,7 +249,7 @@ function ResumePage() {
       Secondary School Certificate (SSC)
     </h3>
 
-    <span className="inline-block mt-4 px-4 py-1 rounded-full bg-[#c33201]/10 text-[#c33201] font-semibold">
+    <span className="inline-block font-Cabin mt-4 px-4 py-1 rounded-full bg-[#c33201]/10 text-[#c33201] font-semibold">
       2016
     </span>
 
@@ -285,7 +284,7 @@ function ResumePage() {
       Higher Secondary Certificate (HSC)
     </h3>
 
-    <span className="inline-block mt-4 px-4 py-1 rounded-full bg-[#c33201]/10 text-[#c33201] font-semibold">
+    <span className="inline-block font-Cabin mt-4 px-4 py-1 rounded-full bg-[#c33201]/10 text-[#c33201] font-semibold">
       2017 - 2018
     </span>
 
@@ -320,7 +319,7 @@ function ResumePage() {
       Bachelor of Business Studies (BBS)
     </h3>
 
-    <span className="inline-block mt-4 px-4 py-1 rounded-full bg-[#c33201]/10 text-[#c33201] font-semibold">
+    <span className="inline-block font-Cabin mt-4 px-4 py-1 rounded-full bg-[#c33201]/10 text-[#c33201] font-semibold">
       2019 - 2020
     </span>
 
