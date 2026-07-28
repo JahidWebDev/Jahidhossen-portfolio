@@ -117,12 +117,9 @@ function About() {
 
           <div className="w-20 h-1 rounded-full bg-[#c33201] mt-5"></div>
 
-          <p className="mt-8 text-gray-600 leading-8 text-lg max-w-6xl">
-            A highly motivated website and app designer, developer,
-            and data analyst with a strong passion for creating
-            innovative web and mobile applications and uncovering
-            valuable insights from data.
-          </p>
+  <p className="mt-8 text-gray-600 leading-8 text-lg max-w-6xl">
+  A passionate <span className="font-semibold text-[#c33201]">MERN Stack Developer</span> focused on building modern, responsive, and scalable web applications using MongoDB, Express.js, React.js, and Node.js with clean code, excellent performance, and user-friendly experiences.
+</p>
 
         </div>
 
@@ -153,86 +150,99 @@ function About() {
 
           <div className="about-content">
 
-            <h3 className="text-4xl font-blinkma font-bold text-[#c33201]">
-              Website/App Designer & Developer
-            </h3>
+      <h3 className="text-4xl font-blinkma font-bold text-[#c33201]">
+  Full Stack MERN Developer
+</h3>
 
-            <p className="italic text-gray-500 mt-4 mb-8">
-              Provide individual and business IT solution -
-              to infinity and beyond
-            </p>
+<p className="italic text-gray-500 mt-4 mb-8">
+  Transforming ideas into fast, secure, and responsive digital solutions with the MERN Stack.
+</p>
+<div className="grid md:grid-cols-2 gap-y-4 gap-x-8">
 
-            <div className="grid md:grid-cols-2 gap-y-5 gap-x-10">
+  <div className="flex items-center gap-2 text-sm lg:text-base">
+    <FaChevronRight className="text-[#c33201] text-xs flex-shrink-0" />
+    <strong className="text-gray-800">Birthday:</strong>
+    <span className="text-gray-600">18 June</span>
+  </div>
 
-              <div className="flex items-center gap-3">
-                <FaChevronRight className="text-[#c33201]" />
-                <strong>Birthday:</strong>
-                <span>18 June</span>
-              </div>
+  <div className="flex items-center gap-2 text-sm lg:text-base">
+    <FaChevronRight className="text-[#c33201] text-xs flex-shrink-0" />
+    <strong className="text-gray-800">Experience:</strong>
+    <span className="text-gray-600">5+ Years</span>
+  </div>
 
-              <div className="flex items-center gap-3">
-                <FaChevronRight className="text-[#c33201]" />
-                <strong>Experience:</strong>
-                <span>10 Year+</span>
-              </div>
+  
 
-              <div className="flex items-center gap-3">
-                <FaChevronRight className="text-[#c33201]" />
-                <strong>Website:</strong>
-                <span>www.dstudiotech.com</span>
-              </div>
+  <div className="flex items-center gap-2 text-sm lg:text-base">
+    <FaChevronRight className="text-[#c33201] text-xs flex-shrink-0" />
+    <strong className="text-gray-800">Training:</strong>
+    <span className="text-gray-600">Creative IT Institute</span>
+  </div>
 
-              <div className="flex items-center gap-3">
-                <FaChevronRight className="text-[#c33201]" />
-                <strong>Degree:</strong>
-                <span>Master of IT</span>
-              </div>
 
-              <div className="flex items-center gap-3">
-                <FaChevronRight className="text-[#c33201]" />
-                <strong>Phone:</strong>
-                <span>+61 411 356 263</span>
-              </div>
+  <div className="flex items-center gap-2 text-sm lg:text-base">
+    <FaChevronRight className="text-[#c33201] text-xs flex-shrink-0" />
+    <strong className="text-gray-800">Phone:</strong>
+    <a
+      href="tel:+8801777169849"
+      className="text-gray-600 hover:text-[#c33201] transition"
+    >
+      +880 1777-169849
+    </a>
+  </div>
 
-              <div className="flex items-center gap-3">
-                <FaChevronRight className="text-[#c33201]" />
-                <strong>Email:</strong>
-                <span>davidfan618@gmail.com</span>
-              </div>
+<div className="flex items-center gap-2 text-sm lg:text-base">
+  <FaChevronRight className="text-[#c33201] text-xs flex-shrink-0" />
 
-              <div className="flex items-center gap-3">
-                <FaChevronRight className="text-[#c33201]" />
-                <strong>City:</strong>
-                <span>Brisbane, Australia</span>
-              </div>
+  <strong className="text-gray-800 flex-shrink-0">
+    Email:
+  </strong>
 
-              <div className="flex items-center gap-3">
-                <FaChevronRight className="text-[#c33201]" />
-                <strong>Freelance:</strong>
-                <span className="text-green-600 font-semibold">
-                  Available
-                </span>
-              </div>
+  <a
+    href="mailto:contactjahiddev@gmail.com"
+    className="
+      text-gray-600
+      hover:text-[#c33201]
+      transition
+      text-xs
+      lg:text-sm
+      break-words
+    "
+  >
+    contactjahiddev@gmail.com
+  </a>
+</div>
 
-            </div>
+  <div className="flex items-center gap-2 text-sm lg:text-base">
+    <FaChevronRight className="text-[#c33201] text-xs flex-shrink-0" />
+    <strong className="text-gray-800">Location:</strong>
+    <span className="text-gray-600">Dhaka, Bangladesh</span>
+  </div>
 
-            <div className="mt-10 space-y-6 text-gray-600 leading-8">
+  <div className="flex items-center gap-2 text-sm lg:text-base">
+    <FaChevronRight className="text-[#c33201] text-xs flex-shrink-0" />
+    <strong className="text-gray-800">Freelance:</strong>
+    <span className="text-green-600 font-semibold">Available</span>
+  </div>
 
-              <p>
-                Extensive education and experience in application
-                development have equipped me with advanced technical
-                expertise including Data Analytics, UI/UX Design,
-                Full Stack Development and Database Management.
-              </p>
+</div>
+         <div className="mt-10 space-y-6 text-gray-600 leading-8">
 
-              <p>
-                Skilled in React.js, Next.js, Vue.js, Node.js,
-                Express.js, PHP, Python, Java, SQL, MongoDB,
-                Adobe Creative Suite, Power BI, Excel,
-                Git and many modern web technologies.
-              </p>
+  <p>
+    I specialize in building modern, responsive, and scalable web
+    applications using the MERN Stack. My focus is on creating
+    clean, efficient, and user-friendly solutions that deliver
+    excellent performance across all devices.
+  </p>
 
-            </div>
+  <p>
+    Experienced with MongoDB, Express.js, React.js, Node.js,
+    JavaScript (ES6+), Next.js, Tailwind CSS, Firebase,
+    REST APIs, Git, GitHub, and responsive UI development,
+    delivering secure and production-ready web applications.
+  </p>
+
+</div>
 
           </div>
 
