@@ -53,10 +53,11 @@ function Hero() {
           }}
         />
       {/* Top Bar */}
-<div className="absolute top-4 lg:top-6 left-0 right-0 z-50 px-4 sm:px-6 lg:px-12">
+<div className="absolute lg:ml-12 mt-4 top-4 lg:top-6 left-0 right-0 z-50 px-4 sm:px-6 lg:px-12">
   <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
 {/* Contact */}
-<div className="flex items-center justify-start gap-4 lg:gap-8 w-full">
+<div className="flex  items-center justify-start gap-4 lg:gap-8 w-full">
+
 
   <a
     href="tel:+8801777169849"
