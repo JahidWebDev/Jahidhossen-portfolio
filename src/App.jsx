@@ -11,6 +11,7 @@ import Pages from "./Home/Pages";
 // import AboutPage from "./Home/AboutPage";
 import ResumePage from "./Components/ResumePage";
 import About from "./Components/About";
+import Portfolio from "./Components/Portfolio";
 
 function App() {
   const [loadingComplete, setLoadingComplete] = useState(false);
@@ -31,6 +32,7 @@ function App() {
     <Route path="/" element={<Pages />} />
     <Route path="/about" element={<About />} />
     <Route path="/resume" element={<ResumePage />} />
+    <Route path="/portfolio" element={<Portfolio />} />
   </Routes>
 </main>
         </div>

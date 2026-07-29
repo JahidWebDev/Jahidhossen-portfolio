@@ -32,9 +32,6 @@ function ResumePage() {
 
         <div className="mb-12">
 
-          <p className="uppercase  tracking-[6px] font-blinkma font-semibold text-[#c33201]">
-            My Resume
-          </p>
 
           <h1
             className="text-5xl lg:text-7xl mt-4"

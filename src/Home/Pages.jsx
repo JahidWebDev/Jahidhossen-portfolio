@@ -1,6 +1,7 @@
 import Hero from "../Components/Hero";
 import About from "../Components/About";
 import ResumePage from "../Components/ResumePage";
+import Portfolio from "../Components/Portfolio";
 
 function Pages() {
   return (
@@ -13,7 +14,7 @@ function Pages() {
       </div>
     
           <ResumePage />
-    
+           <Portfolio/>
    
     </>
   );
