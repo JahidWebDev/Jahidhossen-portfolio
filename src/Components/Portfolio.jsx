@@ -1,77 +1,82 @@
 import React, { useState } from 'react';
-
+import fixitgroup from "../img/fixitgroupbd.png"
+import drfixitbd from "../img/drfixitbd.png"
+import koreanfixit from "../img/koreanfixit.png"
+import newssite from "../img/news.png"
+import newsdashboard from "../img/newsdashboard.png"
+import lubricants from "../img/lubricants.jpg";
 const Portfolio = () => {
   // State to track if all projects are shown
   const [showAll, setShowAll] = useState(false);
 
   // All project data
   const allProjects = [
-    {
-      id: 1,
-      title: 'Makers Tracker',
-      description:
-        "A project goal tracking tool for professionals. It let's you create project, assign goals and generate analytics to track progress.",
-      tech: ['TypeScript', 'Next.js', 'TailwindCSS', 'MySQL'],
-      liveDemo: 'https://jahidhossen-portfolio.vercel.app/',
-      repo: '#',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop&crop=center&auto=format',
-      bgGradient: 'from-blue-50 to-indigo-50',
-    },
-    {
-      id: 2,
-      title: 'Pricing Bees',
-      description:
-        'A no-code pricing page builder. Build professional-looking pricing pages, customize looks, and get detailed analytics to optimize your pricing strategy.',
-      tech: ['TypeScript', 'Next.js', 'Shadcn/ui', 'Convex'],
-      liveDemo: '#',
-      repo: '#',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop&crop=center&auto=format',
-      bgGradient: 'from-purple-50 to-pink-50',
-    },
-    {
-      id: 3,
-      title: 'Indie Hustles',
-      description:
-        'A listing site for Indie hackers to promote their products.',
-      tech: ['TypeScript', 'Next.js', 'TailwindCSS', 'Airtable'],
-      liveDemo: '#',
-      repo: '#',
-      image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=400&h=200&fit=crop&crop=center&auto=format',
-      bgGradient: 'from-green-50 to-emerald-50',
-    },
-    {
-      id: 4,
-      title: 'FlowForge',
-      description:
-        'Visual workflow builder for automation. Design, test, and deploy with drag-and-drop.',
-      tech: ['React', 'Node', 'Postgres'],
-      liveDemo: '#',
-      repo: '#',
-      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=200&fit=crop&crop=center&auto=format',
-      bgGradient: 'from-cyan-50 to-blue-50',
-    },
-    {
-      id: 5,
-      title: 'TaskPulse',
-      description:
-        'Real-time task monitoring with alerting and team dashboards.',
-      tech: ['Python', 'Django', 'Celery', 'Redis'],
-      liveDemo: '#',
-      repo: '#',
-      image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=400&h=200&fit=crop&crop=center&auto=format',
-      bgGradient: 'from-orange-50 to-amber-50',
-    },
-    {
-      id: 6,
-      title: 'LaunchPad',
-      description:
-        'Curated launch platform for indie makers. Get feedback, upvotes, and early users.',
-      tech: ['Vue', 'Nuxt', 'Tailwind', 'Supabase'],
-      liveDemo: '#',
-      repo: '#',
-      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=200&fit=crop&crop=center&auto=format',
-      bgGradient: 'from-rose-50 to-red-50',
-    },
+{
+  id: 1,
+  title: "Fixit Group BD",
+  description:
+    "A modern business website for Fixit Group BD, showcasing industrial coating, flooring, and professional construction solutions.",
+  tech: ["React", "TailwindCSS", "JavaScript"],
+  liveDemo: "https://fixitgroupbd.com/",
+  repo: "https://github.com/JahidWebDev",
+  image: fixitgroup,
+  bgGradient: "from-blue-50 to-indigo-50",
+},
+{
+  id: 2,
+  title: "Dr Fixit BD",
+  description:
+    "A professional website for Dr Fixit BD, showcasing services, solutions, and company information with a modern responsive interface.",
+  tech: ["React", "TailwindCSS", "JavaScript"],
+  liveDemo: "https://drfixitbd.org/",
+  repo: "https://github.com/JahidWebDev",
+  image: drfixitbd,
+  bgGradient: "from-blue-50 to-cyan-50",
+},
+  {
+  id: 3,
+  title: "Korean Fixit",
+  description:
+    "A modern industrial coating and flooring solutions website designed to showcase services, products, and professional solutions with a clean and responsive interface.",
+  tech: ["React", "TailwindCSS", "JavaScript"],
+  liveDemo: "https://koreanfixit.com/",
+  repo: "https://github.com/JahidWebDev",
+  image: koreanfixit,
+  bgGradient: "from-green-50 to-emerald-50",
+},
+{
+  id: 4,
+  title: "News Portal",
+  description:
+    "A modern full-stack news portal built with Next.js, featuring category-based news, breaking news, search, featured stories, and a responsive user-friendly interface.",
+  tech: ["Next.js", "Node.js", "MongoDB", "TailwindCSS"],
+  liveDemo: "https://github.com/JahidWebDev/Next.js-News-Website-Project",
+  repo: "https://github.com/JahidWebDev/Next.js-News-Website-Project",
+  image: newssite,
+  bgGradient: "from-cyan-50 to-blue-50",
+},
+  {
+  id: 5,
+  title: "News Dashboard",
+  description:
+    "A full-stack news management platform built with the MERN stack, featuring news publishing, editing, category management, image uploads, authentication, and an admin dashboard.",
+  tech: ["MongoDB", "Express.js", "React", "Node.js"],
+  liveDemo: "https://github.com/JahidWebDev/News_portal_dashboard",
+  repo: "https://github.com/JahidWebDev/News_portal_dashboard",
+  image: newsdashboard,
+  bgGradient: "from-orange-50 to-amber-50",
+},
+  {
+  id: 6,
+  title: "Lubricants Website",
+  description:
+    "A modern responsive lubricants company website designed to showcase automotive and industrial lubricant products, services, and company information with a clean professional interface.",
+  tech: ["React", "TailwindCSS", "JavaScript"],
+  liveDemo: "https://lubricants-website.vercel.app/",
+  repo: "https://github.com/JahidWebDev/Lubricants-website",
+  image: lubricants,
+  bgGradient: "from-rose-50 to-red-50",
+},
     // Additional projects that appear when "See all" is clicked
     {
       id: 7,
@@ -154,86 +159,140 @@ const Portfolio = () => {
 </div>
 
           {/* Projects Grid - 3 columns */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7">
-            {displayedProjects.map((project, index) => (
-              <div
-                key={project.id}
-                className={`group rounded-2xl overflow-hidden shadow-lg ${
-                  !showAll && index >= 6 ? 'hidden' : ''
-                }`}
-                style={{
-                  animation: showAll && index >= 6
-                    ? 'fadeInUp 0.5s ease-out forwards'
-                    : 'none',
-                  animationDelay: showAll ? `${(index - 6) * 0.1}s` : '0s',
-                }}
+       <div className="grid font-blinkma grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7">
+  {displayedProjects.map((project, index) => (
+    <div
+      key={project.id}
+      onClick={() => {
+        if (project.liveDemo) {
+          window.open(project.liveDemo, "_blank", "noopener,noreferrer");
+        }
+      }}
+      className={`group relative rounded-3xl overflow-hidden bg-white border border-slate-200/80 shadow-[0_8px_30px_rgba(15,23,42,0.06)] hover:shadow-[0_20px_50px_rgba(15,23,42,0.12)] transition-all duration-500 cursor-pointer ${
+        !showAll && index >= 6 ? "hidden" : ""
+      }`}
+      style={{
+        animation:
+          showAll && index >= 6
+            ? "fadeInUp 0.5s ease-out forwards"
+            : "none",
+        animationDelay: showAll ? `${(index - 6) * 0.1}s` : "0s",
+      }}
+    >
+      {/* IMAGE */}
+      <div
+        className={`relative h-52 bg-gradient-to-br ${project.bgGradient} overflow-hidden`}
+      >
+        <img
+          src={project.image}
+          alt={project.title}
+          className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
+          loading="lazy"
+        />
+
+        {/* Dark overlay */}
+        
+
+        {/* Hover View */}
+        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+          <span className="px-5 py-2.5 rounded-full bg-white/15 backdrop-blur-xl border border-white/30 text-white text-sm font-semibold shadow-lg translate-y-3 group-hover:translate-y-0 transition-transform duration-500">
+            View Project ↗
+          </span>
+        </div>
+
+        {/* Tech */}
+        <div className="absolute bottom-4 left-4 right-4 flex flex-wrap gap-2">
+          {project.tech.slice(0, 3).map((tech) => (
+            <span
+              key={tech}
+              className="px-2.5 py-1 rounded-full bg-black/35 backdrop-blur-lg border border-white/15 text-white text-[11px] font-medium"
+            >
+              {tech}
+            </span>
+          ))}
+
+          {project.tech.length > 3 && (
+            <span className="px-2.5 py-1 rounded-full bg-black/35 backdrop-blur-lg border border-white/15 text-white text-[11px] font-medium">
+              +{project.tech.length - 3}
+            </span>
+          )}
+        </div>
+      </div>
+
+      {/* CONTENT */}
+      <div className="p-5 md:p-6">
+        {/* Project Number */}
+        <div className="flex items-center justify-between mb-3">
+          <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-slate-400">
+            Project {String(index + 1).padStart(2, "0")}
+          </span>
+
+          <span className="w-2 h-2 rounded-full bg-[#c33201] group-hover:scale-150 transition-transform duration-300" />
+        </div>
+
+        {/* TITLE */}
+        <h3 className="text-xl font-bold text-[#0b1a2f] mb-2 group-hover:text-[#c33201] transition-colors duration-300">
+          {project.title}
+        </h3>
+
+        {/* DESCRIPTION */}
+        <p className="text-sm leading-6 text-slate-500 line-clamp-2 mb-5">
+          {project.description}
+        </p>
+
+        {/* FOOTER */}
+        <div className="flex items-center justify-between pt-4 border-t border-slate-100">
+          <span className="text-sm font-semibold text-slate-700 group-hover:text-[#c33201] transition-colors">
+            Explore Project
+          </span>
+
+          <div className="flex items-center gap-2">
+            {/* Live */}
+            <a
+              href={project.liveDemo}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="w-9 h-9 rounded-full flex items-center justify-center bg-[#c33201] text-white hover:bg-[#c33201] hover:text-white transition-all duration-300"
+              aria-label="Live Demo"
+            >
+              <svg
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
               >
-                {/* Image Section */}
-                <div className={`relative h-44 bg-gradient-to-br ${project.bgGradient} overflow-hidden`}>
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                  {/* Tech chips overlay on image */}
-                  <div className="absolute bottom-3 left-3 right-3 flex flex-wrap items-center gap-1.5">
-                    {project.tech.slice(0, 3).map((tech) => (
-                      <span
-                        key={tech}
-                        className="bg-black/40 backdrop-blur-md text-white text-[0.6rem] font-medium px-2.5 py-1 rounded-full border border-white/10"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                    {project.tech.length > 3 && (
-                      <span className="bg-black/40 backdrop-blur-md text-white text-[0.6rem] font-medium px-2.5 py-1 rounded-full border border-white/10">
-                        +{project.tech.length - 3}
-                      </span>
-                    )}
-                  </div>
-                </div>
+                <path d="M7 17L17 7" />
+                <path d="M7 7h10v10" />
+              </svg>
+            </a>
 
-                {/* Content Section */}
-                <div className="p-5">
-                  {/* Title */}
-                  <h3 className="font-bold text-[1.1rem] tracking-[-0.01em] text-[#0b1a2f] mb-1.5 group-hover:text-indigo-600 transition-colors duration-200">
-                    {project.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-[#3c4a5e] text-[0.85rem] leading-relaxed mb-4 line-clamp-2">
-                    {project.description}
-                  </p>
-
-                  {/* Links */}
-                  <div className="flex items-center gap-3 pt-2 border-t border-slate-100">
-                    <a
-                      href={project.liveDemo}
-                      className="text-[#1f2a3a] font-semibold text-[0.85rem] no-underline border-b-2 border-transparent hover:border-indigo-500 hover:text-indigo-600 transition-all duration-150 flex items-center gap-1"
-                    >
-                      Live Demo
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M7 17L17 7" />
-                        <path d="M7 7h10v10" />
-                      </svg>
-                    </a>
-                    <span className="text-[#bac8dc] font-light">·</span>
-                    <a
-                      href={project.repo}
-                      className="text-[#5a6c82] font-medium text-[0.85rem] no-underline border-b-2 border-transparent hover:text-indigo-600 hover:border-indigo-300 transition-all duration-150 flex items-center gap-1"
-                    >
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="text-[#5a6c82] group-hover:text-indigo-500 transition-colors">
-                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.15 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.62.24 2.85.12 3.15.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-                      </svg>
-                      Repository
-                    </a>
-                  </div>
-                </div>
-              </div>
-            ))}
+            {/* Github */}
+            <a
+              href={project.repo}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="w-9 h-9 rounded-full flex items-center justify-center  text-white bg-black hover:text-white transition-all duration-300"
+              aria-label="Repository"
+            >
+              <svg
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.15 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.62.24 2.85.12 3.15.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+            </a>
           </div>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
 
           {/* See More Button - Mobile & Tablet */}
           <div className="flex justify-center items-center mt-10">
