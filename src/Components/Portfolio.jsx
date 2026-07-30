@@ -5,6 +5,10 @@ import koreanfixit from "../img/koreanfixit.png"
 import newssite from "../img/news.png"
 import newsdashboard from "../img/newsdashboard.png"
 import lubricants from "../img/lubricants.jpg";
+import petroll from "../img/petroll.png";
+import IslamicFestival from "../img/IslamicFestival.png";
+import CapAjencyProject from "../img/Cap-Ajency-Project.png";
+
 const Portfolio = () => {
   // State to track if all projects are shown
   const [showAll, setShowAll] = useState(false);
@@ -78,39 +82,47 @@ const Portfolio = () => {
   bgGradient: "from-rose-50 to-red-50",
 },
     // Additional projects that appear when "See all" is clicked
-    {
-      id: 7,
-      title: 'AI Chat Studio',
-      description:
-        'Build and deploy AI-powered chatbots with custom knowledge bases and multi-channel support.',
-      tech: ['Python', 'FastAPI', 'React', 'MongoDB'],
-      liveDemo: '#',
-      repo: '#',
-      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=200&fit=crop&crop=center&auto=format',
-      bgGradient: 'from-violet-50 to-purple-50',
-    },
-    {
-      id: 8,
-      title: 'Cloud Canvas',
-      description:
-        'Collaborative design tool for teams with real-time editing, version control, and asset management.',
-      tech: ['TypeScript', 'React', 'Node', 'AWS'],
-      liveDemo: '#',
-      repo: '#',
-      image: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=400&h=200&fit=crop&crop=center&auto=format',
-      bgGradient: 'from-teal-50 to-cyan-50',
-    },
-    {
-      id: 9,
-      title: 'DevMetrics',
-      description:
-        'Developer productivity analytics dashboard with DORA metrics, cycle time tracking, and team insights.',
-      tech: ['Go', 'React', 'PostgreSQL', 'Grafana'],
-      liveDemo: '#',
-      repo: '#',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop&crop=center&auto=format',
-      bgGradient: 'from-amber-50 to-yellow-50',
-    },
+
+{
+  id: 7,
+  title: 'Petroil Website',
+  description:
+    'Modern industrial lubricant and petroleum website designed to showcase products, services, and company information with a clean and responsive interface.',
+  tech: ['React', 'Tailwind CSS', 'JavaScript'],
+  liveDemo: '',
+  repo: 'https://github.com/JahidWebDev/Petroil-website',
+  image: petroll,
+  bgGradient: 'from-orange-50 to-red-50',
+},
+
+   
+{
+  id: 8,
+  title: 'Cap Agency Project',
+  description:
+    'A modern agency website built with a clean and responsive layout to showcase creative services, projects, and business information.',
+  tech: ['HTML', 'CSS', 'Bootstrap'],
+  liveDemo: 'https://cap-ajency-project-2023.vercel.app/',
+  repo: 'https://github.com/JahidWebDev/Cap-Ajency-project-2023',
+  image: CapAjencyProject,
+  bgGradient: 'from-teal-50 to-cyan-50',
+},
+
+
+
+{
+  id: 9,
+  title: 'Islamic Festival',
+  description:
+    'A beautiful Islamic Festival website featuring event information, Islamic content, and a responsive design optimized for a smooth user experience.',
+  tech: ['Html', 'Css', 'Boostrap'],
+  liveDemo: 'https://islamic-festival-2023.vercel.app/',
+  repo: 'https://github.com/JahidWebDev/Islamic-Festival-2023',
+  image: IslamicFestival,
+  bgGradient: 'from-amber-50 to-yellow-50',
+},
+
+
   ];
 
   // Display either first 6 or all projects
@@ -144,7 +156,7 @@ const Portfolio = () => {
 {/* Projects Info */}
 <div className="flex items-center justify-between mb-8">
   <div className="flex items-center gap-3">
-    <div className="h-8 w-1.5 rounded-full bg-gradient-to-b from-indigo-500 to-purple-500"></div>
+    <div className="h-8 w-1.5 rounded-full bg-gradient-to-b from-orange-600 to-black"></div>
 
     <span className="text-sm font-semibold text-slate-500 tracking-widest uppercase">
       Projects
@@ -194,8 +206,8 @@ const Portfolio = () => {
         
 
         {/* Hover View */}
-        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
-          <span className="px-5 py-2.5 rounded-full bg-white/15 backdrop-blur-xl border border-white/30 text-white text-sm font-semibold shadow-lg translate-y-3 group-hover:translate-y-0 transition-transform duration-500">
+        <div className="absolute inset-0 flex hover:text-black items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+          <span className="px-5 py-2.5 rounded-full hover:text-black bg-black/15 backdrop-blur-xl border border-white/30 text-white text-sm font-semibold shadow-lg translate-y-3 group-hover:translate-y-0 transition-transform duration-500">
             View Project ↗
           </span>
         </div>
@@ -298,7 +310,7 @@ const Portfolio = () => {
           <div className="flex justify-center items-center mt-10">
             <button
               onClick={() => setShowAll(!showAll)}
-              className="group bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold px-8 py-3 rounded-full text-sm shadow-md shadow-indigo-200 hover:shadow-xl hover:shadow-indigo-300 hover:scale-105 transition-all duration-200 flex items-center gap-2"
+              className="group bg-gradient-to-r bg-black text-white font-semibold px-8 py-3 rounded-full text-sm shadow-md shadow-indigo-200 hover:shadow-xl  hover:scale-105 transition-all duration-200 flex items-center gap-2"
             >
               <span>{showAll ? 'Show less' : 'See all projects'}</span>
               <svg
