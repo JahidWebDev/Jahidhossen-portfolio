@@ -8,6 +8,8 @@ import lubricants from "../img/lubricants.jpg";
 import petroll from "../img/petroll.png";
 import IslamicFestival from "../img/IslamicFestival.png";
 import CapAjencyProject from "../img/Cap-Ajency-Project.png";
+import realestate from "../img/real-estate-landing-page.png";
+import  finsweet from "../img/finsweet.png";
 
 const Portfolio = () => {
   // State to track if all projects are shown
@@ -121,7 +123,28 @@ const Portfolio = () => {
   image: IslamicFestival,
   bgGradient: 'from-amber-50 to-yellow-50',
 },
-
+{
+  id: 10,
+  title: 'Real Estate Landing Page',
+  description:
+    'A modern real estate website and landing page designed to showcase properties, apartments, and residential homes with a fast, responsive, and user-friendly interface.',
+  tech: ['Html', 'Css', 'Bootstrap'],
+  liveDemo: 'https://real-estate-landing-page-beta-two.vercel.app/',
+  repo: 'https://github.com/JahidWebDev/real-estate-landing-page',
+  image: realestate,
+  bgGradient: 'from-amber-50 to-yellow-50',
+},
+{
+  id: 11,
+  title: 'FinSweet Landing Page',
+  description:
+    'A modern responsive startup landing page built with HTML, CSS, and Bootstrap, featuring a clean UI and professional sections for businesses and early-stage startups.',
+  tech: ['Html', 'Css', 'Bootstrap'],
+  liveDemo: 'https://class-12-html-css-boostrap-finsweet.vercel.app/features.html',
+  repo: 'https://github.com/JahidWebDev/Class-12-html-css-boostrap-finsweet',
+  image: finsweet,
+  bgGradient: 'from-indigo-50 to-blue-50',
+},
 
   ];
 
