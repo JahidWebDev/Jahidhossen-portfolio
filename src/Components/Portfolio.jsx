@@ -140,7 +140,7 @@ const Portfolio = () => {
   description:
     'A modern responsive startup landing page built with HTML, CSS, and Bootstrap, featuring a clean UI and professional sections for businesses and early-stage startups.',
   tech: ['Html', 'Css', 'Bootstrap'],
-  liveDemo: 'https://class-12-html-css-boostrap-finsweet.vercel.app/features.html',
+  liveDemo: 'https://class-12-html-css-boostrap-finsweet.vercel.app/index.html',
   repo: 'https://github.com/JahidWebDev/Class-12-html-css-boostrap-finsweet',
   image: finsweet,
   bgGradient: 'from-indigo-50 to-blue-50',
