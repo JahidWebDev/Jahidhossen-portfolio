@@ -12,6 +12,8 @@ import Pages from "./Home/Pages";
 import ResumePage from "./Components/ResumePage";
 import About from "./Components/About";
 import Portfolio from "./Components/Portfolio";
+import Certificate from "./Components/Certificate";
+import Contact from "./Components/Contact";
 
 function App() {
   const [loadingComplete, setLoadingComplete] = useState(false);
@@ -33,6 +35,8 @@ function App() {
     <Route path="/about" element={<About />} />
     <Route path="/resume" element={<ResumePage />} />
     <Route path="/portfolio" element={<Portfolio />} />
+    <Route path="/certificate" element={<Certificate />} />
+    <Route path="/contact" element={<Contact />} />
   </Routes>
 </main>
         </div>

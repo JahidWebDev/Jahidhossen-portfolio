@@ -34,15 +34,15 @@ function ResumePage() {
 
 
           <h1
-            className="text-5xl lg:text-7xl mt-4"
+            className="text-5xl  text-[#c33201] lg:text-7xl mt-4"
             style={{ fontFamily: "BebasNeue" }}
           >
             Resume
           </h1>
 
-          <div className="w-24 h-1 bg-[#c33201] rounded-full mt-5"></div>
+         
 
-          <p className="mt-8 font-blinkma text-gray-600 max-w-4xl leading-8">
+          <p className="mt-8 font-Cabin  text-gray-600 max-w-4xl leading-8">
             Explore my professional journey as a MERN Stack Developer,
             showcasing my education, technical skills, professional
             experience and passion for building modern web applications.
@@ -58,7 +58,7 @@ function ResumePage() {
 
           <div>
 
-            <h2 className="text-4xl font-BebasNeue font-bold mb-10">
+            <h2 className="text-4xl  text-[#c33201] font-BebasNeue font-bold mb-10">
               Summary
             </h2>
 
@@ -68,11 +68,11 @@ function ResumePage() {
 
               <div className="pb-16">
 
-                <h3 className="text-3xl font-blinkma font-bold uppercase">
+                <h3 className="text-3xl  font-blinkma font-bold uppercase">
                   Jahid Hossen
                 </h3>
 
-                <p className="italic font-blinkma text-gray-500 mt-6 leading-8">
+                <p className="italic font-Cabin text-gray-500 mt-6 leading-8">
                   Passionate MERN Stack Developer specializing in
                   modern, responsive and scalable web applications.
                   I enjoy transforming ideas into fast, secure and
@@ -116,10 +116,12 @@ function ResumePage() {
 {/* Professional Experience */}
 {/* ========================= */}
 
+
+            </div>
 <div className="relative font-blinkma border-l-2 border-[#c33201] pl-8">
 
   {/* Experience 01 */}
-  <h2 className="text-4xl font-bold mb-10">
+  <h2 className="text-4xl  text-[#c33201] font-bold mb-10">
               Professional Experience
             </h2>
 
@@ -136,10 +138,10 @@ function ResumePage() {
     </span>
 
     <p className="mt-4 italic text-gray-500">
-      Freelance • Bangladesh
+      Creative IT Institute
     </p>
 
-    <ul className="mt-5 space-y-3 list-disc pl-5 text-gray-600 leading-7">
+    <ul className="mt-5 space-y-3  font-Cabin list-disc pl-5 text-gray-600 leading-7">
 
       <li>
         Developed modern MERN Stack web applications using
@@ -184,10 +186,10 @@ function ResumePage() {
     </span>
 
     <p className="mt-4 italic text-gray-500">
-      Personal & Client Projects
+      Creative IT Institute
     </p>
 
-    <ul className="mt-5 space-y-3 list-disc pl-5 text-gray-600 leading-7">
+    <ul className="mt-5 space-y-3 font-Cabin list-disc pl-5 text-gray-600 leading-7">
 
       <li>
         Converted Figma and PSD designs into pixel-perfect
@@ -215,8 +217,6 @@ function ResumePage() {
  
 
 </div>
-            </div>
-
             {/* ========= Education Part Next ========= */}
 
           </div>
@@ -230,7 +230,7 @@ function ResumePage() {
 {/* Education */}
 {/* ========================= */}
 
-<h2 className="text-4xl font-blinkma font-bold mt-20 mb-10">
+<h2 className="text-4xl  text-[#c33201] font-blinkma font-bold mt-20 mb-10">
   Education
 </h2>
 
@@ -254,7 +254,7 @@ function ResumePage() {
       Jatrabari Ideal School & College, Dhaka
     </p>
 
-    <ul className="mt-5 space-y-3 list-disc pl-5 text-gray-600 leading-7">
+    <ul className="mt-5 font-Cabin space-y-3 list-disc pl-5 text-gray-600 leading-7">
       <li>
         Successfully completed Secondary School Certificate (SSC).
       </li>
@@ -289,7 +289,7 @@ function ResumePage() {
       Ideal College, Dhanmondi
     </p>
 
-    <ul className="mt-5 space-y-3 list-disc pl-5 text-gray-600 leading-7">
+    <ul className="mt-5 font-Cabin space-y-3 list-disc pl-5 text-gray-600 leading-7">
       <li>
         Completed Higher Secondary education in Business Studies.
       </li>
@@ -324,7 +324,7 @@ function ResumePage() {
       Tejgaon College, Dhaka
     </p>
 
-    <ul className="mt-5 space-y-3 list-disc pl-5 text-gray-600 leading-7">
+    <ul className="mt-5 font-Cabin space-y-3 list-disc pl-5 text-gray-600 leading-7">
       <li>
         Completed Bachelor of Business Studies successfully.
       </li>

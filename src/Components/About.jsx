@@ -81,13 +81,13 @@ function About() {
         {/* Heading */}
         <div className="about-title mb-16">
 
-          <h2 className="text-5xl font-BebasNeue text-6xl   font-bold text-[#c33201]">
+          <h2 className=" font-BebasNeue text-6xl   font-bold text-[#c33201]">
             About
           </h2>
 
-          <div className="w-20 h-1 rounded-full bg-[#c33201] mt-5"></div>
+          
 
-  <p className="mt-8 text-gray-600 leading-8 text-lg max-w-6xl">
+  <p className="mt-6 font-Cabin text-gray-600 leading-8 text-lg max-w-6xl">
   A passionate <span className="font-semibold text-[#c33201]">MERN Stack Developer</span> focused on building modern, responsive, and scalable web applications using MongoDB, Express.js, React.js, and Node.js with clean code, excellent performance, and user-friendly experiences.
 </p>
 
@@ -196,7 +196,7 @@ function About() {
   </div>
 
 </div>
-         <div className="mt-10 space-y-6 text-gray-600 leading-8">
+         <div className="mt-10 font-Cabin space-y-6 text-gray-600 leading-8">
 
   <p>
     I specialize in building modern, responsive, and scalable web
@@ -230,15 +230,12 @@ function About() {
 
     <div className="text-center">
 
-      <span className="uppercase font-blinkma tracking-[6px] text-[#c33201] font-semibold">
-        My Skills
-      </span>
 
-      <h2 className="text-5xl font-BebasNeue lg:text-7xl font-bold text-gray-900 mt-3">
+      <h2 className="text-5xl  text-[#c33201] font-BebasNeue lg:text-7xl font-bold mt-3">
         Technical Expertise
       </h2>
 
-      <p className="text-gray-600 font-blinkma max-w-3xl mx-auto mt-6 leading-8">
+      <p className="text-gray-600 font-Cabin max-w-3xl mx-auto mt-6 leading-8">
         Full Stack Web Developer with expertise in modern frontend,
         backend and UI/UX technologies. Passionate about creating
         scalable, responsive and high-performance applications.
@@ -246,7 +243,7 @@ function About() {
 
     </div>
 
-    <div className="grid md:grid-cols-2 gap-8 mt-20">
+    <div className="grid md:grid-cols-2 gap-8 mt-12">
 
       <Skill title="HTML" value={100} />
       <Skill title="CSS / SCSS" value={95} />

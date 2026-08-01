@@ -160,14 +160,14 @@ const Portfolio = () => {
          {/* Portfolio Header */}
 <div className="mb-8">
  <h1
-            className="text-5xl lg:text-7xl mt-4"
+            className="text-5xl  text-[#c33201] lg:text-7xl mt-4"
             style={{ fontFamily: "BebasNeue" }}
           >
             Portfolio
           </h1>
-<div className="w-24 h-1 bg-[#c33201] rounded-full mt-5"></div>
 
-  <p className="mt-8 font-blinkma text-gray-600 max-w-4xl leading-8">
+
+  <p className="mt-6 font-Cabin text-gray-600 max-w-4xl leading-8">
     Browse my collection of web development projects that showcase my expertise
     in modern front-end and back-end technologies. Each project reflects my
     focus on building responsive, scalable, and user-friendly applications with
@@ -194,7 +194,7 @@ const Portfolio = () => {
 </div>
 
           {/* Projects Grid - 3 columns */}
-       <div className="grid font-blinkma grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7">
+       <div className="grid font-Cabin grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7">
   {displayedProjects.map((project, index) => (
     <div
       key={project.id}
@@ -221,7 +221,7 @@ const Portfolio = () => {
         <img
           src={project.image}
           alt={project.title}
-          className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
+          className="w-full   h-full object-cover transition-all duration-700 group-hover:scale-110"
           loading="lazy"
         />
 
@@ -266,7 +266,7 @@ const Portfolio = () => {
         </div>
 
         {/* TITLE */}
-        <h3 className="text-xl font-bold text-[#0b1a2f] mb-2 group-hover:text-[#c33201] transition-colors duration-300">
+        <h3 className="text-xl font-blinkma font-bold text-[#0b1a2f] mb-2 group-hover:text-[#c33201] transition-colors duration-300">
           {project.title}
         </h3>
 

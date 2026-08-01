@@ -15,7 +15,7 @@ import {
   FaTools,
   FaEnvelope,
 } from "react-icons/fa";
-
+import { FaCertificate } from "react-icons/fa";
 function NavbarWrapper() {
 
 
@@ -223,13 +223,13 @@ function NavbarWrapper() {
 
             <li>
               <NavLink
-                to="/services"
-                className={navClass}
-                onClick={() => setOpen(false)}
-              >
-                <FaTools className="transition-all duration-500 group-hover:scale-125 group-hover:rotate-12" />
-                Services
-              </NavLink>
+  to="/certificate"
+  className={navClass}
+  onClick={() => setOpen(false)}
+>
+  <FaCertificate className="transition-all duration-500 group-hover:scale-125 group-hover:rotate-12" />
+  Certificate
+</NavLink>
             </li>
 
             <li>
