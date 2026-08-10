@@ -179,14 +179,14 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 30px;
+  font-size: 36px;
   font-weight: 700;
   color: white;
- 
+  white-space: nowrap;
   overflow: hidden;
   width: 0;
   font-family: "BebasNeue";
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   /* border-right: 2px solid #EC5E30; */
   z-index: 3; /* follow এর উপর থাকবে */
 

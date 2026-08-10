@@ -117,21 +117,22 @@ tl.to(".follow", {
   Assalamu Alaykum
 </p>
 
-      <h1
-        className="
-          loading-text
-          mt-3
-          font-bold
-          leading-tight
-          text-[18px]
-          sm:text-[24px]
-          md:text-[32px]
-          lg:text-[40px]
-          xl:text-[50px]
-        "
-      >
-        Welcome to My Portfolio
-      </h1>
+  <h1
+  className="
+    loading-text
+    mt-3
+    font-bold
+    leading-tight
+    whitespace-nowrap
+    text-[12px]
+    sm:text-[18px]
+    md:text-[32px]
+    lg:text-[40px]
+    xl:text-[50px]
+  "
+>
+  Welcome to My Portfolio
+</h1>
 
       <div
         className="
