@@ -104,7 +104,7 @@ tl.to(".follow", {
     <p
   className="
     welcome-text
-    text-[10px]
+    text-[7px]
     sm:text-xs
     md:text-sm
     lg:text-lg
@@ -124,7 +124,7 @@ tl.to(".follow", {
     font-bold
     leading-tight
     text-[16px]
-    sm:text-[20px]
+    sm:text-[16px]
     md:text-[26px]
     lg:text-[40px]
     xl:text-[50px]
