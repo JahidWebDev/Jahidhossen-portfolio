@@ -126,7 +126,7 @@ tl.to(".follow", {
     font-bold
     leading-tight
     text-[6px]
-    sm:text-[12px]
+    sm:text-[16px]
     md:text-[26px]
     lg:text-[40px]
     xl:text-[50px]
