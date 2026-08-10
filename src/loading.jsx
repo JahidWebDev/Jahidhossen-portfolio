@@ -101,9 +101,10 @@ tl.to(".follow", {
     >
       <div className="follow"></div>
 
-    <p
+<p
   className="
     welcome-text
+    whitespace-nowrap
     text-[7px]
     sm:text-xs
     md:text-sm
@@ -121,9 +122,10 @@ tl.to(".follow", {
     loading-text
     mt-2
     sm:mt-3
+    whitespace-nowrap
     font-bold
     leading-tight
-    text-[16px]
+    text-[12px]
     sm:text-[16px]
     md:text-[26px]
     lg:text-[40px]
