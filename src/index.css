@@ -179,10 +179,10 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
+  font-size: 36px;
   font-weight: 700;
   color: white;
-
+  white-space: nowrap;
   overflow: hidden;
   width: 0;
   font-family: "BebasNeue";
