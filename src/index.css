@@ -179,7 +179,6 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 36px;
   font-weight: 700;
   color: white;
   white-space: nowrap;
@@ -187,10 +186,8 @@ html {
   width: 0;
   font-family: "BebasNeue";
   letter-spacing: 2px;
-  /* border-right: 2px solid #EC5E30; */
-  z-index: 3; /* follow এর উপর থাকবে */
-
-  animation: typing 2.7s linear forwards, blink 0.7s step-end infinite;
+  z-index: 3;
+  animation: typing 2.0s linear forwards, blink 0.7s step-end infinite;
 }
 
 .welcome-text {

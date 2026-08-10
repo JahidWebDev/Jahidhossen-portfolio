@@ -105,7 +105,7 @@ tl.to(".follow", {
   className="
     welcome-text
     whitespace-nowrap
-    text-[7px]
+    text-[16px]
     sm:text-xs
     md:text-sm
     lg:text-lg
@@ -124,10 +124,10 @@ tl.to(".follow", {
     font-bold
     leading-tight
     whitespace-nowrap
-    text-[12px]
+    text-[36px]
     sm:text-[18px]
     md:text-[32px]
-    lg:text-[55px]
+    lg:text-[50px]
     xl:text-[70px]
   "
 >
