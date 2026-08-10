@@ -101,35 +101,68 @@ tl.to(".follow", {
     >
       <div className="follow"></div>
 
-      <p
-        className="
-          welcome-text
-          text-xs
-          sm:text-sm
-          md:text-base
-          lg:text-lg
-          tracking-[2px]
-          uppercase
-        "
-      >
-        Assalamu Alaykum
-      </p>
+    <p
+  className="
+    welcome-text
+    text-[10px]
+    sm:text-xs
+    md:text-sm
+    lg:text-lg
+    tracking-[1.5px]
+    sm:tracking-[2px]
+    uppercase
+  "
+>
+  Assalamu Alaykum
+</p>
 
-      <h1
-        className="
-          loading-text
-          mt-3
-          font-bold
-          leading-tight
-          text-[18px]
-          sm:text-[24px]
-          md:text-[32px]
-          lg:text-[40px]
-          xl:text-[50px]
-        "
-      >
-        Welcome to My Portfolio
-      </h1>
+<h1
+  className="
+    loading-text
+    mt-2
+    sm:mt-3
+    font-bold
+    leading-tight
+    text-[16px]
+    sm:text-[20px]
+    md:text-[26px]
+    lg:text-[40px]
+    xl:text-[50px]
+  "
+>
+  Welcome to My Portfolio
+</h1>
+
+<div
+  className="
+    progress-bar
+    hide
+    mt-4
+    sm:mt-6
+    h-[2px]
+    w-32
+    sm:w-48
+    md:w-64
+    lg:w-[450px]
+  "
+  style={{ width: `${counter}%` }}
+/>
+
+<p
+  className="
+    count
+    hide
+    mt-2
+    sm:mt-3
+    font-bold
+    text-sm
+    sm:text-base
+    md:text-lg
+    lg:text-xl
+  "
+>
+  {counter}%
+</p>
 
       <div
         className="

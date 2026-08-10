@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Loading from "./loading";
 import NavbarWrapper from "./Components/NavbarWrapper";
-import ScrollToTop from "./Components/ScrollToTop";
+
 
 import Pages from "./Home/Pages";
 
@@ -14,13 +14,14 @@ import About from "./Components/About";
 import Portfolio from "./Components/Portfolio";
 import Certificate from "./Components/Certificate";
 import Contact from "./Components/Contact";
+import ScrollToTop from "./Components/ScrollToTop";
 
 function App() {
   const [loadingComplete, setLoadingComplete] = useState(false);
 
   return (
     <Router>
-      <ScrollToTop />
+      <ScrollToTop/>
 
       {!loadingComplete && (
         <Loading onComplete={() => setLoadingComplete(true)} />
