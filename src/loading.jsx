@@ -117,7 +117,7 @@ tl.to(".follow", {
   Assalamu Alaykum
 </p>
 
-  <h1
+<h1
   className="
     loading-text
     mt-3
@@ -127,8 +127,8 @@ tl.to(".follow", {
     text-[12px]
     sm:text-[18px]
     md:text-[32px]
-    lg:text-[40px]
-    xl:text-[50px]
+    lg:text-[55px]
+    xl:text-[70px]
   "
 >
   Welcome to My Portfolio
