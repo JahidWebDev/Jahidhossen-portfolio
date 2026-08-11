@@ -332,56 +332,57 @@ section {
 /* ===========================
    BIG TITLE
 =========================== */
-
 .hero-title {
+  position: relative;
+  display: block;
 
-  position: absolute;
-
-  inset: 0;
-
-  display: flex;
-
-  justify-content: center;
-
-  align-items: center;
-
-  flex-wrap: wrap;
-
-  gap: 35px;
-
-  padding: 0 50px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 
   pointer-events: none;
-
   z-index: 2;
 
-  transform:
-      perspective(1200px)
-      rotateX(20deg);
+  /* Remove 3D */
+  transform: none !important;
+  perspective: none !important;
+  transform-style: flat !important;
+
+  /* Remove shadow */
+  text-shadow: none !important;
+
+  /* One line */
+  white-space: nowrap;
+
+  /* Normal 2D text */
+  text-transform: none;
+  letter-spacing: 0;
+
+  line-height: 0.9;
 }
 
+/* Important:
+   পুরোনো 3D styling যেন span-এ না লাগে
+*/
 .hero-title span {
+  position: static;
 
-  font-size: clamp(70px, 10vw, 190px);
+  display: inline;
 
-  font-weight: 900;
+  font-size: inherit;
+  font-weight: inherit;
 
-  color: #5b5d64;
+  color: inherit;
 
-  line-height: .85;
+  line-height: inherit;
+  letter-spacing: inherit;
 
-  text-transform: uppercase;
+  text-shadow: none !important;
 
-  letter-spacing: -5px;
-
-  text-shadow:
-      3px 3px 0 #3d3d3d,
-      6px 6px 0 #333,
-      9px 9px 0 #2a2a2a,
-      12px 12px 0 #1f1f1f,
-      15px 15px 25px rgba(0,0,0,.6);
+  transform: none !important;
+  perspective: none !important;
+  transform-style: flat !important;
 }
-
 /* ===========================
    CONTENT
 =========================== */

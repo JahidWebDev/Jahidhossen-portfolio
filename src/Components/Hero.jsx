@@ -414,100 +414,132 @@ function Hero() {
             HERO CONTENT
             ===================================================== */}
 
-        <div
-          className="
-            relative
-            z-10
-            flex
-            items-center
-            justify-center
-            h-full
-          "
-        >
-          <div
-            className="
-              w-full
-              max-w-6xl
-              mx-auto
-              px-16
-              ml-10
-            "
-          >
-            <div
-              className="
-                flex
-                flex-col
-                items-start
-                text-left
-                space-y-4
-                max-w-2xl
-              "
-            >
-              {/* =================================================
-                  NAME
-                  ================================================= */}
+    <div
+  className="
+    relative
+    z-10
+    flex
+    items-center
+    justify-center
+    h-full
+  "
+>
+  <div
+    className="
+      w-full
+      max-w-6xl
+      mx-auto
+      px-6
+      lg:px-16
+      lg:ml-10
+    "
+  >
+    <div
+      className="
+        flex
+        flex-col
+        items-center
+        lg:items-start
+        text-center
+        lg:text-left
+        space-y-4
+        w-full
+        max-w-2xl
+      "
+    >
 
-              <h1
-                className="
-                  hero-title
-                  text-white
-                  text-6xl
-                  md:text-8xl
-                  lg:text-[136px]
-                  leading-[0.95]
-                  lowercase
-                  font-bold
-                "
-                style={{
-                  fontFamily: "BebasNeue",
-                }}
-              >
-                <span className="text-red-500">
-                  Hi,
-                </span>{" "}
-                I'm Jahid
-              </h1>
+      {/* =================================================
+          NAME
+          ================================================= */}
 
-              {/* =================================================
-                  TYPING TEXT
-                  ================================================= */}
+      <h1
+        className="
+          hero-title
+          text-white
+          
+          text-[52px]
+          sm:text-6xl
+          md:text-8xl
+          lg:text-[136px]
+          leading-[0.9]
+          font-bold
+          text-center
+          lg:text-left
+          whitespace-nowrap
+          !transform-none
+          [perspective:none]
+          [transform-style:flat]
+          [text-shadow:none]
+             translate-y-16
+        sm:translate-y-12
+        md:translate-y-8
+        lg:translate-y-0
+        "
+        style={{
+          fontFamily: "BebasNeue",
+          transform: "none",
+          perspective: "none",
+          transformStyle: "flat",
+          textShadow: "none",
+        }}
+      >
+        <span className="text-red-500">Hi,</span>{" "}
+        I'm Jahid
+      </h1>
 
-              <div
-                className="
-                  flex
-                  items-center
-                  text-2xl
-                  md:text-4xl
-                  lg:text-4xl
-                  font-semibold
-                  text-white
-                "
-                style={{
-                  fontFamily: "blinkma",
-                }}
-              >
-                <span className="target"></span>
+      {/* =================================================
+          TYPING TEXT
+          ================================================= */}
 
-                <span className="ml-2 text-white animate-pulse">
-                  |
-                </span>
-              </div>
+      <div
+        className="
+          flex
+          items-center
+          justify-center
+          lg:justify-start
+          text-center
+          lg:text-left
+          text-xl
+          sm:text-2xl
+          md:text-4xl
+          lg:text-4xl
+          font-semibold
+          text-white
+          !transform-none
+          [transform-style:flat]
+          [text-shadow:none]
+        "
+        style={{
+          fontFamily: "blinkma",
+          transform: "none",
+          transformStyle: "flat",
+          textShadow: "none",
+        }}
+      >
+        <span className="target"></span>
 
-              {/* =================================================
-                  RED LINE
-                  ================================================= */}
+        <span className="ml-2 text-white animate-pulse">
+          |
+        </span>
+      </div>
 
-              <div
-                className="
-                  h-1
-                  w-20
-                  rounded-full
-                  bg-red-600
-                "
-              ></div>
-            </div>
-          </div>
-        </div>
+      {/* =================================================
+          RED LINE
+          ================================================= */}
+
+      <div
+        className="
+          h-1
+          w-16
+          sm:w-20
+          rounded-full
+          bg-red-600
+        "
+      ></div>
+
+    </div>
+  </div>
+</div>
       </section>
 
       {/* =====================================================
