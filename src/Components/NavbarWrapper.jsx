@@ -58,34 +58,85 @@ function NavbarWrapper() {
   return (
     <>
       {/* Mobile Button */}
-    <button
+{/* Mobile Top Bar */}
+<div
+  className="
+    fixed
+    top-4
+    left-7
+    right-7
+    z-[998]
+    lg:hidden
+    h-[52px]
+    bg-[#111111]/90
+    backdrop-blur-md
+    flex
+    items-center
+    justify-between
+    rounded-[3px]
+    border
+    border-white/10
+  "
+>
+  {/* LEFT - GMAIL */}
+  <a
+    href="mailto:contactjahiddev@gmail.com"
+    className="
+      flex
+      items-center
+      gap-2
+      px-4
+      h-full
+      text-gray-300
+      hover:text-white
+      transition
+      text-sm
+      whitespace-nowrap
+    "
+  >
+    <FaEnvelope
+      className="
+        w-4
+        h-4
+        text-white
+        flex-shrink-0
+      "
+    />
+
+    <span>
+      contactjahiddev@gmail.com
+    </span>
+  </a>
+
+</div>
+
+
+{/* Mobile Menu Button */}
+<button
   onClick={() => setOpen(!open)}
   className="
     fixed
-    top-5
-    right-5
+    top-4
+    right-7
     z-[999]
     lg:hidden
-    w-12
-    h-12
+    w-[56px]
+    h-[52px]
     flex
     items-center
     justify-center
-
-   
-  
-   
     text-white
-  
-  
- 
-   
+    bg-[#111111]/95
+    backdrop-blur-md
+    rounded-[3px]
+    border-l
+    border-white/10
   "
 >
   {open ? (
-    <HiXMark className="w-8 h-8 mr-4 " />
+    <HiXMark className="w-7 h-7" />
   ) : (
-    <HiBars3 className="w-8 h-8 mr-4  text-white" />
+    <HiBars3 className="w-7 h-7 text-white" />
   )}
 </button>
       {/* Overlay */}
@@ -136,7 +187,7 @@ function NavbarWrapper() {
         {/* Close */}
       
 
-       <div className="flex flex-col items-center h-full overflow-y-auto px-8 py-10">
+       <div className="flex flex-col mt-10 items-center h-full overflow-y-auto px-8 py-10">
           {/* Profile */}
           <img
             src={Image}

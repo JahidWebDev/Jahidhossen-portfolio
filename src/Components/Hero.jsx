@@ -114,55 +114,7 @@ function Hero() {
         < lg
         ================================================= */}
 
-    <div
-  className="
-    lg:hidden
-    w-full
-    h-[52px]
-    bg-[#111111]/90
-    flex
-    items-center
-    justify-between
-    rounded-[3px]
-    
-  "
->
-
-      {/* LEFT - GMAIL */}
-
-      <a
-        href="mailto:contactjahiddev@gmail.com"
-        className="
-          flex
-          items-center
-          gap-2
-          px-3
-          h-full
-          text-gray-300
-          hover:text-white
-          transition
-          text-[16px]
-          sm:text-xs
-          whitespace-nowrap
-        "
-      >
-        <FaEnvelope
-          className="
-            text-2
-            text-white
-            flex-shrink-0
-            
-          "
-        />
-
-        <span>
-          contactjahiddev@gmail.com
-        </span>
-      </a>
-
-
-
-    </div>
+  
 
 
     {/* =================================================
@@ -568,8 +520,8 @@ function Hero() {
         rel="noopener noreferrer"
         className="
           fixed
-          bottom-8
-          right-8
+          bottom-3
+          right-3
           z-[9999]
           group
         "
