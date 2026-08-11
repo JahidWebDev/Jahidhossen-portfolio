@@ -83,9 +83,9 @@ function NavbarWrapper() {
   "
 >
   {open ? (
-    <HiXMark className="w-10 h-10 " />
+    <HiXMark className="w-8 h-8 mr-4 " />
   ) : (
-    <HiBars3 className="w-10 h-10 text-black" />
+    <HiBars3 className="w-8 h-8 mr-4  text-white" />
   )}
 </button>
       {/* Overlay */}

@@ -52,7 +52,7 @@ function About() {
 
   return (
     <section 
-     id="about" ref={sectionRef} className=" glow bg-white py-20 px-6 md:px-10 lg:left-72 lg:px-20   isolate
+     id="about" ref={sectionRef} className=" glow bg-[#FFFFFF] py-20 px-3 md:px-10 lg:left-72 lg:px-20   isolate
    
     from-white
     via-[#fffaf8]
