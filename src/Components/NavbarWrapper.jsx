@@ -169,7 +169,7 @@ function NavbarWrapper() {
     lg:w-72
     bg-[#111]
     z-50
-max-[600px]:mt-14
+
     transform
     transition-all
     duration-500
@@ -194,12 +194,12 @@ max-[600px]:mt-14
       py-6
 
       max-[600px]:overflow-hidden
-      max-[600px]:mt-0
+      max-[600px]:mt-16
 
       sm:px-8
       sm:py-10
-
-      lg:mt-10
+      
+      lg:mt-2
       lg:px-8
       lg:py-10
       lg:overflow-y-auto
@@ -366,7 +366,7 @@ max-[600px]:mt-14
     {/* Footer */}
     <div
       className="
-       
+      
         pt-5
         w-full
         text-center
@@ -376,35 +376,33 @@ max-[600px]:mt-14
         lg:pt-10
       "
     >
-   <div
-  className="
-    w-full
-    h-px
-    bg-gradient-to-r
-    from-transparent
-    via-[#c33201]
-    to-transparent
-    mb-3
+      <div
+        className="
+          w-full
+          h-px
+          bg-gradient-to-r
+          from-transparent
+          via-[#c33201]
+          to-transparent
+          mb-3
+          lg:mt-16
+          lg:mb-6
+        "
+      />
 
-    lg:mb-6
-  "
-/>
+      <p
+        className="
+          text-xs
+          text-gray-500
 
-<p
-  className="
-    text-xs
-    text-gray-500
-    mt-6
+          sm:text-sm
 
-    sm:text-sm
-    sm:mt-0
-
-    lg:text-sm
-    lg:-mt-4
-  "
->
-  © 2026. All Rights Reserved.
-</p>
+          lg:text-sm
+          lg:-mt-4
+        "
+      >
+        © 2026. All Rights Reserved.
+      </p>
     </div>
 
   </div>
