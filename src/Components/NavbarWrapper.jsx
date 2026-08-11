@@ -226,7 +226,7 @@ function NavbarWrapper() {
           </div>
 
           {/* Navigation */}
-          <ul className="w-full font-blinkma mt-7 space-y-3">
+          <ul className="w-full text-2xl font-BebasNeue mt-7 space-y-1">
 
             <li>
               <NavLink
@@ -303,9 +303,9 @@ function NavbarWrapper() {
 
 
 
-  <p className="mt-2 text-sm text-gray-500">
-    © 2026. All Rights Reserved.
-  </p>
+  <p className="text-sm text-gray-500 -mt-4 lg:mt-0">
+  © 2026. All Rights Reserved.
+</p>
 
 </div>
 
