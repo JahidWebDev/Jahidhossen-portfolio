@@ -157,8 +157,9 @@ function NavbarWrapper() {
 )}
 
       {/* Sidebar */}
-      <aside
-        className={`
+      {/* Sidebar */}
+<aside
+  className={`
     fixed
     top-0
     left-0
@@ -176,141 +177,236 @@ function NavbarWrapper() {
 
     ${
       open
-        ? "translate-y-0 "
-        : "-translate-y-full "
+        ? "translate-y-0"
+        : "-translate-y-full"
     }
 
     lg:translate-y-0
-   
   `}
 >
-        {/* Close */}
-      
+  <div
+    className="
+      flex
+      flex-col
+      items-center
+      h-full
+      px-6
+      py-6
 
-       <div className="flex flex-col mt-10 items-center h-full overflow-y-auto px-8 py-10">
-          {/* Profile */}
-          <img
-            src={Image}
-            alt="Profile"
-            className="w-32 h-32 rounded-full object-cover border-7 border-[#2C2F3F] 
-            "
-          />
-<h2
-  className="mt-5 text-3xl text-white tracking-[3px] font-semibold"
-  style={{ fontFamily: "BebasNeue" }}
->
-  Jahid Hossen
-</h2>
+      max-[600px]:overflow-hidden
+      max-[600px]:mt-0
 
-          
+      sm:px-8
+      sm:py-10
 
-          {/* Social */}
-          <div className="flex gap-4 mt-6">
+      lg:mt-10
+      lg:px-8
+      lg:py-10
+      lg:overflow-y-auto
+    "
+  >
 
-            <a href="#" className={socialClass}>
-              <FaFacebookF className="group-hover:scale-125 transition-all duration-500" />
-            </a>
+    {/* Profile */}
+    <img
+      src={Image}
+      alt="Profile"
+      className="
+        w-24
+        h-24
+        rounded-full
+        object-cover
+        border-[7px]
+        border-[#2C2F3F]
 
-            <a href="#" className={socialClass}>
-              <FaGithub className="group-hover:scale-125 transition-all duration-500" />
-            </a>
+        sm:w-28
+        sm:h-28
 
-            <a href="#" className={socialClass}>
-              <FaLinkedinIn className="group-hover:scale-125 transition-all duration-500" />
-            </a>
+        lg:w-32
+        lg:h-32
+      "
+    />
 
-            <a href="#" className={socialClass}>
-              <FaInstagram className="group-hover:scale-125 transition-all duration-500" />
-            </a>
+    <h2
+      className="
+        mt-3
+        text-2xl
+        text-white
+        tracking-[3px]
+        font-semibold
 
-          </div>
+        sm:mt-4
+        sm:text-3xl
 
-          {/* Navigation */}
-          <ul className="w-full text-2xl font-BebasNeue mt-7 space-y-1">
+        lg:mt-5
+        lg:text-3xl
+      "
+      style={{ fontFamily: "BebasNeue" }}
+    >
+      Jahid Hossen
+    </h2>
 
-            <li>
-              <NavLink
-                to="/"
-                className={navClass}
-                onClick={() => setOpen(false)}
-              >
-                <FaHome className="transition-all duration-500 group-hover:scale-125 group-hover:rotate-12" />
-                Home
-              </NavLink>
-            </li>
+    {/* Social */}
+    <div
+      className="
+        flex
+        gap-3
+        mt-4
 
-            <li>
-              <NavLink
-                to="/about"
-                className={navClass}
-                onClick={() => setOpen(false)}
-              >
-                <FaUser className="transition-all duration-500 group-hover:scale-125 group-hover:rotate-12" />
-                About
-              </NavLink>
-            </li>
+        sm:gap-4
+        sm:mt-5
 
-            <li>
-              <NavLink
-                to="/resume"
-                className={navClass}
-                onClick={() => setOpen(false)}
-              >
-                <FaFileAlt className="transition-all duration-500 group-hover:scale-125 group-hover:rotate-12" />
-                Resume
-              </NavLink>
-            </li>
+        lg:gap-4
+        lg:mt-6
+      "
+    >
+      <a href="#" className={socialClass}>
+        <FaFacebookF className="group-hover:scale-125 transition-all duration-500" />
+      </a>
 
-            <li>
-              <NavLink
-                to="/portfolio"
-                className={navClass}
-                onClick={() => setOpen(false)}
-              >
-                <FaBriefcase className="transition-all duration-500 group-hover:scale-125 group-hover:rotate-12" />
-                Portfolio
-              </NavLink>
-            </li>
+      <a href="#" className={socialClass}>
+        <FaGithub className="group-hover:scale-125 transition-all duration-500" />
+      </a>
 
-            <li>
-              <NavLink
-  to="/certificate"
-  className={navClass}
-  onClick={() => setOpen(false)}
->
-  <FaCertificate className="transition-all duration-500 group-hover:scale-125 group-hover:rotate-12" />
-  Certificate
-</NavLink>
-            </li>
+      <a href="#" className={socialClass}>
+        <FaLinkedinIn className="group-hover:scale-125 transition-all duration-500" />
+      </a>
 
-            <li>
-              <NavLink
-                to="/contact"
-                className={navClass}
-                onClick={() => setOpen(false)}
-              >
-                <FaEnvelope className="transition-all duration-500 group-hover:scale-125 group-hover:rotate-12" />
-                Contact
-              </NavLink>
-            </li>
+      <a href="#" className={socialClass}>
+        <FaInstagram className="group-hover:scale-125 transition-all duration-500" />
+      </a>
+    </div>
 
-          </ul>
+    {/* Navigation */}
+    <ul
+      className="
+        w-full
+        text-xl
+        font-BebasNeue
+        mt-4
+        space-y-0
 
-          {/* Footer */}
-          <div className="mt-auto pt-10 w-full text-center">
+        sm:text-2xl
+        sm:mt-5
+        sm:space-y-1
 
-  <div className="w-full h-px bg-gradient-to-r from-transparent via-[#c33201] to-transparent mb-6"></div>
+        lg:text-2xl
+        lg:mt-7
+        lg:space-y-1
+      "
+    >
 
+      <li>
+        <NavLink
+          to="/"
+          className={navClass}
+          onClick={() => setOpen(false)}
+        >
+          <FaHome className="transition-all duration-500 group-hover:scale-125 group-hover:rotate-12" />
+          Home
+        </NavLink>
+      </li>
 
+      <li>
+        <NavLink
+          to="/about"
+          className={navClass}
+          onClick={() => setOpen(false)}
+        >
+          <FaUser className="transition-all duration-500 group-hover:scale-125 group-hover:rotate-12" />
+          About
+        </NavLink>
+      </li>
 
-  <p className="text-sm text-gray-500 -mt-4 lg:mt-0">
-  © 2026. All Rights Reserved.
-</p>
+      <li>
+        <NavLink
+          to="/resume"
+          className={navClass}
+          onClick={() => setOpen(false)}
+        >
+          <FaFileAlt className="transition-all duration-500 group-hover:scale-125 group-hover:rotate-12" />
+          Resume
+        </NavLink>
+      </li>
 
-</div>
+      <li>
+        <NavLink
+          to="/portfolio"
+          className={navClass}
+          onClick={() => setOpen(false)}
+        >
+          <FaBriefcase className="transition-all duration-500 group-hover:scale-125 group-hover:rotate-12" />
+          Portfolio
+        </NavLink>
+      </li>
 
-        </div>
-      </aside>
+      <li>
+        <NavLink
+          to="/certificate"
+          className={navClass}
+          onClick={() => setOpen(false)}
+        >
+          <FaCertificate className="transition-all duration-500 group-hover:scale-125 group-hover:rotate-12" />
+          Certificate
+        </NavLink>
+      </li>
+
+      <li>
+        <NavLink
+          to="/contact"
+          className={navClass}
+          onClick={() => setOpen(false)}
+        >
+          <FaEnvelope className="transition-all duration-500 group-hover:scale-125 group-hover:rotate-12" />
+          Contact
+        </NavLink>
+      </li>
+
+    </ul>
+
+    {/* Footer */}
+    <div
+      className="
+        mt-auto
+        pt-5
+        w-full
+        text-center
+
+        sm:pt-7
+
+        lg:pt-10
+      "
+    >
+      <div
+        className="
+          w-full
+          h-px
+          bg-gradient-to-r
+          from-transparent
+          via-[#c33201]
+          to-transparent
+          mb-3
+
+          lg:mb-6
+        "
+      />
+
+      <p
+        className="
+          text-xs
+          text-gray-500
+
+          sm:text-sm
+
+          lg:text-sm
+          lg:-mt-4
+        "
+      >
+        © 2026. All Rights Reserved.
+      </p>
+    </div>
+
+  </div>
+</aside>
     </>
   );
 }
