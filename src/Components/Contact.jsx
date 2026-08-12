@@ -42,8 +42,9 @@ function Contact() {
       font-bold
       leading-[0.95]
       text-[#c33201]
+      lg:text-[#c33201]
       lg:text-7xl
-      lg:text-[#111]
+      
     "
     style={{ fontFamily: "BebasNeue" }}
   >
@@ -52,7 +53,7 @@ function Contact() {
 
   <p
     className="
-    font-Cabin mt-6 text-gray-600 leading-8 text-lg max-w-6xl
+    font-Cabin mt-6 w-[690px] text-gray-400 leading-8 text-lg max-w-6xl
     "
     style={{ fontFamily: "Cabin" }}
   >

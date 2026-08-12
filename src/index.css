@@ -420,7 +420,9 @@ section {
 
   margin-bottom: 18px;
 }
-
+body{
+background: #000;
+}
 .hero-text p {
 
   color: #8d8d8d;
