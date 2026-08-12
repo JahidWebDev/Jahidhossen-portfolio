@@ -257,6 +257,7 @@ function About() {
           text-lg
           max-w-6xl
           mx-auto
+          
         "
       >
         Full Stack Web Developer with expertise in modern frontend,

@@ -45,7 +45,7 @@ function ResumePage() {
 
     <p
       className="
-        mt-6 font-Cabin text-gray-600 leading-8 text-lg max-w-6xl
+        mt-6 font-Cabin lg:w-[600px] text-gray-600 leading-8 text-lg max-w-6xl
       "
     >
       Explore my professional journey as a MERN Stack Developer,
@@ -243,7 +243,7 @@ function ResumePage() {
                   sm:break-normal
                 "
               >
-                jahidhossen-portfolio.vercel.app
+                jahidhossen.vercel.app
               </a>
 
             </li>
@@ -270,19 +270,20 @@ function ResumePage() {
           lg:pl-8
         "
       >
-
-        <h2
-          className="
-            text-3xl
-            sm:text-4xl
-            text-[#c33201]
-            font-bold
-            mb-8
-            lg:mb-10
-          "
-        >
-          Professional Experience
-        </h2>
+<h2
+  className="
+    text-[26px]
+    sm:text-4xl
+    text-[#c33201]
+    font-bold
+    mb-8
+    lg:mb-10
+    whitespace-nowrap 
+    
+  "
+>
+  Professional Experience
+</h2>
 
 
         {/* EXPERIENCE 01 */}
@@ -359,9 +360,10 @@ function ResumePage() {
               list-disc
               pl-5
               text-gray-600
-              leading-7
-              text-sm
+              leading-8
+              w-[370px]
               sm:text-base
+              
             "
           >
 
@@ -468,8 +470,9 @@ function ResumePage() {
               list-disc
               pl-5
               text-gray-600
-              leading-7
-              text-sm
+              leading-8
+             
+               w-[340]
               sm:text-base
             "
           >
@@ -619,8 +622,8 @@ function ResumePage() {
               list-disc
               pl-5
               text-gray-600
-              leading-7
-              text-sm
+              leading-8
+                   w-[360]
               sm:text-base
             "
           >
@@ -719,8 +722,8 @@ function ResumePage() {
               list-disc
               pl-5
               text-gray-600
-              leading-7
-              text-sm
+              leading-8
+                   w-[360]
               sm:text-base
             "
           >
@@ -819,8 +822,8 @@ function ResumePage() {
               list-disc
               pl-5
               text-gray-600
-              leading-7
-              text-sm
+              leading-8
+                  w-[370px]
               sm:text-base
             "
           >

@@ -29,14 +29,14 @@ function Certificate() {
         
 
           <h2
-            className="  text-[#c33201] text-5xl lg:text-7xl "
+            className="  font-BebasNeue text-6xl   font-bold text-[#c33201] "
             style={{ fontFamily: "BebasNeue" }}
           >
             Certificates
           </h2>
 
           <p
-            className="mt-5 max-w-3xl text-gray-600 text-lg leading-8"
+            className="mt-6 font-Cabin lg:w-[700px] text-gray-600 leading-8 text-lg max-w-6xl"
             style={{ fontFamily: "Cabin" }}
           >
             Professional certifications that demonstrate my knowledge,

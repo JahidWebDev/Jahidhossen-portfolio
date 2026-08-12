@@ -153,21 +153,21 @@ const Portfolio = () => {
 
   return (
     <div className="min-h-screen bg-white  from-slate-50 via-white to-slate-100 flex items-center justify-center p-4 sm:p-6">
-      <div className="max-w-7xl lg:mr-20 w-full">
+      <div className="max-w-7xl px-4 lg:mr-20 w-full">
         {/* Main Portfolio Container */}
         <div className="rounded-3xl ">
           {/* Header */}
          {/* Portfolio Header */}
-<div className="mb-8">
+<div className="mb-8 mt-15">
  <h1
-            className="text-5xl  text-[#c33201] lg:text-7xl mt-4"
+            className="font-BebasNeue text-6xl   font-bold text-[#c33201]"
             style={{ fontFamily: "BebasNeue" }}
           >
             Portfolio
           </h1>
 
 
-  <p className="mt-6 font-Cabin text-gray-600 max-w-4xl leading-8">
+  <p className="mt-6 font-Cabin lg:w-[700px] text-gray-600 leading-8 text-lg max-w-6xl">
     Browse my collection of web development projects that showcase my expertise
     in modern front-end and back-end technologies. Each project reflects my
     focus on building responsive, scalable, and user-friendly applications with
