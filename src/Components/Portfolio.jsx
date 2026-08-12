@@ -167,13 +167,10 @@ const Portfolio = () => {
           </h1>
 
 
-  <p className="mt-6 font-Cabin lg:w-[700px] text-gray-600 leading-8 text-lg max-w-6xl">
-    Browse my collection of web development projects that showcase my expertise
-    in modern front-end and back-end technologies. Each project reflects my
-    focus on building responsive, scalable, and user-friendly applications with
-    clean design, optimized performance, and practical solutions to real-world
-    challenges.
-  </p>
+<p className="mt-6 font-Cabin lg:w-[600px] text-gray-600 leading-8 text-lg max-w-6xl">
+  Explore my web development projects, showcasing modern technologies,
+  responsive design, optimized performance, and practical solutions.
+</p>
 </div>
 
 {/* Projects Info */}

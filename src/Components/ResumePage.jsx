@@ -146,7 +146,7 @@ function ResumePage() {
               lg:mt-6
               leading-7
               lg:leading-8
-              text-sm
+      
               sm:text-base
             "
           >
@@ -361,7 +361,7 @@ function ResumePage() {
               pl-5
               text-gray-600
               leading-8
-              w-[370px]
+              text-sm
               sm:text-base
               
             "
@@ -470,9 +470,9 @@ function ResumePage() {
               list-disc
               pl-5
               text-gray-600
+              
               leading-8
-             
-               w-[340]
+              text-sm
               sm:text-base
             "
           >
@@ -622,8 +622,8 @@ function ResumePage() {
               list-disc
               pl-5
               text-gray-600
-              leading-8
-                   w-[360]
+           leading-8
+              text-sm
               sm:text-base
             "
           >
@@ -722,8 +722,8 @@ function ResumePage() {
               list-disc
               pl-5
               text-gray-600
-              leading-8
-                   w-[360]
+               leading-8
+              text-sm
               sm:text-base
             "
           >
@@ -823,7 +823,7 @@ function ResumePage() {
               pl-5
               text-gray-600
               leading-8
-                  w-[370px]
+              text-sm
               sm:text-base
             "
           >
