@@ -246,35 +246,59 @@ function NavbarWrapper() {
     </h2>
 
     {/* Social */}
-    <div
-      className="
-        flex
-        gap-3
-        mt-4
+  <div
+  className="
+    flex
+    gap-3
+    mt-4
 
-        sm:gap-4
-        sm:mt-5
+    sm:gap-4
+    sm:mt-5
 
-        lg:gap-4
-        lg:mt-6
-      "
-    >
-      <a href="#" className={socialClass}>
-        <FaFacebookF className="group-hover:scale-125 transition-all duration-500" />
-      </a>
+    lg:gap-4
+    lg:mt-6
+  "
+>
+  {/* Facebook */}
+  <a
+    href="https://www.facebook.com/jahid.hossen.558836/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className={socialClass}
+  >
+    <FaFacebookF className="group-hover:scale-125 transition-all duration-500" />
+  </a>
 
-      <a href="#" className={socialClass}>
-        <FaGithub className="group-hover:scale-125 transition-all duration-500" />
-      </a>
+  {/* GitHub */}
+  <a
+    href="https://github.com/JahidWebDev"
+    target="_blank"
+    rel="noopener noreferrer"
+    className={socialClass}
+  >
+    <FaGithub className="group-hover:scale-125 transition-all duration-500" />
+  </a>
 
-      <a href="#" className={socialClass}>
-        <FaLinkedinIn className="group-hover:scale-125 transition-all duration-500" />
-      </a>
+  {/* LinkedIn */}
+  <a
+    href="https://www.linkedin.com/in/jahid227mernfullstackdeveloperbd/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className={socialClass}
+  >
+    <FaLinkedinIn className="group-hover:scale-125 transition-all duration-500" />
+  </a>
 
-      <a href="#" className={socialClass}>
-        <FaInstagram className="group-hover:scale-125 transition-all duration-500" />
-      </a>
-    </div>
+  {/* Instagram / Page */}
+  <a
+    href="#"
+    target="_blank"
+    rel="noopener noreferrer"
+    className={socialClass}
+  >
+    <FaInstagram className="group-hover:scale-125 transition-all duration-500" />
+  </a>
+</div>
 
     {/* Navigation */}
     <ul
