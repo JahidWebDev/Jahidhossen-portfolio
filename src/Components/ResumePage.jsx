@@ -36,11 +36,7 @@ function ResumePage() {
 
     <h1
       className="
-        text-5xl
-        sm:text-6xl
-        text-[#c33201]
-        lg:text-7xl
-        mt-4
+       font-BebasNeue text-6xl   font-bold text-[#c33201]
       "
       style={{ fontFamily: "BebasNeue" }}
     >
@@ -49,15 +45,7 @@ function ResumePage() {
 
     <p
       className="
-        mt-6
-        lg:mt-8
-        font-Cabin
-        text-gray-600
-        max-w-4xl
-        leading-7
-        lg:leading-8
-        text-sm
-        sm:text-base
+        mt-6 font-Cabin text-gray-600 leading-8 text-lg max-w-6xl
       "
     >
       Explore my professional journey as a MERN Stack Developer,
@@ -89,7 +77,7 @@ function ResumePage() {
 
       <h2
         className="
-          text-3xl
+          text-4xl
           sm:text-4xl
           text-[#c33201]
           font-BebasNeue

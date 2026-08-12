@@ -87,7 +87,7 @@ function About() {
 
           
 
-  <p className="mt-6 font-Cabin text-gray-600 leading-8 text-lg max-w-6xl">
+  <p className="mt-6 font-Cabin lg:w-[700px] text-gray-600 leading-8 text-lg max-w-6xl">
   A passionate <span className="font-semibold text-[#c33201]">MERN Stack Developer</span> focused on building modern, responsive, and scalable web applications using MongoDB, Express.js, React.js, and Node.js with clean code, excellent performance, and user-friendly experiences.
 </p>
 
@@ -223,19 +223,42 @@ function About() {
 
                 {/* ================= SKILLS ================= */}
 {/* ================= SKILLS ================= */}
-<section className="py-10  relative overflow-hidden">
+<section className="relative overflow-hidden py-10 sm:py-12 lg:py-10">
 
+  <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
 
-  <div className="max-w-7xl mx-auto px-6 relative z-10">
+    {/* =========================
+        HEADING
+        ========================= */}
 
     <div className="text-center">
 
-
-      <h2 className="text-5xl  text-[#c33201] font-BebasNeue lg:text-7xl font-bold mt-3">
+      <h2
+        className="
+          text-4xl
+          sm:text-5xl
+          text-[#c33201]
+          font-BebasNeue
+          lg:text-7xl
+          font-bold
+          mt-3
+          leading-tight
+        "
+      >
         Technical Expertise
       </h2>
 
-      <p className="text-gray-600 font-Cabin max-w-3xl mx-auto mt-6 leading-8">
+      <p
+        className="
+          mt-6
+          font-Cabin
+          text-gray-600
+          leading-8
+          text-lg
+          max-w-6xl
+          mx-auto
+        "
+      >
         Full Stack Web Developer with expertise in modern frontend,
         backend and UI/UX technologies. Passionate about creating
         scalable, responsive and high-performance applications.
@@ -243,22 +266,126 @@ function About() {
 
     </div>
 
-    <div className="grid md:grid-cols-2 gap-8 mt-12">
 
-      <Skill title="HTML" value={100} />
-      <Skill title="CSS / SCSS" value={95} />
-      <Skill title="Bootstrap" value={95} />
-      <Skill title="Tailwind CSS" value={100} />
-      <Skill title="Git & Github" value={95} />
-      <Skill title="JavaScript" value={95} />
-      <Skill title="React.js" value={95} />
-      <Skill title="Next.js" value={90} />
-      <Skill title="TypeScript" value={88} />
-      <Skill title="Node.js" value={90} />
-      <Skill title="Express.js" value={90} />
-      <Skill title="MongoDB" value={90} />
-      <Skill title="Mongoose" value={88} />
-      <Skill title="Adobe (PS, AI, XD, PR)" value={85} />
+    {/* =========================
+        SKILLS
+        ========================= */}
+
+    <div
+      className="
+        grid
+        grid-cols-1
+        lg:grid-cols-2
+        gap-x-8
+        gap-y-5
+        lg:gap-y-6
+        mt-10
+        sm:mt-12
+        lg:mt-14
+        items-center
+      "
+    >
+
+      {/* =========================
+          LEFT COLUMN
+          ========================= */}
+
+      <div className="flex flex-col gap-5 lg:gap-6">
+
+        <Skill
+          title="HTML"
+          value={100}
+          color="bg-[#FF0000]"
+        />
+
+        <Skill
+          title="CSS / SCSS"
+          value={95}
+          color="bg-[rgb(255,99,71)]"
+        />
+
+        <Skill
+          title="Bootstrap"
+          value={95}
+          color="bg-[#87B9E8]"
+        />
+
+        <Skill
+          title="Tailwind CSS"
+          value={100}
+          color="bg-[#FFB20F]"
+        />
+
+        <Skill
+          title="Git & Github"
+          value={95}
+          color="bg-[#D985AA]"
+        />
+
+        <Skill
+          title="JavaScript"
+          value={95}
+          color="bg-[#70D1D1]"
+        />
+
+        <Skill
+          title="React.js"
+          value={95}
+          color="bg-[#B5DDEF]"
+        />
+
+      </div>
+
+
+      {/* =========================
+          RIGHT COLUMN
+          ========================= */}
+
+      <div className="flex flex-col gap-5 lg:gap-6">
+
+        <Skill
+          title="Next.js"
+          value={90}
+          color="bg-[#C2A7C8]"
+        />
+
+        <Skill
+          title="TypeScript"
+          value={88}
+          color="bg-[#718EF0]"
+        />
+
+        <Skill
+          title="Node.js"
+          value={90}
+          color="bg-[#C2B39B]"
+        />
+
+        <Skill
+          title="Express.js"
+          value={90}
+          color="bg-[#FFF19A]"
+        />
+
+        <Skill
+          title="MongoDB"
+          value={90}
+          color="bg-[#8BA67D]"
+        />
+
+        <Skill
+          title="Mongoose"
+          value={88}
+          color="bg-[#B9DCEC]"
+        />
+
+        <Skill
+          title="Adobe (PS, AI, XD, PR)"
+          value={85}
+          color="bg-[#D8D8D8]"
+        />
+
+      </div>
 
     </div>
 
@@ -276,100 +403,72 @@ function About() {
 import { motion } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 
-export function Skill({ title, value }) {
-  const isMobile = useMediaQuery({
-    maxWidth: 768,
-  });
-
+function Skill({ title, value, color, className = "" }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 25 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{
-        once: true,
-        amount: 0.3,
-      }}
-      transition={{
-        duration: 0.5,
-        ease: "easeOut",
-      }}
-      whileHover={
-        !isMobile
-          ? {
-              y: -4,
-            }
-          : {}
-      }
-      className="
-    bg-white/20
-  backdrop-blur-md
-  border
-  border-white/30
-  rounded-2xl
-  shadow-[0_8px_32px_rgba(0,0,0,0.12)]
-  hover:bg-white/30
-  hover:shadow-[0_12px_40px_rgba(0,0,0,0.18)]
-  transition-all
-  duration-300
-  p-4
-  will-change-transform
-"
+    <div
+      className={`
+        group
+        relative
+        flex
+        items-center
+        justify-between
+        w-full
+        min-h-[58px]
+        px-5
+        sm:px-7
+        lg:px-8
+        py-3
+        rounded-[10px]
+        transition-all
+        duration-300
+        hover:-translate-y-1
+        hover:shadow-lg
+        ${color}
+        ${className}
+      `}
     >
-      <div className="flex items-center justify-between mb-3">
-        <h3 className="font-semibold font-blinkma text-base md:text-lg text-gray-800">
-          {title}
-        </h3>
+      {/* Skill Name */}
+      <h3
+        className="
+          text-lg
+          sm:text-xl
+          lg:text-2xl
+          font-semibold
+          text-black
+          tracking-wide
+        "
+        style={{ fontFamily: "Cabin" }}
+      >
+        {title}
+      </h3>
 
-        <span className="font-bold font-Cabin text-[#c33201] text-sm md:text-base">
-          {value}%
-        </span>
-      </div>
-
-      <div className="relative h-3 bg-gray-200 rounded-full overflow-hidden">
-        <motion.div
-          initial={{ width: 0 }}
-          whileInView={{ width: `${value}%` }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 1.2,
-            ease: "easeOut",
-          }}
-          className="
-            relative
-            h-full
-            rounded-full
-            overflow-hidden
-            bg-gradient-to-r
-            from-[#c33201]
-            
-            to-[#00a5f1]
-          "
-        >
-          {/* Desktop only Shine Effect */}
-          {!isMobile && (
-            <motion.div
-              animate={{
-                x: ["-100%", "150%"],
-              }}
-              transition={{
-                duration: 2.5,
-                repeat: Infinity,
-                ease: "linear",
-              }}
-              className="
-                absolute
-                inset-y-0
-                w-10
-                bg-white/30
-                blur-sm
-                rotate-12
-              "
-            />
-          )}
-        </motion.div>
-      </div>
-    </motion.div>
+      {/* Percentage */}
+      <span
+        className="
+          shrink-0
+          ml-4
+          min-w-[68px]
+          text-center
+          px-4
+          py-1
+          rounded-full
+          bg-white/45
+          text-black
+          text-xs
+          sm:text-sm
+          font-medium
+          backdrop-blur-sm
+        "
+        style={{ fontFamily: "Cabin" }}
+      >
+        {value}%
+      </span>
+    </div>
   );
 }
+
+
+
+
 
 export default About;
