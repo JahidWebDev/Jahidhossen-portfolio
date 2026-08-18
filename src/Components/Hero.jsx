@@ -347,56 +347,45 @@ function Hero() {
                 group
               "
             >
-              <div
-                className="
-                  flex
-                  items-center
-                  gap-3
-                  px-6
-                  py-3
-                  rounded-full
-                  bg-black/40
-                  backdrop-blur-xl
-                  border
-                  border-[#c33201]/50
-                  shadow-[0_0_25px_rgba(195,50,1,0.35)]
-                  transition-all
-                  duration-300
-                  hover:bg-[#c33201]
-                  hover:border-[#ff6a3d]
-                  hover:shadow-[0_0_35px_rgba(195,50,1,0.7)]
-                  hover:-translate-y-1
-                  hover:scale-105
-                "
-              >
-                <FaDownload
-                  className="
-                    text-white
-                    text-lg
-                    transition-transform
-                    duration-300
-                    group-hover:rotate-12
-                  "
-                />
-
-               <a
-  href="../../public/JAHID HOSSEN SHAKIL.pdf"
+             <a
+  href="/JAHID-HOSSEN-SHAKIL.pdf"
   download="JAHID-HOSSEN-SHAKIL-Resume.pdf"
-  className="..."
+  className="
+    group
+    flex
+    items-center
+    gap-3
+    px-6
+    py-3
+    rounded-full
+    bg-black/40
+    backdrop-blur-xl
+    border
+    border-[#c33201]/50
+    shadow-[0_0_25px_rgba(195,50,1,0.35)]
+    transition-all
+    duration-300
+    hover:bg-[#c33201]
+    hover:border-[#ff6a3d]
+    hover:shadow-[0_0_35px_rgba(195,50,1,0.7)]
+    hover:-translate-y-1
+    hover:scale-105
+  "
 >
-  <span
+  <FaDownload
     className="
       text-white
-      font-semibold
-      text-sm
-      lg:text-base
-      tracking-wide
+      text-lg
+      transition-transform
+      duration-300
+      group-hover:rotate-12
     "
-  >
+  />
+
+  <span className="text-white font-semibold text-sm lg:text-base tracking-wide">
     Download Resume
   </span>
 </a>
-              </div>
             </Link>
           </div>
         </div>
