@@ -379,17 +379,23 @@ function Hero() {
                   "
                 />
 
-                <span
-                  className="
-                    text-white
-                    font-semibold
-                    text-sm
-                    lg:text-base
-                    tracking-wide
-                  "
-                >
-                  Download Resume
-                </span>
+               <a
+  href="../../public/JAHID HOSSEN SHAKIL.pdf"
+  download="JAHID-HOSSEN-SHAKIL-Resume.pdf"
+  className="..."
+>
+  <span
+    className="
+      text-white
+      font-semibold
+      text-sm
+      lg:text-base
+      tracking-wide
+    "
+  >
+    Download Resume
+  </span>
+</a>
               </div>
             </Link>
           </div>
