@@ -347,10 +347,15 @@ function Hero() {
                 group
               "
             >
-             <a
-  href="/JAHID-HOSSEN-SHAKIL.pdf"
+  <a
+  href="../../public/Resume.pdf"
   download="JAHID-HOSSEN-SHAKIL-Resume.pdf"
   className="
+    fixed
+    bottom-6
+    left-4
+    lg:left-8
+    z-[9999]
     group
     flex
     items-center
