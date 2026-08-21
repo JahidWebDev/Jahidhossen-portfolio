@@ -28,7 +28,7 @@ const contactInfo = [
 
 function Contact() {
   return (
-    <section className="min-h-screen lg:bg-[#111111] bg-white flex items-center py-20 px-6 lg:px-16 lg:rounded-t-[20px]">
+    <section className="min-h-screen lg:bg-[#1F2731] bg-white flex items-center py-20 px-6 lg:px-16 lg:rounded-t-[20px]">
       <div className="max-w-7xl lg:mr-36 mx-auto w-full">
 
         {/* Heading */}
@@ -355,33 +355,31 @@ function Contact() {
     </div>
 
     {/* Button */}
-    <button
-      type="submit"
-      className="
-        group
-        bg-white
-        lg:bg-black
-        lg:text-white
-        hover:bg-[#d63b08]
-        text-black
-        rounded-xl
-        px-10
-        h-14
-        flex
-        items-center
-        gap-3
-        transition-all
-        duration-300
-        hover:scale-105
-        shadow-lg
-        shadow-[#c33201]/20
-      "
-      style={{ fontFamily: "Cabin" }}
-    >
-      <FaPaperPlane className="group-hover:translate-x-1 transition-transform duration-300" />
+  <button
+  type="submit"
+  className="
+    group
+    bg-[#1F2731]
+    text-white
+    rounded-xl
+    px-10
+    h-14
+    flex
+    items-center
+    gap-3
+    shadow-lg
+    shadow-indigo-200
+    hover:shadow-xl
+    hover:scale-105
+    transition-all
+    duration-200
+  "
+  style={{ fontFamily: "Cabin" }}
+>
+  <FaPaperPlane className="group-hover:translate-x-1 transition-transform duration-300" />
 
-      Send Message
-    </button>
+  Send Message
+</button>
 
   </form>
 

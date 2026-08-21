@@ -572,43 +572,48 @@ function Hero() {
 
         {/* WhatsApp Button */}
 
-        <div
-          className="
-            relative
-            flex
-            items-center
-            gap-3
-            bg-[#1F2731]
-            text-[#39FF14]
-            px-3
-            py-3
-            rounded-full
-            shadow-lg
-            hover:bg-[#6E0000]
-            hover:scale-110
-            transition-all
-            duration-300
-          "
-        >
-          <FaWhatsapp className="text-3xl" />
+       <div
+  className="
+    relative
+    flex
+    items-center
+    gap-3
+    bg-[#1F2731]
+    text-[#39FF14]
 
-          <div
-            className="
-              hidden
-              lg:flex
-              flex-col
-              leading-none
-            "
-          >
-            <span className="text-xs opacity-80">
-              Need Help?
-            </span>
+    px-3
+    py-3
+    rounded-full
 
-            <span className="font-semibold">
-              Chat on WhatsApp
-            </span>
-          </div>
-        </div>
+    border
+    border-gray-400
+
+    shadow-lg
+    hover:bg-[#6E0000]
+    hover:scale-110
+    transition-all
+    duration-300
+  "
+>
+  <FaWhatsapp className="text-3xl" />
+
+  <div
+    className="
+      hidden
+      lg:flex
+      flex-col
+      leading-none
+    "
+  >
+    <span className="text-xs opacity-80">
+      Need Help?
+    </span>
+
+    <span className="font-semibold">
+      Chat on WhatsApp
+    </span>
+  </div>
+</div>
       </a>
     </>
   );
