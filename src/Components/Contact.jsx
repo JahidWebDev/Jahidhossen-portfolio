@@ -196,7 +196,7 @@ function Contact() {
     lg:col-span-8
     -mx-6
     lg:mx-0
-    bg-[#111111]
+    bg-[#1F2731]
     lg:bg-white
     rounded-b-[16px]
     shadow-xl
