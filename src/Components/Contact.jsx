@@ -359,8 +359,10 @@ function Contact() {
   type="submit"
   className="
     group
-    bg-[#1F2731]
-    text-white
+    lg:bg-[#1F2731]
+    bg-white
+    text-black
+    lg:text-white
     rounded-xl
     px-10
     h-14

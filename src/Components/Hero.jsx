@@ -584,10 +584,10 @@ function Hero() {
     px-3
     py-3
     rounded-full
-
-    border
-    border-gray-400
-
+border-gray-400
+    
+    lg:border-gray-400 border-2
+ 
     shadow-lg
     hover:bg-[#6E0000]
     hover:scale-110
