@@ -108,7 +108,7 @@ function About() {
                 w-full z-50
                 
                 rounded-2xl
-                bg-[#111]
+                bg-[#1F2731]
                 shadow-2xl
                 object-cover
               "
@@ -254,6 +254,7 @@ function About() {
           font-Cabin
           text-gray-600
           leading-8
+          lg:w-[900px]
           text-lg
           max-w-6xl
           mx-auto

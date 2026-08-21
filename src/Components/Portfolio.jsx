@@ -178,7 +178,7 @@ const Portfolio = () => {
   <div className="flex items-center gap-3">
     <div className="h-8 w-1.5 rounded-full bg-gradient-to-b from-orange-600 to-black"></div>
 
-    <span className="text-sm font-semibold text-slate-500 tracking-widest uppercase">
+    <span className="text-sm font-semibold text-slate-700 tracking-widest uppercase">
       Projects
     </span>
 
@@ -200,7 +200,7 @@ const Portfolio = () => {
           window.open(project.liveDemo, "_blank", "noopener,noreferrer");
         }
       }}
-      className={`group relative rounded-3xl overflow-hidden bg-white border border-slate-200/80 shadow-[0_8px_30px_rgba(15,23,42,0.06)] hover:shadow-[0_20px_50px_rgba(15,23,42,0.12)] transition-all duration-500 cursor-pointer ${
+      className={`group relative rounded-3xl overflow-hidden bg-[#E3DFD6]/40 border border-slate-200/80 shadow-[0_8px_30px_rgba(15,23,42,0.06)] hover:shadow-[0_20px_50px_rgba(15,23,42,0.12)] transition-all duration-500 cursor-pointer ${
         !showAll && index >= 6 ? "hidden" : ""
       }`}
       style={{
@@ -263,7 +263,7 @@ const Portfolio = () => {
         </div>
 
         {/* TITLE */}
-        <h3 className="text-xl font-blinkma font-bold text-[#0b1a2f] mb-2 group-hover:text-[#c33201] transition-colors duration-300">
+        <h3 className="text-xl font-blinkma font-bold text-[#1F2731] mb-2 group-hover:text-[#c33201] transition-colors duration-300">
           {project.title}
         </h3>
 
@@ -330,7 +330,7 @@ const Portfolio = () => {
           <div className="flex justify-center items-center mt-10">
             <button
               onClick={() => setShowAll(!showAll)}
-              className="group bg-gradient-to-r bg-black text-white font-semibold px-8 py-3 rounded-full text-sm shadow-md shadow-indigo-200 hover:shadow-xl  hover:scale-105 transition-all duration-200 flex items-center gap-2"
+              className="group bg-gradient-to-r bg-[#2C2F3F] text-white font-semibold px-8 py-3 rounded-full text-sm shadow-md shadow-indigo-200 hover:shadow-xl  hover:scale-105 transition-all duration-200 flex items-center gap-2"
             >
               <span>{showAll ? 'Show less' : 'See all projects'}</span>
               <svg

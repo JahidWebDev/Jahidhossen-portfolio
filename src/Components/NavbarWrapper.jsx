@@ -167,7 +167,7 @@ function NavbarWrapper() {
     w-full
     sm:w-80
     lg:w-72
-    bg-[#111]
+    bg-[#1F2731]
     z-50
 
     transform

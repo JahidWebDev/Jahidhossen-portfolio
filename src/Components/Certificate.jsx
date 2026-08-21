@@ -29,7 +29,7 @@ function Certificate() {
         
 
           <h2
-            className="  font-BebasNeue text-6xl   font-bold text-[#c33201] "
+            className="  font-BebasNeue text-6xl    font-bold text-[#c33201] "
             style={{ fontFamily: "BebasNeue" }}
           >
             Certificates
@@ -54,7 +54,7 @@ function Certificate() {
             >
               {/* Image */}
 
-              <div className="relative bg-[#fafafa] p-6">
+              <div className="relative bg-white p-6">
                 <img
                   src={item.image}
                   alt={item.title}
@@ -95,7 +95,7 @@ function Certificate() {
                     href={item.image}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 h-12 rounded-xl bg-black text-white flex items-center justify-center gap-2 transition hover:bg-[#da3f0c]"
+                    className="flex-1 h-12 rounded-xl bg-[#2C2F3F] shadow-indigo-200 text-white flex items-center justify-center gap-2 transition hover:bg-[#da3f0c]"
                     style={{ fontFamily: "Cabin" }}
                   >
                     <FaEye />

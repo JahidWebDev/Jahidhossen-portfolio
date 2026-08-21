@@ -9,7 +9,7 @@ function ResumePage() {
   return (
     <section
       id="resume"
-      className="relative py-20  bg-[#f8f8f8] overflow-hidden"
+      className="relative py-20 bg-white   overflow-hidden"
     >
       {/* Background Pattern */}
   {/* <div
@@ -26,7 +26,7 @@ function ResumePage() {
   }}
 /> */}
 
-<div className="relative max-w-7xl mx-auto px-7 sm:px-5 md:px-8 lg:px-12 lg:right-20">
+<div className="relative  max-w-7xl mx-auto px-7 sm:px-5 md:px-8 lg:px-12 lg:right-20">
 
   {/* =====================================================
       HEADING
@@ -79,7 +79,7 @@ function ResumePage() {
         className="
           text-4xl
           sm:text-4xl
-          text-[#c33201]
+          text-[#1F2731]
           font-BebasNeue
           font-bold
           mb-8
@@ -97,7 +97,7 @@ function ResumePage() {
           relative
           border-l-0
           lg:border-l-2
-          border-[#c33201]
+          border-[#1F2731]
           pl-0
           lg:pl-8
         "
@@ -265,7 +265,7 @@ function ResumePage() {
           font-blinkma
           border-l-0
           lg:border-l-2
-          border-[#c33201]
+          border-[#1F2731]
           pl-0
           lg:pl-8
         "
@@ -540,7 +540,7 @@ function ResumePage() {
           font-blinkma
           border-l-0
           lg:border-l-2
-          border-[#c33201]
+          border-[#1F2731]
           pl-0
           lg:pl-8
         "

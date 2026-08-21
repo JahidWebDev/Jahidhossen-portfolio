@@ -578,7 +578,7 @@ function Hero() {
             flex
             items-center
             gap-3
-            bg-[#c33201]
+            bg-[#1F2731]
             text-[#39FF14]
             px-3
             py-3

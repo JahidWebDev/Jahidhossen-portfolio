@@ -27,7 +27,7 @@ function App() {
         <Loading onComplete={() => setLoadingComplete(true)} />
       )}
 
-      {loadingComplete && (
+      {loadingComplete && ( 
         <div className="flex">
           <NavbarWrapper />
 <main className="flex-1 lg:ml-72 overflow-x-hidden">
